@@ -9,33 +9,33 @@
         <h3 class="font-heading text-lg font-bold uppercase tracking-tight mb-4 text-white">
           {{ site.title }}
         </h3>
-        <p class="text-sm leading-relaxed" style="color: rgba(255,255,255,0.7);">
+        <p class="text-sm leading-relaxed" style="color: rgba(255,255,255,0.7);" data-i18n="footer.about.text">
           The Guru shows you how to build the hottest Peakboard apps on the planet. No theory lectures, no 47-page whitepapers - just real projects you can steal, learn from, and actually use. May your dashboards always be real-time and your data sources never timeout.
         </p>
       </div>
 
       <!-- Quick Links -->
       <div>
-        <h3 class="font-heading text-lg font-bold uppercase tracking-tight mb-4 text-white">
+        <h3 class="font-heading text-lg font-bold uppercase tracking-tight mb-4 text-white" data-i18n="footer.quicklinks">
           Quick Links
         </h3>
         <ul class="grid grid-cols-2 gap-x-8 gap-y-2.5">
           <li>
             <a href="{{ '/about' | relative_url }}" class="text-sm hover:text-accent-amber transition-colors inline-flex items-center group" style="color: rgba(255,255,255,0.7);">
               <i class="fas fa-user-circle mr-2 text-accent-amber"></i>
-              About
+              <span data-i18n="footer.about">About</span>
             </a>
           </li>
           <li>
             <a href="{{ '/search' | relative_url }}" class="text-sm hover:text-accent-amber transition-colors inline-flex items-center group" style="color: rgba(255,255,255,0.7);">
               <i class="fas fa-search mr-2 text-accent-amber"></i>
-              Search
+              <span data-i18n="footer.search">Search</span>
             </a>
           </li>
           <li>
             <a href="{{ '/impressum' | relative_url }}" class="text-sm hover:text-accent-amber transition-colors inline-flex items-center group" style="color: rgba(255,255,255,0.7);">
               <i class="fas fa-gavel mr-2 text-accent-amber"></i>
-              Legal Notice
+              <span data-i18n="footer.legal">Legal Notice</span>
             </a>
           </li>
           <li>
@@ -63,7 +63,7 @@
     <!-- Bottom Bar -->
     <div class="mt-12 pt-8 border-t" style="border-color: rgba(255,255,255,0.2);">
       <p class="text-center text-sm font-medium" style="color: rgba(255,255,255,0.6);">
-        &copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.
+        &copy; {{ 'now' | date: "%Y" }} {{ site.title }}. <span data-i18n="footer.copyright.suffix">All rights reserved.</span>
       </p>
     </div>
   </div>

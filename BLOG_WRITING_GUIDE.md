@@ -2,7 +2,7 @@
 
 This guide documents all conventions for writing articles on the Jekyll blog **"Peakboard Guru"**. Follow these rules exactly when creating new posts.
 
-**Language:** All articles are written in **English**.
+**Language:** Every article is **bilingual (English + German)**. The original article is written in English; an equivalent German translation is added in the same file. Only the downloadable `.pbmx` project files stay single-language.
 
 **Content focus:** Articles describe a **real-world use case** and the business value it delivers. Focus on the problem being solved, who benefits, and the outcome. Do NOT explain Peakboard internals, technical implementation details, or how the dashboard was built step by step.
 
@@ -33,6 +33,7 @@ _posts/2026-03-03-Fun-with-Shelly-Plug-S-Switching-Power-on-and-off.md
 ---
 layout: post
 title: Your Article Title Here
+title_de: Dein Artikeltitel hier
 date: 2026-03-03 00:00:00 +0000
 tags: tag1 tag2
 image: /assets/2026-03-03-14-30-00/title.png
@@ -42,18 +43,20 @@ image: /assets/2026-03-03-14-30-00/title.png
 | Field | Description |
 |-------|-------------|
 | `layout` | Always `post` |
-| `title` | Human-readable title. Often uses ` - ` as separator for subtitles |
+| `title` | English title. Human-readable, often uses ` - ` as separator for subtitles |
+| `title_de` | German translation of the title. Required for every post |
 | `date` | Format: `YYYY-MM-DD HH:MM:SS +0000` |
-| `tags` | **Space-separated** tag slugs (not a YAML list!). First tag = primary category |
+| `tags` | **Space-separated** tag slugs (not a YAML list!). First tag = primary category. Tag slugs stay in English |
 | `image` | Path to hero image. Pattern: `/assets/YYYY-MM-DD-HH-MM-SS/title.png` (or `title.jpg`). Match the actual file extension. The folder name matches the post's `date:` field with hyphens |
 
 ### Recommended Fields
 
-Always include `bg_alternative` and `description` for new posts:
+Always include `bg_alternative`, `description`, and `description_de` for new posts:
 
 ```yaml
 bg_alternative: true
 description: "One or two sentences summarizing what this article covers."
+description_de: "Ein oder zwei Sätze, die zusammenfassen, worum es in diesem Artikel geht."
 downloads:
   - name: ProjectFile.pbmx
     url: /assets/2026-03-03-14-30-00/ProjectFile.pbmx
@@ -76,10 +79,21 @@ Each download gets its own download button in the sidebar. Use meaningful names 
 ### Optional Fields
 
 ```yaml
+prompt: >
+  The exact prompt that was given to the AI to generate the Peakboard
+  project for this article. Use the YAML folded scalar (>) so single
+  line breaks in the source become spaces and the text flows naturally
+  in the rendered box. Use a blank line for an explicit paragraph break.
+prompt_de: >
+  Optionaler deutscher Prompt-Text, falls der Prompt selbst übersetzt
+  wurde. Wenn nicht gesetzt, wird der englische Prompt für beide
+  Sprachen angezeigt.
 read_more_links:
   - name: Display Text
+    name_de: Anzeigetext
     url: https://example.com
   - name: Related Article
+    name_de: Verwandter Artikel
     url: /Related-Article-Title.html
 downloads:
   - name: ProjectFile.pbmx
@@ -89,9 +103,12 @@ downloads:
 | Field | Description |
 |-------|-------------|
 | `bg_alternative` | `true` = light hero box style with a semi-transparent text box over the image. Always use for new posts |
-| `description` | Shown below title in hero area and used for SEO meta tags. Always include for new posts |
-| `downloads` | List of `{name, url}` rendered as Guru download button images at the top of the right sidebar. For multi-project articles, list each project file separately with a descriptive name. Do NOT add download links in the article body - the buttons are generated automatically from this field |
-| `read_more_links` | List of `{name, url}` shown in sidebar under "Related Links" |
+| `description` | English summary shown below title and used for SEO meta tags. Always include for new posts |
+| `description_de` | German translation of the description. Always include for new posts |
+| `prompt` | **Required for every NEW post.** The exact AI prompt used to create the Peakboard project. Rendered in a visually distinct box at the bottom of the article body so readers know the project is AI-generated. Use the YAML folded scalar (`>`) syntax so single line breaks in the source become spaces and the text flows naturally - use a blank line for an explicit paragraph break. Older posts without this field continue to render without the box - the field is purely additive |
+| `prompt_de` | Optional German translation of the prompt. If omitted, the English prompt is shown in both language modes |
+| `downloads` | List of `{name, url}` rendered as Guru download button images at the top of the right sidebar. The `.pbmx` filename and the URL stay single-language - do not translate them |
+| `read_more_links` | List of `{name, url}` shown in sidebar under "Related Links". Add `name_de` for the German label. The URL stays the same |
 
 ### Post Template (Single Project)
 
@@ -99,11 +116,17 @@ downloads:
 ---
 layout: post
 title: Article Title - With Subtitle
+title_de: Artikeltitel - Mit Untertitel
 date: 2026-03-03 00:00:00 +0000
 tags: fitness
 image: /assets/2026-03-03-14-30-00/title.png
 bg_alternative: true
 description: "Short summary of the article for SEO and hero display."
+description_de: "Kurze Zusammenfassung des Artikels für SEO und Hero-Anzeige."
+prompt: >
+  Build a Peakboard dashboard that shows the daily class schedule for a
+  fitness studio with KPI tiles, an occupancy bar chart, and a countdown
+  to the next class.
 downloads:
   - name: SampleProject.pbmx
     url: /assets/2026-03-03-14-30-00/SampleProject.pbmx
@@ -116,11 +139,17 @@ downloads:
 ---
 layout: post
 title: Restaurant Ordering System - Order Kiosk and Kitchen Display
+title_de: Restaurant-Bestellsystem - Bestellkiosk und Küchenanzeige
 date: 2026-03-03 00:00:00 +0000
 tags: gastronomy
 image: /assets/2026-03-03-14-30-00/title.jpg
 bg_alternative: true
 description: "A complete restaurant ordering system with a customer-facing kiosk and a kitchen display."
+description_de: "Ein komplettes Restaurant-Bestellsystem mit einem Kundenkiosk und einer Küchenanzeige."
+prompt: >
+  Build a two-part Peakboard system for a restaurant: a customer-facing
+  ordering kiosk on a touchscreen, and a kitchen display that shows
+  incoming orders sorted by time.
 downloads:
   - name: OrderKiosk.pbmx
     url: /assets/2026-03-03-14-30-00/OrderKiosk.pbmx
@@ -155,15 +184,48 @@ You can use multiple tags if applicable (e.g. `production logistics`). The first
 
 ## 4. Article Content Structure
 
-### Opening Paragraph (No Header!)
+### Bilingual Body Structure
 
-Every article starts with a direct intro paragraph **without** any heading. No `# Introduction`, no `---` separator. Just text immediately after the front matter closing `---`.
+The article body consists of two language blocks that wrap the actual content. Shared elements (video tags, YouTube embeds) live **outside** the language blocks at the top of the body so they appear in both languages.
 
 ```markdown
 ---
 ...front matter...
 ---
+{% include youtube.html id="VIDEO_ID" %}
+
+<div data-lang="en" markdown="1">
+
+...full English content here, including all headings and images...
+
+</div>
+
+<div data-lang="de" markdown="1">
+
+...complete German translation here, including all headings and images...
+
+</div>
+```
+
+Important rules:
+
+- The `markdown="1"` attribute is mandatory - kramdown only renders Markdown inside HTML blocks when this attribute is set
+- Leave a blank line directly after the opening `<div ...>` and directly before the closing `</div>` so kramdown enters Markdown mode correctly
+- Both language blocks must contain the **same set of images, screenshots, and structural headings** - just translated text
+- Image paths, URLs, and `assets/.../*.pbmx` references stay identical in both blocks
+- Tag links (`/category/...`) stay in English (tags are slugs)
+- The language toggle in the header chooses which block is visible at runtime; both are present in the rendered HTML
+
+### Opening Paragraph (No Header!)
+
+Every language block starts with a direct intro paragraph **without** any heading. No `# Introduction`, no `---` separator. Just text immediately after the opening `<div ...>` line and its blank line.
+
+```markdown
+<div data-lang="en" markdown="1">
+
 In this article, we will discuss how to...
+
+</div>
 ```
 
 ### Headers
@@ -265,7 +327,7 @@ The URL preserves the exact filename casing (not lowercased). There is no date i
 
 ## 6. Writing Style
 
-- **Language:** Always English
+- **Language:** Bilingual - English first, then a complete German translation in a separate `data-lang="de"` block
 - **Voice:** The blog author is "Thilo" - write in first person plural ("we") or instructional second person ("you")
 - **Tone:** Technical but approachable, sometimes playful/punny titles
 - **Structure:** Problem → Setup → Step-by-step walkthrough → Result/Conclusion
@@ -286,16 +348,20 @@ The URL preserves the exact filename casing (not lowercased). There is no date i
 ---
 layout: post
 title: Gym Class Schedule Display - Building a Fitness Studio Dashboard with Peakboard
+title_de: Kursplan-Display - Ein Fitnessstudio-Dashboard mit Peakboard bauen
 date: 2026-03-03 00:00:00 +0000
 tags: fitness
 image: /assets/2026-03-03-14-30-00/title.png
 bg_alternative: true
 description: "Build a dynamic gym class schedule display with Peakboard."
+description_de: "Ein dynamisches Fitnessstudio-Kursplan-Display mit Peakboard bauen."
 downloads:
   - name: GymClassSchedule.pbmx
     url: /assets/2026-03-03-14-30-00/GymClassSchedule.pbmx
 ---
 <video width="100%" controls><source src="{{ site.baseurl }}/assets/2026-03-03-14-30-00/video.mp4" type="video/mp4"></video>
+
+<div data-lang="en" markdown="1">
 
 Fitness studios often need a way to present their daily class schedule.
 In this article, we build a complete dashboard with a course timetable,
@@ -314,6 +380,30 @@ The application uses two Peakboard lists as its data backbone.
 ## Result
 
 The finished dashboard provides an at-a-glance overview of the schedule.
+
+</div>
+
+<div data-lang="de" markdown="1">
+
+Fitnessstudios brauchen oft einen Weg, ihren Tageskursplan zu präsentieren.
+In diesem Artikel bauen wir ein komplettes Dashboard mit einer Kurstabelle,
+KPI-Karten und einem Auslastungsbalkendiagramm.
+
+## Das Layout-Konzept
+
+Das Dashboard läuft mit 1920x1080 in dunklem Design mit Neon-Cyan-Akzenten.
+
+## Die Daten einrichten
+
+Die Anwendung nutzt zwei Peakboard-Listen als Datengrundlage.
+
+![image](/assets/2026-03-03-14-30-00/010.png)
+
+## Ergebnis
+
+Das fertige Dashboard liefert einen Auf-einen-Blick-Überblick über den Kursplan.
+
+</div>
 ```
 
 ### Multi-Project Example
@@ -322,11 +412,13 @@ The finished dashboard provides an at-a-glance overview of the schedule.
 ---
 layout: post
 title: Restaurant Ordering System - Customer Kiosk and Kitchen Display
+title_de: Restaurant-Bestellsystem - Kundenkiosk und Küchenanzeige
 date: 2026-03-03 00:00:00 +0000
 tags: gastronomy
 image: /assets/2026-03-03-14-30-00/title.jpg
 bg_alternative: true
 description: "A two-part restaurant system with a self-service ordering kiosk and a real-time kitchen display."
+description_de: "Ein zweiteiliges Restaurant-System mit einem Selbstbedienungskiosk und einer Echtzeit-Küchenanzeige."
 downloads:
   - name: OrderKiosk.pbmx
     url: /assets/2026-03-03-14-30-00/OrderKiosk.pbmx
@@ -334,6 +426,8 @@ downloads:
     url: /assets/2026-03-03-14-30-00/KitchenDisplay.pbmx
 ---
 <video width="100%" controls><source src="{{ site.baseurl }}/assets/2026-03-03-14-30-00/video.mp4" type="video/mp4"></video>
+
+<div data-lang="en" markdown="1">
 
 Managing orders in a busy restaurant can be chaotic. This two-part system
 connects a customer-facing ordering kiosk with a kitchen display that
@@ -354,6 +448,32 @@ As orders come in, they appear on the kitchen screen sorted by time.
 ## Result
 
 The two dashboards work together to streamline the ordering process.
+
+</div>
+
+<div data-lang="de" markdown="1">
+
+Bestellungen in einem belebten Restaurant zu verwalten kann chaotisch sein.
+Dieses zweiteilige System verbindet einen Kundenkiosk mit einer Küchenanzeige,
+die eingehende Bestellungen in Echtzeit zeigt.
+
+## Der Bestellkiosk
+
+Kunden stöbern im Menü und geben Bestellungen direkt am Touchscreen auf.
+
+![Order Kiosk](/assets/2026-03-03-14-30-00/OrderKiosk_010.png)
+
+## Die Küchenanzeige
+
+Eingehende Bestellungen erscheinen auf dem Küchenbildschirm sortiert nach Zeit.
+
+![Kitchen Display](/assets/2026-03-03-14-30-00/KitchenDisplay_010.png)
+
+## Ergebnis
+
+Die beiden Dashboards arbeiten zusammen und verschlanken den Bestellprozess.
+
+</div>
 ```
 
 ---
@@ -365,11 +485,17 @@ The two dashboards work together to streamline the ordering process.
 - [ ] `date:` matches the file name date
 - [ ] `tags:` uses valid tags from the list above (space-separated)
 - [ ] `image:` points to an existing hero image
+- [ ] `title_de` and `description_de` are set with German translations
+- [ ] `prompt:` is set (the AI prompt used to create the project) - mandatory for new posts
+- [ ] Body has both `<div data-lang="en" markdown="1">` and `<div data-lang="de" markdown="1">` blocks
+- [ ] Both blocks contain blank lines after the opening `<div ...>` and before the closing `</div>`
+- [ ] Both blocks share the same headings, images, and structure
 - [ ] No `#` (H1) headers in the body
-- [ ] First paragraph has no heading
+- [ ] First paragraph in each block has no heading
 - [ ] Internal links use `/Title-Slug.html` format (no date in URL)
 - [ ] Images are in `/assets/YYYY-MM-DD-HH-MM-SS/` folder
-- [ ] Article ends with a `## Result` or `## Conclusion` section
+- [ ] Article ends with a `## Result` or `## Conclusion` section (both languages)
 - [ ] Download link(s) in `downloads:` front matter only (not as text in the article body)
+- [ ] `read_more_links` entries have `name_de` for the German label
 - [ ] For multi-project articles: all project files listed in `downloads:` with descriptive names
 - [ ] For multi-project articles: each project has its own screenshot shown in the article body

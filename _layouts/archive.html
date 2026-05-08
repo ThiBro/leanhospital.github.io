@@ -4,7 +4,7 @@ layout: base
 
 <div class="mx-auto max-w-7xl px-6 lg:px-8">
   <div class="mt-10">
-    <h1 class="text-3xl font-bold mb-8">Article Archive</h1>
+    <h1 class="text-3xl font-bold mb-8" data-i18n="archive.title">Article Archive</h1>
 
     {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
     
@@ -25,11 +25,14 @@ layout: base
                       <div class="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400 mb-2">
                         <span>{{ post.date | date: "%B %d, %Y" }}</span>
                         <span>•</span>
-                        <span>{% include reading_time.html content=post.content %} read</span>
+                        <span>{% include reading_time.html content=post.content %} <span data-i18n="post.read">read</span></span>
                       </div>
                       
                       <h4 class="text-lg font-semibold">
-                        <a href="{{ post.url | relative_url }}" class="hover:text-secondary">{{ post.title }}</a>
+                        <a href="{{ post.url | relative_url }}" class="hover:text-secondary">
+                          <span data-lang="en">{{ post.title }}</span>
+                          <span data-lang="de">{{ post.title_de | default: post.title }}</span>
+                        </a>
                       </h4>
                       
                       {% include post-tags.html tags=post.tags %}

@@ -13,8 +13,8 @@ layout: base
         {% endif %}
         <div class="absolute inset-0 flex items-center">
             <div class="max-w-7xl mx-auto px-8 w-full">
-                <h1 class="text-5xl font-bold text-white mt-2 leading-tight">{{ page.hero.title }}</h1>
-                <p class="text-xl text-white/80 mt-6">{{ page.hero.subtitle }}</p>
+                <h1 class="text-5xl font-bold text-white mt-2 leading-tight"{% if page.i18n_prefix %} data-i18n="{{ page.i18n_prefix }}.hero.title"{% endif %}>{{ page.hero.title }}</h1>
+                <p class="text-xl text-white/80 mt-6"{% if page.i18n_prefix %} data-i18n="{{ page.i18n_prefix }}.hero.subtitle"{% endif %}>{{ page.hero.subtitle }}</p>
             </div>
         </div>
     </div>

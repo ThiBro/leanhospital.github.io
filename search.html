@@ -4,17 +4,18 @@ layout: base
 
 <div id="search-app" class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mt-10">
-        <h1 class="text-3xl font-bold mb-8">Search Articles</h1>
+        <h1 class="text-3xl font-bold mb-8" data-i18n="search.title">Search Articles</h1>
 
         <!-- Search Input -->
         <div class="mb-8">
             <div class="relative">
-                <input 
-                    type="text" 
-                    id="search-input" 
+                <input
+                    type="text"
+                    id="search-input"
                     v-model="searchQuery"
                     @input="performSearch"
                     placeholder="Type to search articles..."
+                    data-i18n-attr="placeholder:search.placeholder"
                     class="w-full px-4 py-3 border border-gray-200 dark:border-gray-800 rounded-lg focus:ring-secondary focus:border-0
                            bg-white dark:bg-blackground dark:text-light
                            text-lg"
@@ -39,16 +40,16 @@ layout: base
                         </div>
                         
                         <h3 class="text-lg font-semibold mb-2">
-                            <a :href="result.item.url" class="hover:text-secondary" v-html="highlightText(result.item.title, result.matches, 'title')"></a>
+                            <a :href="result.item.url" class="hover:text-secondary" v-html="highlightText(displayTitle(result.item), result.matches, titleKey)"></a>
                         </h3>
-                        
-                        <p class="text-gray-600 dark:text-gray-300 line-clamp-2 mb-4" v-html="highlightText(result.item.content, result.matches, 'content')"></p>
+
+                        <p class="text-gray-600 dark:text-gray-300 line-clamp-2 mb-4" v-html="highlightText(displayContent(result.item), result.matches, contentKey)"></p>
 
                         <!-- Updated Read More Button -->
                         <div class="mt-4">
-                            <a :href="result.item.url" 
+                            <a :href="result.item.url"
                                class="inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg text-white bg-secondary hover:bg-secondary/90 transition-colors">
-                                Read More
+                                <span data-i18n="search.readMore">Read More</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                                 </svg>
@@ -66,7 +67,7 @@ layout: base
 
         <!-- No Results State -->
         <div v-else-if="searchQuery" class="text-center py-12 text-gray-500 dark:text-gray-400">
-            No results found for "{{ searchQuery }}"
+            <span data-i18n="search.noResults">No results found for</span> "<span v-text="searchQuery"></span>"
         </div>
     </div>
 </div>
@@ -75,23 +76,31 @@ layout: base
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
 
 <script>
-const { createApp, ref, onMounted } = Vue
+const { createApp, ref, onMounted, computed } = Vue
 
 createApp({
     setup() {
         const searchQuery = ref('')
         const searchResults = ref([])
+        const posts = ref([])
         const fuse = ref(null)
+        const lang = ref((window.PBG_I18N && window.PBG_I18N.getLang()) || 'en')
+
+        const titleKey = computed(() => lang.value === 'de' ? 'title_de' : 'title')
+        const contentKey = computed(() => lang.value === 'de' ? 'content_de' : 'content')
+
+        const displayTitle = (item) => item[titleKey.value] || item.title
+        const displayContent = (item) => item[contentKey.value] || item.content
 
         const highlightText = (text, matches, key) => {
             if (!matches) return text
-            
+
             const match = matches.find(m => m.key === key)
             if (!match) return text
 
             let highlightedText = text
             const indices = match.indices.sort((a, b) => b[0] - a[0])
-            
+
             indices.forEach(([start, end]) => {
                 const before = highlightedText.substring(0, start)
                 const highlight = highlightedText.substring(start, end + 1)
@@ -102,22 +111,34 @@ createApp({
             return highlightedText
         }
 
+        const buildFuse = () => {
+            if (!posts.value.length) return
+            fuse.value = new Fuse(posts.value, {
+                keys: [
+                    { name: titleKey.value, weight: 0.5 },
+                    { name: contentKey.value, weight: 0.3 }
+                ],
+                includeScore: true,
+                includeMatches: true,
+                threshold: 0.3,
+                distance: 200,
+                ignoreLocation: true,
+                minMatchCharLength: 3
+            })
+        }
+
         onMounted(async () => {
             try {
                 const response = await fetch('{{ "/search.json" | relative_url }}')
-                const posts = await response.json()
+                posts.value = await response.json()
 
-                fuse.value = new Fuse(posts, {
-                    keys: [
-                        { name: 'title', weight: 0.5 },
-                        { name: 'content', weight: 0.3 }
-                    ],
-                    includeScore: true,
-                    includeMatches: true,
-                    threshold: 0.3,
-                    distance: 200,
-                    ignoreLocation: true,
-                    minMatchCharLength: 3
+                buildFuse()
+
+                // Re-build index and re-run search when language changes
+                document.addEventListener('pbg:langchange', (e) => {
+                    lang.value = e.detail.lang
+                    buildFuse()
+                    performSearch()
                 })
 
                 // Read query parameter from URL
@@ -145,7 +166,11 @@ createApp({
             searchQuery,
             searchResults,
             performSearch,
-            highlightText
+            highlightText,
+            titleKey,
+            contentKey,
+            displayTitle,
+            displayContent
         }
     }
 }).mount('#search-app')

@@ -36,7 +36,7 @@ layout: base
                     {% endif %}
 
                     <p class="text-[10px] font-bold uppercase tracking-widest {% unless page.bg_alternative %}text-white/80{% else %}text-gray-600 dark:text-gray-400{% endunless %} mb-3">
-                        Published in
+                        <span data-i18n="post.publishedIn">Published in</span>
                         {% if page.tags and page.tags.size > 0 %}
                             {% for tag in page.tags %}
                                 <a href="{{ tag | slugify | prepend: '/category/' | relative_url }}"
@@ -45,17 +45,19 @@ layout: base
                                 </a>{% unless forloop.last %}, {% endunless %}
                             {% endfor %}
                         {% else %}
-                            <span class="{% unless page.bg_alternative %}text-white{% else %}text-gray-900 dark:text-white{% endunless %}">Uncategorized</span>
+                            <span class="{% unless page.bg_alternative %}text-white{% else %}text-gray-900 dark:text-white{% endunless %}" data-i18n="post.uncategorized">Uncategorized</span>
                         {% endif %}
                     </p>
 
                     <h1 class="font-heading text-xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold {% unless page.bg_alternative %}text-white{% else %}text-gray-900 dark:text-white{% endunless %} leading-tight tracking-tight">
-                        {{ page.title }}
+                        <span data-lang="en">{{ page.title }}</span>
+                        <span data-lang="de">{{ page.title_de | default: page.title }}</span>
                     </h1>
 
-                    {% if page.description %}
+                    {% if page.description or page.description_de %}
                     <p class="mt-5 text-base md:text-lg {% unless page.bg_alternative %}text-white/80{% else %}text-gray-600 dark:text-gray-400{% endunless %} max-w-3xl">
-                        {{ page.description }}
+                        <span data-lang="en">{{ page.description }}</span>
+                        <span data-lang="de">{{ page.description_de | default: page.description }}</span>
                     </p>
                     {% endif %}
 
@@ -73,21 +75,23 @@ layout: base
     <div class="mx-auto max-w-7xl px-6 lg:px-8 pt-10">
         <div class="bg-white dark:bg-blackground p-8 rounded-xl" style="border: 2px solid #5C2E0E;">
             <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-3">
-                Published in
+                <span data-i18n="post.publishedIn">Published in</span>
                 {% if page.tags and page.tags.size > 0 %}
                     {% for tag in page.tags %}
                         <a href="{{ tag | slugify | prepend: '/category/' | relative_url }}" class="text-gray-900 dark:text-white hover:text-accent-cyan transition-colors">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
                     {% endfor %}
                 {% else %}
-                    <span class="text-gray-900 dark:text-white">Uncategorized</span>
+                    <span class="text-gray-900 dark:text-white" data-i18n="post.uncategorized">Uncategorized</span>
                 {% endif %}
             </p>
             <h1 class="font-heading text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight leading-tight">
-                {{ page.title }}
+                <span data-lang="en">{{ page.title }}</span>
+                <span data-lang="de">{{ page.title_de | default: page.title }}</span>
             </h1>
-            {% if page.description %}
+            {% if page.description or page.description_de %}
             <p class="mt-4 text-gray-600 dark:text-gray-400 max-w-3xl">
-                {{ page.description }}
+                <span data-lang="en">{{ page.description }}</span>
+                <span data-lang="de">{{ page.description_de | default: page.description }}</span>
             </p>
             {% endif %}
         </div>
@@ -105,12 +109,13 @@ layout: base
                     <div class="flex flex-wrap items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400">
                         <span>{{ page.date | date: "%b %d, %Y" }}</span>
                         <span class="w-1 h-1 bg-accent-cyan rounded-full"></span>
-                        <span>{% include reading_time.html content=page.content %} read</span>
+                        <span>{% include reading_time.html content=page.content %} <span data-i18n="post.read">read</span></span>
                     </div>
                     <div class="flex items-center gap-3">
                         <button onclick="copyPageUrl()"
                                 class="inline-flex items-center justify-center w-9 h-9 border border-gray-200 dark:border-gray-800 text-gray-600 dark:text-gray-300 hover:text-accent-cyan hover:border-accent-cyan/60 transition-colors"
-                                title="Copy link">
+                                title="Copy link"
+                                data-i18n-attr="title:post.copyLink">
                             <i class="fas fa-link"></i>
                         </button>
                     </div>
@@ -123,6 +128,22 @@ layout: base
                     <div id="article-content" class="prose prose-dismantle text-gray-900 dark:text-light dark:prose-invert max-w-none">
                         {{ content }}
 
+                        {% if page.prompt or page.prompt_de %}
+                        <aside class="not-prose mt-10 rounded-xl overflow-hidden" style="border: 2px solid #5C2E0E; background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);">
+                            <div class="flex items-center gap-2 px-5 py-3" style="background-color: #5C2E0E;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-accent-cyan flex-shrink-0">
+                                    <path d="M12 2 L13.5 8.5 L20 10 L13.5 11.5 L12 18 L10.5 11.5 L4 10 L10.5 8.5 Z" fill="currentColor"/>
+                                    <path d="M19 3 L19.7 5.3 L22 6 L19.7 6.7 L19 9 L18.3 6.7 L16 6 L18.3 5.3 Z" fill="currentColor"/>
+                                    <path d="M19 15 L19.5 16.5 L21 17 L19.5 17.5 L19 19 L18.5 17.5 L17 17 L18.5 16.5 Z" fill="currentColor"/>
+                                </svg>
+                                <span class="font-heading text-xs font-bold uppercase tracking-widest text-white" data-i18n="post.aiPromptHeader">AI-generated project</span>
+                            </div>
+                            <div class="px-5 py-4">
+                                <p class="text-sm text-gray-700 mb-3" data-i18n="post.aiPromptIntro">This project was created entirely with AI. The exact prompt used:</p>
+                                <pre class="text-sm font-mono text-gray-900 bg-white/70 rounded-lg p-4 border border-amber-200 m-0" style="white-space: pre-wrap; word-break: break-word; overflow-wrap: anywhere;"><span data-lang="en">{{ page.prompt | escape }}</span><span data-lang="de">{{ page.prompt_de | default: page.prompt | escape }}</span></pre>
+                            </div>
+                        </aside>
+                        {% endif %}
                     </div>
                 </div>
 
@@ -146,7 +167,7 @@ layout: base
                         {% if page.read_more_links %}
                         <div class="break-words min-w-0">
                             <div class="mb-5 flex items-center gap-3">
-                                <h3 class="font-heading text-xs font-bold uppercase tracking-widest text-gray-900 dark:text-white whitespace-nowrap">
+                                <h3 class="font-heading text-xs font-bold uppercase tracking-widest text-gray-900 dark:text-white whitespace-nowrap" data-i18n="post.resources">
                                     Resources
                                 </h3>
                                 <div class="flex-1 h-0.5 bg-gradient-to-r from-accent-cyan/50 to-transparent"></div>
@@ -159,7 +180,7 @@ layout: base
                         {% if page.previous.url or page.next.url %}
                         <div class="break-words min-w-0 pr-2">
                             <div class="mb-5 flex items-center gap-3">
-                                <h3 class="font-heading text-xs font-bold uppercase tracking-widest text-gray-900 dark:text-white whitespace-nowrap">
+                                <h3 class="font-heading text-xs font-bold uppercase tracking-widest text-gray-900 dark:text-white whitespace-nowrap" data-i18n="post.keepReading">
                                     Keep Reading
                                 </h3>
                                 <div class="flex-1 h-0.5 bg-gradient-to-r from-accent-cyan/50 to-transparent"></div>
@@ -169,9 +190,10 @@ layout: base
                                 <a href="{{ page.previous.url | relative_url }}"
                                    title="{{ page.previous.title }}"
                                    class="group block">
-                                    <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-2">← Previous Article</p>
+                                    <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-2" data-i18n="post.previous">← Previous Article</p>
                                     <h3 class="font-heading text-sm font-bold text-gray-900 dark:text-white group-hover:text-accent-cyan transition-colors leading-snug line-clamp-3">
-                                        {{ page.previous.title }}
+                                        <span data-lang="en">{{ page.previous.title }}</span>
+                                        <span data-lang="de">{{ page.previous.title_de | default: page.previous.title }}</span>
                                     </h3>
                                 </a>
                                 {% endif %}
@@ -180,9 +202,10 @@ layout: base
                                 <a href="{{ page.next.url | relative_url }}"
                                    title="{{ page.next.title }}"
                                    class="group block">
-                                    <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-2">Next Article →</p>
+                                    <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-2" data-i18n="post.next">Next Article →</p>
                                     <h3 class="font-heading text-sm font-bold text-gray-900 dark:text-white group-hover:text-accent-cyan transition-colors leading-snug line-clamp-3">
-                                        {{ page.next.title }}
+                                        <span data-lang="en">{{ page.next.title }}</span>
+                                        <span data-lang="de">{{ page.next.title_de | default: page.next.title }}</span>
                                     </h3>
                                 </a>
                                 {% endif %}
@@ -228,7 +251,8 @@ layout: base
     // Copy URL functionality
     function copyPageUrl() {
         navigator.clipboard.writeText(window.location.href).then(() => {
-            alert('Link copied to clipboard!');
+            var msg = (window.PBG_I18N && window.PBG_I18N.t('post.copyLink.alert')) || 'Link copied to clipboard!';
+            alert(msg);
         }).catch(err => {
             console.error('Failed to copy link:', err);
         });

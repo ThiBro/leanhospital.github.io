@@ -12,23 +12,36 @@
                 <img src="{{ '/assets/img/logo-header.png' | relative_url }}" alt="{{ site.title }}" style="height: 125px; width: auto; position: fixed; top: -25px; left: 8px;" class="pointer-events-auto z-50">
             </a>
 
-            <!-- Search -->
-            <div style="position: fixed; right: 16px; top: 16px; z-index: 50;" class="flex items-center">
+            <!-- Search + Language -->
+            <div style="position: fixed; right: 16px; top: 16px; z-index: 50;" class="flex items-center gap-2">
                 <!-- Search input (hidden by default) -->
                 <form id="header-search-form" action="{{ '/search' | relative_url }}" method="get"
                       class="hidden items-center mr-2" onsubmit="return headerSearchSubmit()">
                     <input type="text" name="q" id="header-search-input"
                            placeholder="Search..."
+                           data-i18n-attr="placeholder:header.search.placeholder"
                            class="w-48 md:w-64 px-3 py-1.5 text-sm border border-gray-300 rounded-lg
                                   focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent
                                   bg-white dark:bg-blackground dark:border-gray-700 dark:text-light" />
                 </form>
                 <!-- Search icon button -->
                 <button onclick="toggleHeaderSearch()" aria-label="Search"
+                        data-i18n-attr="aria-label:header.search.aria"
                         class="text-gray-700 dark:text-gray-300 hover:text-accent-cyan transition-colors p-1">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                     </svg>
+                </button>
+
+                <!-- Language selector -->
+                <button id="header-lang-toggle" type="button" onclick="window.PBG_I18N && window.PBG_I18N.toggleLang()"
+                        aria-label="Switch language"
+                        data-i18n-attr="aria-label:header.lang.aria"
+                        class="inline-flex items-center gap-1 text-gray-700 dark:text-gray-300 hover:text-accent-cyan transition-colors p-1 text-sm font-bold uppercase tracking-wider border border-gray-300 rounded-md px-2 py-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m-9 9h18" />
+                    </svg>
+                    <span data-lang-current>EN</span>
                 </button>
             </div>
         </div>
@@ -39,6 +52,8 @@
         <div id="reading-progress" class="h-full bg-secondary w-0 transition-all duration-150"></div>
     </div>
 </header>
+
+<script src="{{ '/assets/js/i18n.js' | relative_url }}?{{ site.time | date: '%s%N' }}"></script>
 
 <script>
     function toggleHeaderSearch() {
@@ -83,4 +98,3 @@
         }
     });
 </script>
-
