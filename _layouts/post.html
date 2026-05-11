@@ -154,12 +154,26 @@ layout: base
                         {% if page.downloads %}
                         <div class="break-words min-w-0">
                             {% for dl in page.downloads %}
-                            <a href="{{ dl.url | relative_url }}" download class="block hover:scale-105 transition-transform duration-200 mb-5 text-center">
-                                <img src="{{ '/assets/img/download-button.png' | relative_url }}" alt="Download {{ dl.name }}" style="width: 100%; height: auto;">
-                                {% if page.downloads.size > 1 %}
-                                <span class="block mt-1 text-xs font-medium text-gray-600 dark:text-gray-400">{{ dl.name | split: '.' | first }}</span>
-                                {% endif %}
-                            </a>
+                            {%- assign dl_url_en = dl.url | default: dl.url_de -%}
+                            {%- assign dl_url_de = dl.url_de | default: dl.url -%}
+                            {%- assign dl_name_en = dl.name | default: dl.name_de -%}
+                            {%- assign dl_name_de = dl.name_de | default: dl.name -%}
+                            <div data-lang="en">
+                                <a href="{{ dl_url_en | relative_url }}" download class="block hover:scale-105 transition-transform duration-200 mb-5 text-center">
+                                    <img src="{{ '/assets/img/download-button.png' | relative_url }}" alt="Download {{ dl_name_en }}" style="width: 100%; height: auto;">
+                                    {% if page.downloads.size > 1 %}
+                                    <span class="block mt-1 text-xs font-medium text-gray-600 dark:text-gray-400">{{ dl_name_en | split: '.' | first }}</span>
+                                    {% endif %}
+                                </a>
+                            </div>
+                            <div data-lang="de">
+                                <a href="{{ dl_url_de | relative_url }}" download class="block hover:scale-105 transition-transform duration-200 mb-5 text-center">
+                                    <img src="{{ '/assets/img/download-button.png' | relative_url }}" alt="Download {{ dl_name_de }}" style="width: 100%; height: auto;">
+                                    {% if page.downloads.size > 1 %}
+                                    <span class="block mt-1 text-xs font-medium text-gray-600 dark:text-gray-400">{{ dl_name_de | split: '.' | first }}</span>
+                                    {% endif %}
+                                </a>
+                            </div>
                             {% endfor %}
                         </div>
                         {% endif %}

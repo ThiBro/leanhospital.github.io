@@ -2,7 +2,7 @@
 
 This guide documents all conventions for writing articles on the Jekyll blog **"Peakboard Guru"**. Follow these rules exactly when creating new posts.
 
-**Language:** Every article is **bilingual (English + German)**. The original article is written in English; an equivalent German translation is added in the same file. Only the downloadable `.pbmx` project files stay single-language.
+**Language:** Every article is **bilingual (English + German)**. The original article is written in English; an equivalent German translation is added in the same file. Downloadable `.pbmx` project files can optionally be provided in both languages too (see "Bilingual Downloads" below); if only one language is supplied, the same file is offered in both language modes.
 
 **Content focus:** Articles describe a **real-world use case** and the business value it delivers. Focus on the problem being solved, who benefits, and the outcome. Do NOT explain Peakboard internals, technical implementation details, or how the dashboard was built step by step.
 
@@ -76,6 +76,25 @@ downloads:
 
 Each download gets its own download button in the sidebar. Use meaningful names that describe what each project does.
 
+### Bilingual Downloads
+
+If a `.pbmx` project exists in both an English and a German variant (e.g., translated labels inside the dashboard), add `name_de` and `url_de` next to the English entry. The download button then swaps with the site language toggle:
+
+```yaml
+downloads:
+  - name: GymClassSchedule.pbmx
+    url: /assets/2026-03-03-14-30-00/GymClassSchedule_en.pbmx
+    name_de: Kursplan.pbmx
+    url_de: /assets/2026-03-03-14-30-00/Kursplan_de.pbmx
+```
+
+Rules:
+
+- If only `name`/`url` is set, the English file is shown to both EN and DE readers (fallback).
+- If only `name_de`/`url_de` is set, the German file is shown to both EN and DE readers (fallback).
+- If both are set, the language toggle in the header switches which file gets downloaded.
+- Translating downloads is **optional**. For projects with no translatable text (icons, numbers only), keep one single `name`/`url` entry.
+
 ### Optional Fields
 
 ```yaml
@@ -107,7 +126,7 @@ downloads:
 | `description_de` | German translation of the description. Always include for new posts |
 | `prompt` | **Required for every NEW post.** The exact AI prompt used to create the Peakboard project. Rendered in a visually distinct box at the bottom of the article body so readers know the project is AI-generated. Use the YAML folded scalar (`>`) syntax so single line breaks in the source become spaces and the text flows naturally - use a blank line for an explicit paragraph break. Older posts without this field continue to render without the box - the field is purely additive |
 | `prompt_de` | Optional German translation of the prompt. If omitted, the English prompt is shown in both language modes |
-| `downloads` | List of `{name, url}` rendered as Guru download button images at the top of the right sidebar. The `.pbmx` filename and the URL stay single-language - do not translate them |
+| `downloads` | List of `{name, url}` (optionally plus `name_de`/`url_de`) rendered as Guru download button images at the top of the right sidebar. See the "Bilingual Downloads" section above for translating a project file; for single-language projects, leave the `_de` variants off |
 | `read_more_links` | List of `{name, url}` shown in sidebar under "Related Links". Add `name_de` for the German label. The URL stays the same |
 
 ### Post Template (Single Project)
