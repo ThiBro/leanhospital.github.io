@@ -20,6 +20,8 @@ redirect_from:
 - /de/connected-greenhouse-monitoring-suite-floor-dashboard-and-office-overview/
 ---
 
+{% include youtube.html id="GmM59ymo3hQ" %}
+
 Kommerzielle Gewächshausbetriebe haben ein wiederkehrendes Problem: Die Leute, die die Pflanzen sehen können, sind nicht diejenigen, die entscheiden, wann eskaliert wird, und die Entscheider können nicht riechen, fühlen oder hören, was tatsächlich zwischen den Reihen passiert. Die Folge ist entweder Überalarmierung (jeder Ausschlag löst einen Anruf aus) oder mangelnde Quittierung (Alarme stehen auf einem Bildschirm, den niemand beobachtet, während eine kritische Zone zwei Stunden lang überhitzt). Die beiden Dashboards in dieser Suite schließen diesen Kreislauf mit einem gemeinsamen Datenrückgrat, sodass eine Aktion im Büro sofort auf der Hallenfläche sichtbar wird und ein manueller Check vor Ort dort protokolliert wird, wo das Büro ihn sehen kann.
 
 ## Das Hallen-Dashboard

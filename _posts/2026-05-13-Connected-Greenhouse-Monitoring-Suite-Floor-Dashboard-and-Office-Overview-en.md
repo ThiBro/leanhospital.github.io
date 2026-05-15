@@ -20,6 +20,8 @@ redirect_from:
 - /Connected-Greenhouse-Monitoring-Suite-Floor-Dashboard-and-Office-Overview.html
 ---
 
+{% include youtube.html id="AYugIurc6w8" %}
+
 Commercial greenhouse operations have a recurring problem: the people who can see the plants are not the people who decide when to escalate, and the people who decide cannot smell, touch, or hear what is actually happening between the rows. The result is either over-alerting (every spike triggers a phone call) or under-acknowledgement (alarms sit on a screen no one is watching while a critical zone bakes for two hours). The two dashboards in this suite are designed to close that loop with a single shared data backbone, so an action taken in the office is immediately reflected on the floor, and a manual check performed on the floor is logged where the office can see it.
 
 ## The Greenhouse Floor Dashboard
