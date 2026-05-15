@@ -6,7 +6,8 @@ layout: base
   <div class="mt-10">
     <h1 class="text-3xl font-bold mb-8" data-i18n="archive.title">Article Archive</h1>
 
-    {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+    {% assign lang_posts = site.posts | where: "lang", page.lang %}
+    {% assign postsByYear = lang_posts | group_by_exp:"post", "post.date | date: '%Y'" %}
     
     {% for year in postsByYear %}
       <div class="mb-12">
@@ -30,8 +31,7 @@ layout: base
                       
                       <h4 class="text-lg font-semibold">
                         <a href="{{ post.url | relative_url }}" class="hover:text-secondary">
-                          <span data-lang="en">{{ post.title }}</span>
-                          <span data-lang="de">{{ post.title_de | default: post.title }}</span>
+                          {{ post.title }}
                         </a>
                       </h4>
                       

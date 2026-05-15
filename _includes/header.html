@@ -2,20 +2,28 @@
     <!-- Thin accent line -->
     <div class="h-0.5 w-full bg-gradient-to-r from-transparent via-accent-cyan to-transparent"></div>
 
+    {%- assign _page_lang = page.lang | default: site.default_lang | default: 'en' -%}
+    {%- if _page_lang == 'de' -%}
+      {%- assign _home_url = '/de/' -%}
+      {%- assign _search_action = '/de/search/' -%}
+    {%- else -%}
+      {%- assign _home_url = '/' -%}
+      {%- assign _search_action = '/search/' -%}
+    {%- endif -%}
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
             <!-- Logo/Home - Desktop: large image, Mobile: smaller image -->
-            <a href="{{ '/' | relative_url }}" class="hidden md:block">
+            <a href="{{ _home_url | relative_url }}" class="hidden md:block">
                 <img src="{{ '/assets/img/logo-header.png' | relative_url }}" alt="{{ site.title }}" style="height: 250px; width: auto; position: fixed; top: -55px; left: 16px;" class="pointer-events-auto z-50">
             </a>
-            <a href="{{ '/' | relative_url }}" id="mobile-logo" class="block md:hidden">
+            <a href="{{ _home_url | relative_url }}" id="mobile-logo" class="block md:hidden">
                 <img src="{{ '/assets/img/logo-header.png' | relative_url }}" alt="{{ site.title }}" style="height: 125px; width: auto; position: fixed; top: -25px; left: 8px;" class="pointer-events-auto z-50">
             </a>
 
             <!-- Search + Language -->
             <div style="position: fixed; right: 16px; top: 16px; z-index: 50;" class="flex items-center gap-2">
                 <!-- Search input (hidden by default) -->
-                <form id="header-search-form" action="{{ '/search' | relative_url }}" method="get"
+                <form id="header-search-form" action="{{ _search_action | relative_url }}" method="get"
                       class="hidden items-center mr-2" onsubmit="return headerSearchSubmit()">
                     <input type="text" name="q" id="header-search-input"
                            placeholder="Search..."
@@ -33,16 +41,27 @@
                     </svg>
                 </button>
 
-                <!-- Language selector -->
-                <button id="header-lang-toggle" type="button" onclick="window.PBG_I18N && window.PBG_I18N.toggleLang()"
-                        aria-label="Switch language"
-                        data-i18n-attr="aria-label:header.lang.aria"
+                <!-- Language selector: server-rendered link to the translated page -->
+                {%- assign _current_lang = page.lang | default: site.default_lang | default: 'en' -%}
+                {%- if _current_lang == 'de' -%}
+                    {%- assign _other_lang_label = 'EN' -%}
+                    {%- assign _other_lang_url = page.translation_url | default: '/' -%}
+                    {%- assign _other_lang_aria = 'Switch to English' -%}
+                {%- else -%}
+                    {%- assign _other_lang_label = 'DE' -%}
+                    {%- assign _other_lang_url = page.translation_url | default: '/de/' -%}
+                    {%- assign _other_lang_aria = 'Sprache wechseln' -%}
+                {%- endif -%}
+                <a id="header-lang-toggle" href="{{ _other_lang_url | relative_url }}"
+                        aria-label="{{ _other_lang_aria }}"
+                        hreflang="{% if _current_lang == 'de' %}en{% else %}de{% endif %}"
+                        rel="alternate"
                         class="inline-flex items-center gap-1 text-gray-700 dark:text-gray-300 hover:text-accent-cyan transition-colors p-1 text-sm font-bold uppercase tracking-wider border border-gray-300 rounded-md px-2 py-0.5">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m-9 9h18" />
                     </svg>
-                    <span data-lang-current>EN</span>
-                </button>
+                    <span>{{ _other_lang_label }}</span>
+                </a>
             </div>
         </div>
     </div>

@@ -3,7 +3,11 @@ description: "Peakboard Guru shows you fancy Peakboard projects"
 baseurl: ""
 url: "https://peakboard-guru.com"
 permalink: /:title:output_ext
+default_lang: en
 port: 4001
+
+# Per-post permalinks set via front matter (/en/<slug>/ and /de/<slug>/)
+# always take precedence over the global permalink above.
 
 # Build settings
 markdown: kramdown

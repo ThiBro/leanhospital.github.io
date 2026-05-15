@@ -44,7 +44,8 @@ layout: base
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {%- for post in site.posts -%}
+      {%- assign lang_posts = site.posts | where: "lang", page.lang -%}
+      {%- for post in lang_posts -%}
         {% include article-card-magazine-clean.html post=post %}
       {%- endfor -%}
     </div>

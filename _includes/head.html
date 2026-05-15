@@ -36,6 +36,20 @@
 {% if page.tags.size > 0 %}<meta property="article:tag" content="{% for tag in page.tags %}{{ tag }}{% unless forloop.last %},{% endunless %}{% endfor %}">{% endif %}
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | replace:'.html','' | absolute_url }}">
 
+{%- comment -%}
+  hreflang alternates: explicit per-page translation_url wins, otherwise we
+  derive the counterpart by swapping /en/ <-> /de/ in the canonical URL.
+{%- endcomment -%}
+{%- assign _this_lang = page.lang | default: site.default_lang | default: 'en' -%}
+{%- assign _this_url = page.url | replace:'index.html','' | absolute_url -%}
+{%- if page.translation_url -%}
+  {%- assign _other_url = page.translation_url | absolute_url -%}
+  {%- if _this_lang == 'en' -%}{%- assign _other_lang = 'de' -%}{%- else -%}{%- assign _other_lang = 'en' -%}{%- endif -%}
+<link rel="alternate" hreflang="{{ _this_lang }}" href="{{ _this_url }}">
+<link rel="alternate" hreflang="{{ _other_lang }}" href="{{ _other_url }}">
+<link rel="alternate" hreflang="x-default" href="{%- if _this_lang == 'en' -%}{{ _this_url }}{%- else -%}{{ _other_url }}{%- endif -%}">
+{%- endif -%}
+
 <link href="{{ '/assets/css/main.css' | relative_url }}?{{ site.time | date: '%s%N' }}" rel="stylesheet">
 <link href="{{ '/assets/css/simpleLightbox.min.css' | relative_url }}?{{ site.time | date: '%s%N' }}" rel="stylesheet">
 <script src="{{ '/assets/js/simpleLightbox.min.js' | relative_url }}?{{ site.time | date: '%s%N' }}"></script>
@@ -59,4 +73,4 @@
 
 {% if page.noindex %}<meta name='robots' content='noindex,nofollow' />
 {% elsif page.draft %}<meta name='robots' content='noindex,nofollow' />
-{$ else $}<meta name="robots" content="index, follow">{% endif %}
+{% else %}<meta name="robots" content="index, follow">{% endif %}

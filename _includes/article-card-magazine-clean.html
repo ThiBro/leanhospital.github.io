@@ -23,8 +23,7 @@
     <!-- Title -->
     <h3 class="font-heading text-lg font-bold text-gray-900 dark:text-white mb-3 leading-tight group-hover:text-accent-cyan transition-colors line-clamp-2">
       <a href="{{ include.post.url | relative_url }}">
-        <span data-lang="en">{{ include.post.title }}</span>
-        <span data-lang="de">{{ include.post.title_de | default: include.post.title }}</span>
+        {{ include.post.title }}
       </a>
     </h3>
     
@@ -40,8 +39,7 @@
     
     <!-- Excerpt -->
     <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-3 leading-relaxed">
-      <span data-lang="en">{{ include.post.description | default: include.post.content | strip_html | truncatewords: 25 }}</span>
-      <span data-lang="de">{{ include.post.description_de | default: include.post.description | default: include.post.content | strip_html | truncatewords: 25 }}</span>
+      {{ include.post.description | default: include.post.content | strip_html | truncatewords: 25 }}
     </p>
     
     <!-- Read More Link -->

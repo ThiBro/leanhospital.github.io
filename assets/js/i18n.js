@@ -3,7 +3,6 @@
 (function () {
   'use strict';
 
-  var STORAGE_KEY = 'pbg-lang';
   var DEFAULT_LANG = 'en';
   var SUPPORTED = ['en', 'de'];
 
@@ -203,24 +202,11 @@
     }
   };
 
-  function getStoredLang() {
-    try {
-      var v = localStorage.getItem(STORAGE_KEY);
-      if (v && SUPPORTED.indexOf(v) !== -1) return v;
-    } catch (e) { /* ignore */ }
-    return null;
-  }
-
   function detectLang() {
-    var stored = getStoredLang();
-    if (stored) return stored;
-    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
-    if (nav.indexOf('de') === 0) return 'de';
+    // Language is fixed by the page URL and rendered into <html lang="">.
+    var attr = (document.documentElement.getAttribute('lang') || '').toLowerCase();
+    if (SUPPORTED.indexOf(attr) !== -1) return attr;
     return DEFAULT_LANG;
-  }
-
-  function setStoredLang(lang) {
-    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) { /* ignore */ }
   }
 
   function translate(key, lang) {
@@ -257,37 +243,11 @@
       });
     });
 
-    // Whole-block language sections (e.g. translated markdown content)
-    var blocks = document.querySelectorAll('[data-lang]');
-    blocks.forEach(function (el) {
-      el.style.display = (el.getAttribute('data-lang') === lang) ? '' : 'none';
-    });
-
-    // Document <html lang="">
-    document.documentElement.setAttribute('lang', lang);
-
-    // Update toggle button label
-    var btnLabel = document.querySelector('[data-lang-current]');
-    if (btnLabel) btnLabel.textContent = lang.toUpperCase();
-  }
-
-  function setLang(lang) {
-    if (SUPPORTED.indexOf(lang) === -1) lang = DEFAULT_LANG;
-    setStoredLang(lang);
-    window.PBG_LANG = lang;
-    applyTranslations(lang);
-    document.dispatchEvent(new CustomEvent('pbg:langchange', { detail: { lang: lang } }));
-  }
-
-  function toggleLang() {
-    setLang(window.PBG_LANG === 'de' ? 'en' : 'de');
   }
 
   // Public API
   window.PBG_I18N = {
     t: function (key) { return translate(key, window.PBG_LANG || DEFAULT_LANG); },
-    setLang: setLang,
-    toggleLang: toggleLang,
     getLang: function () { return window.PBG_LANG || DEFAULT_LANG; },
     apply: function () { applyTranslations(window.PBG_LANG || DEFAULT_LANG); }
   };

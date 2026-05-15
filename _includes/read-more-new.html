@@ -11,10 +11,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5 mr-2 flex-shrink-0 mt-1 transition-transform group-hover:translate-x-0.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
             </svg>
-            <span class="break-words">
-              <span data-lang="en">{{ link.name }}</span>
-              <span data-lang="de">{{ link.name_de | default: link.name }}</span>
-            </span>
+            <span class="break-words">{% if page.lang == 'de' %}{{ link.name_de | default: link.name }}{% else %}{{ link.name | default: link.name_de }}{% endif %}</span>
           </span>
         </a>
       {% endfor %}

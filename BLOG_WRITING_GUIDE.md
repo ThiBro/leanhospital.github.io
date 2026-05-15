@@ -2,7 +2,7 @@
 
 This guide documents all conventions for writing articles on the Jekyll blog **"Peakboard Guru"**. Follow these rules exactly when creating new posts.
 
-**Language:** Every article is **bilingual (English + German)**. The original article is written in English; an equivalent German translation is added in the same file. Downloadable `.pbmx` project files can optionally be provided in both languages too (see "Bilingual Downloads" below); if only one language is supplied, the same file is offered in both language modes.
+**Language:** Every article is **bilingual (English + German)**. Each post lives as **two sibling files** in `_posts/`: one English file (`*-en.md`) and one German file (`*-de.md`), each containing the content for that language only. Both files are deployed at their own URL (`/en/<slug>/` and `/de/<slug>/`) and link to each other through a `translation_url:` field. There are no `<div data-lang>` wrappers and no `*_de` front matter fields.
 
 **Content focus:** Articles describe a **real-world use case** and the business value it delivers. Focus on the problem being solved, who benefits, and the outcome. Do NOT explain Peakboard internals, technical implementation details, or how the dashboard was built step by step.
 
@@ -10,22 +10,33 @@ This guide documents all conventions for writing articles on the Jekyll blog **"
 
 ## 1. File Naming
 
-**Pattern:** `YYYY-MM-DD-Title-With-Hyphens.md`
+**Pattern:** two files per post, sharing the same date and slug:
 
-- Date prefix must match the `date:` field in front matter
-- Spaces in the title become hyphens
-- Preserve title case
-- Remove special characters (apostrophes, colons, etc.)
-- Place in `_posts/`
+```
+_posts/YYYY-MM-DD-Title-With-Hyphens-en.md
+_posts/YYYY-MM-DD-Title-With-Hyphens-de.md
+```
+
+- Date prefix must match the `date:` field in front matter and must be identical in both files
+- Slug portion mirrors the English title (so the EN and DE files sort next to each other in the file list)
+- Spaces in the title become hyphens, preserve title case, remove apostrophes/colons
+- The `-en` / `-de` suffix is what splits the two language variants
 
 **Example:**
 ```
-_posts/2026-03-03-Fun-with-Shelly-Plug-S-Switching-Power-on-and-off.md
+_posts/2026-03-03-Fitness-Studio-Class-Schedule-Display-en.md
+_posts/2026-03-03-Fitness-Studio-Class-Schedule-Display-de.md
 ```
+
+Both files generate URLs derived from the slug portion only, lower-cased:
+- `https://peakboard-guru.com/en/fitness-studio-class-schedule-display/`
+- `https://peakboard-guru.com/de/fitness-studio-class-schedule-display/`
 
 ---
 
 ## 2. Front Matter
+
+Each language file has its own simple front matter — no `*_de` paired fields anymore. The two files differ in `title`, `description`, `prompt`, `lang`, `permalink`, and `translation_url`; everything else (date, tags, image, downloads urls, etc.) is identical.
 
 ### Required Fields
 
@@ -33,38 +44,48 @@ _posts/2026-03-03-Fun-with-Shelly-Plug-S-Switching-Power-on-and-off.md
 ---
 layout: post
 title: Your Article Title Here
-title_de: Dein Artikeltitel hier
 date: 2026-03-03 00:00:00 +0000
 tags: tag1 tag2
 image: /assets/2026-03-03-14-30-00/title.png
+lang: en                                              # or `de`
+permalink: /en/your-article-title-here/               # or `/de/your-article-title-here/`
+translation_url: /de/your-article-title-here/         # or `/en/...`
 ---
 ```
 
 | Field | Description |
 |-------|-------------|
 | `layout` | Always `post` |
-| `title` | English title. Human-readable, often uses ` - ` as separator for subtitles |
-| `title_de` | German translation of the title. Required for every post |
-| `date` | Format: `YYYY-MM-DD HH:MM:SS +0000` |
-| `tags` | **Space-separated** tag slugs (not a YAML list!). First tag = primary category. Tag slugs stay in English |
-| `image` | Path to hero image. Pattern: `/assets/YYYY-MM-DD-HH-MM-SS/title.png` (or `title.jpg`). Match the actual file extension. The folder name matches the post's `date:` field with hyphens |
+| `title` | The article title in this file's language. Human-readable, often uses ` - ` as separator for subtitles |
+| `date` | Format: `YYYY-MM-DD HH:MM:SS +0000`. Identical in both language files |
+| `tags` | **Space-separated** tag slugs (not a YAML list!). First tag = primary category. Tag slugs stay in English. Identical in both files |
+| `image` | Path to hero image. Pattern: `/assets/YYYY-MM-DD-HH-MM-SS/title.png` (or `.jpg`). Shared by both languages |
+| `lang` | `en` or `de`. Drives `<html lang>`, language-filtered listings, and hreflang tags |
+| `permalink` | Output URL of this file. Pattern: `/en/<slug>/` or `/de/<slug>/`. The slug is the lower-cased, hyphenated title |
+| `translation_url` | Pointer to the sibling file's URL. Used by the language toggle and hreflang `<link rel="alternate">` tags |
 
 ### Recommended Fields
 
-Always include `bg_alternative`, `description`, and `description_de` for new posts:
+Always include `bg_alternative` and `description` for new posts. `description` is per-language and is used for the SEO meta tag and the hero subtitle.
 
 ```yaml
 bg_alternative: true
 description: "One or two sentences summarizing what this article covers."
-description_de: "Ein oder zwei Sätze, die zusammenfassen, worum es in diesem Artikel geht."
+```
+
+### Downloads
+
+`downloads` is a per-language list of `.pbmx` (and similar) files shown as Guru download buttons in the right sidebar. Each entry needs a `name` and a `url`.
+
+```yaml
 downloads:
   - name: ProjectFile.pbmx
     url: /assets/2026-03-03-14-30-00/ProjectFile.pbmx
 ```
 
-### Multi-Project Downloads
+#### Multi-Project Downloads
 
-Some articles cover a multi-project system (e.g., an ordering dashboard + a kitchen display). In this case, list **all** project files in the `downloads` field with descriptive names:
+Some articles cover a multi-project system (e.g., an ordering kiosk + a kitchen display). List all project files with descriptive names:
 
 ```yaml
 downloads:
@@ -74,108 +95,98 @@ downloads:
     url: /assets/2026-03-03-14-30-00/KitchenDisplay.pbmx
 ```
 
-Each download gets its own download button in the sidebar. Use meaningful names that describe what each project does.
+#### Bilingual Downloads
 
-### Bilingual Downloads
-
-If a `.pbmx` project exists in both an English and a German variant (e.g., translated labels inside the dashboard), add `name_de` and `url_de` next to the English entry. The download button then swaps with the site language toggle:
+If a `.pbmx` project exists in both an English and a German variant (e.g., translated labels inside the dashboard), reference the **language-matched file** in each language's front matter:
 
 ```yaml
+# in *-en.md
 downloads:
   - name: GymClassSchedule.pbmx
     url: /assets/2026-03-03-14-30-00/GymClassSchedule_en.pbmx
-    name_de: Kursplan.pbmx
-    url_de: /assets/2026-03-03-14-30-00/Kursplan_de.pbmx
+
+# in *-de.md
+downloads:
+  - name: Kursplan.pbmx
+    url: /assets/2026-03-03-14-30-00/Kursplan_de.pbmx
 ```
 
-Rules:
-
-- If only `name`/`url` is set, the English file is shown to both EN and DE readers (fallback).
-- If only `name_de`/`url_de` is set, the German file is shown to both EN and DE readers (fallback).
-- If both are set, the language toggle in the header switches which file gets downloaded.
-- Translating downloads is **optional**. For projects with no translatable text (icons, numbers only), keep one single `name`/`url` entry.
+If the project has no translatable text (icons/numbers only), reference the same `.pbmx` URL in both files.
 
 ### Optional Fields
 
 ```yaml
-prompt: >
+prompt: |
   The exact prompt that was given to the AI to generate the Peakboard
-  project for this article. Use the YAML folded scalar (>) so single
-  line breaks in the source become spaces and the text flows naturally
-  in the rendered box. Use a blank line for an explicit paragraph break.
-prompt_de: >
-  Optionaler deutscher Prompt-Text, falls der Prompt selbst übersetzt
-  wurde. Wenn nicht gesetzt, wird der englische Prompt für beide
-  Sprachen angezeigt.
+  project for this article. Use the YAML block scalar (|) so explicit
+  line breaks in the source are preserved.
 read_more_links:
-  - name: Display Text
-    name_de: Anzeigetext
-    url: https://example.com
-  - name: Related Article
-    name_de: Verwandter Artikel
-    url: /Related-Article-Title.html
-downloads:
-  - name: ProjectFile.pbmx
-    url: /assets/2026-03-03-14-30-00/ProjectFile.pbmx
+  - name: Other UI design articles
+    url: /category/ui
+  - name: More use case examples
+    url: /category/usecase
+redirect_from:
+  - /Old-Article-Title.html
 ```
 
 | Field | Description |
 |-------|-------------|
 | `bg_alternative` | `true` = light hero box style with a semi-transparent text box over the image. Always use for new posts |
-| `description` | English summary shown below title and used for SEO meta tags. Always include for new posts |
-| `description_de` | German translation of the description. Always include for new posts |
-| `prompt` | **Required for every NEW post.** The exact AI prompt used to create the Peakboard project. Rendered in a visually distinct box at the bottom of the article body so readers know the project is AI-generated. Use the YAML folded scalar (`>`) syntax so single line breaks in the source become spaces and the text flows naturally - use a blank line for an explicit paragraph break. Older posts without this field continue to render without the box - the field is purely additive |
-| `prompt_de` | Optional German translation of the prompt. If omitted, the English prompt is shown in both language modes |
-| `downloads` | List of `{name, url}` (optionally plus `name_de`/`url_de`) rendered as Guru download button images at the top of the right sidebar. See the "Bilingual Downloads" section above for translating a project file; for single-language projects, leave the `_de` variants off |
-| `read_more_links` | List of `{name, url}` shown in sidebar under "Related Links". Add `name_de` for the German label. The URL stays the same |
+| `description` | Summary in this file's language. Used for the SEO `<meta name="description">` and below the hero title. Always include |
+| `prompt` | **Required for every NEW post.** The exact AI prompt used to create the Peakboard project, in this file's language. Rendered in a visually distinct box at the bottom of the article body. Use YAML block scalar (`\|`) so line breaks survive |
+| `downloads` | List of `{name, url}` rendered as Guru download button images in the right sidebar |
+| `read_more_links` | List of `{name, url}` shown in the sidebar under "Related Links". Each language file uses names in that language; URLs may be identical |
+| `redirect_from` | Optional list of legacy paths (from `jekyll-redirect-from`) that should 301 to this file. Only the **English** file should redirect from the pre-migration `/<Title>.html` URL |
 
 ### Post Template (Single Project)
 
+**`_posts/2026-03-03-Sample-Article-en.md`**:
 ```yaml
 ---
 layout: post
-title: Article Title - With Subtitle
-title_de: Artikeltitel - Mit Untertitel
+title: Sample Article - With Subtitle
 date: 2026-03-03 00:00:00 +0000
 tags: fitness
 image: /assets/2026-03-03-14-30-00/title.png
 bg_alternative: true
 description: "Short summary of the article for SEO and hero display."
-description_de: "Kurze Zusammenfassung des Artikels für SEO und Hero-Anzeige."
-prompt: >
+prompt: |
   Build a Peakboard dashboard that shows the daily class schedule for a
   fitness studio with KPI tiles, an occupancy bar chart, and a countdown
   to the next class.
 downloads:
   - name: SampleProject.pbmx
     url: /assets/2026-03-03-14-30-00/SampleProject.pbmx
+lang: en
+permalink: /en/sample-article-with-subtitle/
+translation_url: /de/sample-article-with-subtitle/
 ---
 ```
 
-### Post Template (Multi-Project)
-
+**`_posts/2026-03-03-Sample-Article-de.md`**:
 ```yaml
 ---
 layout: post
-title: Restaurant Ordering System - Order Kiosk and Kitchen Display
-title_de: Restaurant-Bestellsystem - Bestellkiosk und Küchenanzeige
+title: Beispielartikel - Mit Untertitel
 date: 2026-03-03 00:00:00 +0000
-tags: gastronomy
-image: /assets/2026-03-03-14-30-00/title.jpg
+tags: fitness
+image: /assets/2026-03-03-14-30-00/title.png
 bg_alternative: true
-description: "A complete restaurant ordering system with a customer-facing kiosk and a kitchen display."
-description_de: "Ein komplettes Restaurant-Bestellsystem mit einem Kundenkiosk und einer Küchenanzeige."
-prompt: >
-  Build a two-part Peakboard system for a restaurant: a customer-facing
-  ordering kiosk on a touchscreen, and a kitchen display that shows
-  incoming orders sorted by time.
+description: "Kurze Zusammenfassung des Artikels für SEO und Hero-Anzeige."
+prompt: |
+  Erstelle ein Peakboard-Dashboard, das den Tageskursplan eines
+  Fitnessstudios mit KPI-Kacheln, einem Auslastungsbalkendiagramm und
+  einem Countdown zum nächsten Kurs zeigt.
 downloads:
-  - name: OrderKiosk.pbmx
-    url: /assets/2026-03-03-14-30-00/OrderKiosk.pbmx
-  - name: KitchenDisplay.pbmx
-    url: /assets/2026-03-03-14-30-00/KitchenDisplay.pbmx
+  - name: Beispielprojekt.pbmx
+    url: /assets/2026-03-03-14-30-00/SampleProject.pbmx
+lang: de
+permalink: /de/sample-article-with-subtitle/
+translation_url: /en/sample-article-with-subtitle/
 ---
 ```
+
+The DE file's `permalink` slug mirrors the EN slug (we keep one slug per post so the URLs stay aligned and easy to spot-check).
 
 ---
 
@@ -197,15 +208,13 @@ Tags are space-separated in front matter. Use an **industry-specific** tag that 
 | `energy` | Energy, utilities, sustainability |
 | `transportation` | Public transit, airports, fleet management |
 
-You can use multiple tags if applicable (e.g. `production logistics`). The first tag is used as the primary category shown on the article card. Add new tags as needed when no existing tag fits - keep them lowercase, use hyphens for multi-word tags.
+Tag slugs stay in **English** in both files. The first tag is used as the primary category shown on the article card. You can use multiple tags if applicable (e.g. `production logistics`). Add new tags as needed when no existing tag fits - keep them lowercase, use hyphens for multi-word tags.
 
 ---
 
 ## 4. Article Content Structure
 
-### Bilingual Body Structure
-
-The article body consists of two language blocks that wrap the actual content. Shared elements (video tags, YouTube embeds) live **outside** the language blocks at the top of the body so they appear in both languages.
+The body is plain markdown for **just this file's language**. No language wrappers, no `data-lang` divs, no `markdown="1"` boilerplate.
 
 ```markdown
 ---
@@ -213,39 +222,18 @@ The article body consists of two language blocks that wrap the actual content. S
 ---
 {% include youtube.html id="VIDEO_ID" %}
 
-<div data-lang="en" markdown="1">
+In this article we...
 
-...full English content here, including all headings and images...
+## First section
 
-</div>
-
-<div data-lang="de" markdown="1">
-
-...complete German translation here, including all headings and images...
-
-</div>
+...
 ```
 
-Important rules:
-
-- The `markdown="1"` attribute is mandatory - kramdown only renders Markdown inside HTML blocks when this attribute is set
-- Leave a blank line directly after the opening `<div ...>` and directly before the closing `</div>` so kramdown enters Markdown mode correctly
-- Both language blocks must contain the **same set of images, screenshots, and structural headings** - just translated text
-- Image paths, URLs, and `assets/.../*.pbmx` references stay identical in both blocks
-- Tag links (`/category/...`) stay in English (tags are slugs)
-- The language toggle in the header chooses which block is visible at runtime; both are present in the rendered HTML
+Shared assets (the YouTube include, an opening `<video>` element) sit at the top of the body in **both** files — they are just markdown, not language-specific.
 
 ### Opening Paragraph (No Header!)
 
-Every language block starts with a direct intro paragraph **without** any heading. No `# Introduction`, no `---` separator. Just text immediately after the opening `<div ...>` line and its blank line.
-
-```markdown
-<div data-lang="en" markdown="1">
-
-In this article, we will discuss how to...
-
-</div>
-```
+Every article starts with a direct intro paragraph **without** any heading. No `# Introduction`, no `---` separator. Just text immediately after the front matter and any shared video include.
 
 ### Headers
 
@@ -255,34 +243,34 @@ In this article, we will discuss how to...
 - Common section patterns:
   - Setup / context section
   - Step-by-step procedural sections (one H2 per step)
-  - `## Result` or `## Result and conclusion` or `## Conclusion` at the end
+  - `## Result` or `## Conclusion` at the end
 
 ### Images
 
-Store images in `/assets/YYYY-MM-DD-HH-MM-SS/` folder matching the post date.
+Store images in `/assets/YYYY-MM-DD-HH-MM-SS/` folder matching the post date. The folder is shared by both language files.
 
 **Naming conventions:**
-- Hero image: `title.png` or `title.jpg` (match the actual file extension)
-- Screenshot (single project): `010.png` - named `010.png`
-- Screenshots (multi-project): `{ProjectName}_010.png` for each sub-project (e.g., `OrderDashboard_010.png`, `KitchenDisplay_010.png`)
+- Hero image: `title.png` or `title.jpg` (match the actual file extension). The hero is language-neutral and not localized
+- Screenshot (single project, English/default): `010.png`
+- Screenshot (single project, German variant): `010_de.png` - same base name with `_de` suffix
+- Screenshots (multi-project): `{ProjectName}_010.png` for each sub-project (e.g., `OrderDashboard_010.png`); the German variant adds the `_de` suffix
 - Downloadable files (`.pbmx`, `.pbfx`, `.py`, `.txt`) go in the same folder
 
-**Markdown syntax (single project):**
+**Bilingual screenshots:**
+
+Provide screenshots in both languages whenever the dashboard contains visible text (labels, headers, KPI names). Each file references its own variant:
+
+`*-en.md`:
 ```markdown
-![screenshot](/assets/2026-03-03-14-30-00/010.png)
+![dashboard overview](/assets/2026-03-03-14-30-00/010.png)
 ```
 
-**Markdown syntax (multi-project):**
-For multi-project articles, show each project's screenshot with a descriptive heading or label:
+`*-de.md`:
 ```markdown
-## The Order Dashboard
-
-![Order Dashboard](/assets/2026-03-03-14-30-00/OrderDashboard_010.png)
-
-## The Kitchen Display
-
-![Kitchen Display](/assets/2026-03-03-14-30-00/KitchenDisplay_010.png)
+![Dashboard-Übersicht](/assets/2026-03-03-14-30-00/010_de.png)
 ```
+
+**Fallback rule:** If a screenshot exists in only one language (because the dashboard shows numbers/icons only), reference the same file in both files. The alt text is always written in the file's own language.
 
 ### Code Blocks
 
@@ -300,19 +288,19 @@ For multi-project articles, show each project's screenshot with a descriptive he
 ```
 ````
 
-Supported language identifiers: `json`, `lua`, `sql`, `csharp`, `python`, `abap`, `xml`, `powershell`, `html`, `url` (for URL snippets), `text` (plain text)
+Supported language identifiers: `json`, `lua`, `sql`, `csharp`, `python`, `abap`, `xml`, `powershell`, `html`, `url`, `text`.
 
 ### Links
 
-- Internal links use the **title slug** with `.html` extension (no date in URL!):
+- Internal links use the **language-prefixed permalink**:
   ```markdown
-  [Related Article](/Related-Article-Title-Slug.html)
+  [Related Article](/en/related-article-title-slug/)
   ```
+  In the German file, link to the matching `/de/...` URL.
 - External links use full URLs:
   ```markdown
   [Shelly API Docs](https://shelly-api-docs.shelly.cloud/gen1/)
   ```
-- No category links (categories have been removed)
 
 ### Formatting
 
@@ -327,26 +315,37 @@ Supported language identifiers: `json`, `lua`, `sql`, `csharp`, `python`, `abap`
 {% include youtube.html id="VIDEO_ID_HERE" %}
 ```
 
-Always placed at the very top of the article, before the first text paragraph. No heading needed above the video.
+Always placed at the very top of the article body, before the first text paragraph. No heading needed above the video. Each language file usually has its own `id` value pointing to the language-matched YouTube upload.
 
 ---
 
 ## 5. URL Structure
 
-The blog uses flat permalinks: `/:title:output_ext`
+The blog uses language-prefixed pretty URLs:
 
-A post file named `2026-03-03-My-Cool-Article.md` becomes the URL:
 ```
-/My-Cool-Article.html
+/en/<slug>/      (English version of every post)
+/de/<slug>/      (German version of every post)
 ```
 
-The URL preserves the exact filename casing (not lowercased). There is no date in the URL path.
+The slug is the lower-cased, hyphenated form of the file's title portion. For example, `_posts/2026-03-03-My-Cool-Article-en.md` becomes `https://peakboard-guru.com/en/my-cool-article/`.
+
+The non-prefixed root pages stay on `/` (EN) and `/de/` (DE):
+
+| Page | English | German |
+|------|---------|--------|
+| Home | `/` | `/de/` |
+| About | `/about/` | `/de/about/` |
+| Impressum | `/impressum/` | `/de/impressum/` |
+| Search | `/search/` | `/de/search/` |
+
+Each post HTML includes `<link rel="alternate" hreflang>` tags pointing at the sibling language, plus a per-language `<link rel="canonical">`. The language toggle in the header is a real `<a href>` to `page.translation_url` (no JavaScript needed) so search engines can crawl both languages independently.
 
 ---
 
 ## 6. Writing Style
 
-- **Language:** Bilingual - English first, then a complete German translation in a separate `data-lang="de"` block
+- **Language:** Bilingual - two separate files, one per language. Each file is written natively (not as a literal translation)
 - **Voice:** The blog author is "Thilo" - write in first person plural ("we") or instructional second person ("you")
 - **Tone:** Technical but approachable, sometimes playful/punny titles
 - **Structure:** Problem → Setup → Step-by-step walkthrough → Result/Conclusion
@@ -354,8 +353,8 @@ The URL preserves the exact filename casing (not lowercased). There is no date i
 - **Screenshots:** Heavy use of annotated screenshots showing each configuration step
 - **Practical focus:** Every article typically includes a downloadable `.pbmx` sample project
 - **Download button:** Do NOT add download links as text in the article body. The Guru download button image is rendered automatically in the right sidebar from the `downloads` front matter field
-- **Cross-linking:** Reference related articles and categories using internal links
-- **Punctuation:** Never use em dashes (---) or en dashes (--). Use only regular hyphens (-)
+- **Cross-linking:** Reference related articles via the language-prefixed `/en/...` or `/de/...` URL
+- **Punctuation:** Never use em dashes (—) or en dashes (–). Use only regular hyphens (-)
 
 ---
 
@@ -363,24 +362,24 @@ The URL preserves the exact filename casing (not lowercased). There is no date i
 
 ### Single-Project Example
 
+**`_posts/2026-03-03-Gym-Class-Schedule-Display-en.md`**:
 ```markdown
 ---
 layout: post
 title: Gym Class Schedule Display - Building a Fitness Studio Dashboard with Peakboard
-title_de: Kursplan-Display - Ein Fitnessstudio-Dashboard mit Peakboard bauen
 date: 2026-03-03 00:00:00 +0000
 tags: fitness
 image: /assets/2026-03-03-14-30-00/title.png
 bg_alternative: true
 description: "Build a dynamic gym class schedule display with Peakboard."
-description_de: "Ein dynamisches Fitnessstudio-Kursplan-Display mit Peakboard bauen."
 downloads:
   - name: GymClassSchedule.pbmx
     url: /assets/2026-03-03-14-30-00/GymClassSchedule.pbmx
+lang: en
+permalink: /en/gym-class-schedule-display-building-a-fitness-studio-dashboard-with-peakboard/
+translation_url: /de/gym-class-schedule-display-building-a-fitness-studio-dashboard-with-peakboard/
 ---
-<video width="100%" controls><source src="{{ site.baseurl }}/assets/2026-03-03-14-30-00/video.mp4" type="video/mp4"></video>
-
-<div data-lang="en" markdown="1">
+{% include youtube.html id="EN_VIDEO_ID" %}
 
 Fitness studios often need a way to present their daily class schedule.
 In this article, we build a complete dashboard with a course timetable,
@@ -390,19 +389,31 @@ KPI cards, and an occupancy bar chart.
 
 The dashboard runs at 1920x1080 with a dark design and neon cyan accents.
 
-## Setting up the data
-
-The application uses two Peakboard lists as its data backbone.
-
 ![image](/assets/2026-03-03-14-30-00/010.png)
 
 ## Result
 
 The finished dashboard provides an at-a-glance overview of the schedule.
+```
 
-</div>
-
-<div data-lang="de" markdown="1">
+**`_posts/2026-03-03-Gym-Class-Schedule-Display-de.md`**:
+```markdown
+---
+layout: post
+title: Kursplan-Display - Ein Fitnessstudio-Dashboard mit Peakboard bauen
+date: 2026-03-03 00:00:00 +0000
+tags: fitness
+image: /assets/2026-03-03-14-30-00/title.png
+bg_alternative: true
+description: "Ein dynamisches Fitnessstudio-Kursplan-Display mit Peakboard bauen."
+downloads:
+  - name: Kursplan.pbmx
+    url: /assets/2026-03-03-14-30-00/GymClassSchedule.pbmx
+lang: de
+permalink: /de/gym-class-schedule-display-building-a-fitness-studio-dashboard-with-peakboard/
+translation_url: /en/gym-class-schedule-display-building-a-fitness-studio-dashboard-with-peakboard/
+---
+{% include youtube.html id="DE_VIDEO_ID" %}
 
 Fitnessstudios brauchen oft einen Weg, ihren Tageskursplan zu präsentieren.
 In diesem Artikel bauen wir ein komplettes Dashboard mit einer Kurstabelle,
@@ -412,109 +423,35 @@ KPI-Karten und einem Auslastungsbalkendiagramm.
 
 Das Dashboard läuft mit 1920x1080 in dunklem Design mit Neon-Cyan-Akzenten.
 
-## Die Daten einrichten
-
-Die Anwendung nutzt zwei Peakboard-Listen als Datengrundlage.
-
-![image](/assets/2026-03-03-14-30-00/010.png)
+![image](/assets/2026-03-03-14-30-00/010_de.png)
 
 ## Ergebnis
 
 Das fertige Dashboard liefert einen Auf-einen-Blick-Überblick über den Kursplan.
-
-</div>
-```
-
-### Multi-Project Example
-
-```markdown
----
-layout: post
-title: Restaurant Ordering System - Customer Kiosk and Kitchen Display
-title_de: Restaurant-Bestellsystem - Kundenkiosk und Küchenanzeige
-date: 2026-03-03 00:00:00 +0000
-tags: gastronomy
-image: /assets/2026-03-03-14-30-00/title.jpg
-bg_alternative: true
-description: "A two-part restaurant system with a self-service ordering kiosk and a real-time kitchen display."
-description_de: "Ein zweiteiliges Restaurant-System mit einem Selbstbedienungskiosk und einer Echtzeit-Küchenanzeige."
-downloads:
-  - name: OrderKiosk.pbmx
-    url: /assets/2026-03-03-14-30-00/OrderKiosk.pbmx
-  - name: KitchenDisplay.pbmx
-    url: /assets/2026-03-03-14-30-00/KitchenDisplay.pbmx
----
-<video width="100%" controls><source src="{{ site.baseurl }}/assets/2026-03-03-14-30-00/video.mp4" type="video/mp4"></video>
-
-<div data-lang="en" markdown="1">
-
-Managing orders in a busy restaurant can be chaotic. This two-part system
-connects a customer-facing ordering kiosk with a kitchen display that
-shows incoming orders in real time.
-
-## The Order Kiosk
-
-Customers browse the menu and place orders directly on a touchscreen.
-
-![Order Kiosk](/assets/2026-03-03-14-30-00/OrderKiosk_010.png)
-
-## The Kitchen Display
-
-As orders come in, they appear on the kitchen screen sorted by time.
-
-![Kitchen Display](/assets/2026-03-03-14-30-00/KitchenDisplay_010.png)
-
-## Result
-
-The two dashboards work together to streamline the ordering process.
-
-</div>
-
-<div data-lang="de" markdown="1">
-
-Bestellungen in einem belebten Restaurant zu verwalten kann chaotisch sein.
-Dieses zweiteilige System verbindet einen Kundenkiosk mit einer Küchenanzeige,
-die eingehende Bestellungen in Echtzeit zeigt.
-
-## Der Bestellkiosk
-
-Kunden stöbern im Menü und geben Bestellungen direkt am Touchscreen auf.
-
-![Order Kiosk](/assets/2026-03-03-14-30-00/OrderKiosk_010.png)
-
-## Die Küchenanzeige
-
-Eingehende Bestellungen erscheinen auf dem Küchenbildschirm sortiert nach Zeit.
-
-![Kitchen Display](/assets/2026-03-03-14-30-00/KitchenDisplay_010.png)
-
-## Ergebnis
-
-Die beiden Dashboards arbeiten zusammen und verschlanken den Bestellprozess.
-
-</div>
 ```
 
 ---
 
 ## 8. Checklist Before Publishing
 
-- [ ] File name matches pattern `YYYY-MM-DD-Title.md`
+For each post you need to ship **both** an `-en.md` and a `-de.md` file. Run this check against each side:
+
+- [ ] File name follows `YYYY-MM-DD-Title-<lang>.md`
 - [ ] `layout: post` is set
-- [ ] `date:` matches the file name date
-- [ ] `tags:` uses valid tags from the list above (space-separated)
+- [ ] `date:` matches the file name date and is identical in both files
+- [ ] `tags:` uses valid tags from the list above (space-separated, English)
 - [ ] `image:` points to an existing hero image
-- [ ] `title_de` and `description_de` are set with German translations
-- [ ] `prompt:` is set (the AI prompt used to create the project) - mandatory for new posts
-- [ ] Body has both `<div data-lang="en" markdown="1">` and `<div data-lang="de" markdown="1">` blocks
-- [ ] Both blocks contain blank lines after the opening `<div ...>` and before the closing `</div>`
-- [ ] Both blocks share the same headings, images, and structure
+- [ ] `lang:` is set (`en` or `de`)
+- [ ] `permalink:` is `/en/<slug>/` or `/de/<slug>/` with the same slug on both sides
+- [ ] `translation_url:` points to the sibling file's permalink
+- [ ] `description:` is set in this file's language
+- [ ] `prompt:` is set in this file's language - mandatory for new posts
+- [ ] Body is single-language markdown (no `<div data-lang>` wrappers)
 - [ ] No `#` (H1) headers in the body
-- [ ] First paragraph in each block has no heading
-- [ ] Internal links use `/Title-Slug.html` format (no date in URL)
-- [ ] Images are in `/assets/YYYY-MM-DD-HH-MM-SS/` folder
-- [ ] Article ends with a `## Result` or `## Conclusion` section (both languages)
+- [ ] First paragraph has no heading
+- [ ] Internal links use `/en/<slug>/` (in the EN file) or `/de/<slug>/` (in the DE file)
+- [ ] Images are in `/assets/YYYY-MM-DD-HH-MM-SS/` folder; alt text matches the file's language
+- [ ] Article ends with a `## Result` or `## Conclusion` section
 - [ ] Download link(s) in `downloads:` front matter only (not as text in the article body)
-- [ ] `read_more_links` entries have `name_de` for the German label
-- [ ] For multi-project articles: all project files listed in `downloads:` with descriptive names
-- [ ] For multi-project articles: each project has its own screenshot shown in the article body
+- [ ] `read_more_links` entries use names in this file's language
+- [ ] Multi-project articles: all project files listed in `downloads:` with descriptive names; each project has its own screenshot

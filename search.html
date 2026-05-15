@@ -1,5 +1,9 @@
 ---
 layout: base
+lang: en
+permalink: /search/
+translation_url: /de/search/
+search_data_url: /search.json
 ---
 
 <div id="search-app" class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -84,13 +88,12 @@ createApp({
         const searchResults = ref([])
         const posts = ref([])
         const fuse = ref(null)
-        const lang = ref((window.PBG_I18N && window.PBG_I18N.getLang()) || 'en')
 
-        const titleKey = computed(() => lang.value === 'de' ? 'title_de' : 'title')
-        const contentKey = computed(() => lang.value === 'de' ? 'content_de' : 'content')
+        const titleKey = 'title'
+        const contentKey = 'content'
 
-        const displayTitle = (item) => item[titleKey.value] || item.title
-        const displayContent = (item) => item[contentKey.value] || item.content
+        const displayTitle = (item) => item.title
+        const displayContent = (item) => item.content
 
         const highlightText = (text, matches, key) => {
             if (!matches) return text
@@ -115,8 +118,8 @@ createApp({
             if (!posts.value.length) return
             fuse.value = new Fuse(posts.value, {
                 keys: [
-                    { name: titleKey.value, weight: 0.5 },
-                    { name: contentKey.value, weight: 0.3 }
+                    { name: titleKey, weight: 0.5 },
+                    { name: contentKey, weight: 0.3 }
                 ],
                 includeScore: true,
                 includeMatches: true,
@@ -129,19 +132,11 @@ createApp({
 
         onMounted(async () => {
             try {
-                const response = await fetch('{{ "/search.json" | relative_url }}')
+                const response = await fetch('{{ page.search_data_url | relative_url }}')
                 posts.value = await response.json()
 
                 buildFuse()
 
-                // Re-build index and re-run search when language changes
-                document.addEventListener('pbg:langchange', (e) => {
-                    lang.value = e.detail.lang
-                    buildFuse()
-                    performSearch()
-                })
-
-                // Read query parameter from URL
                 const params = new URLSearchParams(window.location.search)
                 const q = params.get('q')
                 if (q) {

@@ -16,8 +16,7 @@
             </div>
             <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                 <a href="{{ include.post.url | relative_url }}">
-                    <span data-lang="en">{{ include.post.title }}</span>
-                    <span data-lang="de">{{ include.post.title_de | default: include.post.title }}</span>
+                    {{ include.post.title }}
                 </a>
             </h3>
             <div class="flex flex-wrap gap-2 mt-2">
@@ -26,8 +25,7 @@
                 {% endfor %}
             </div>
             <p class="mt-4 text-gray-500 dark:text-gray-400">
-                <span data-lang="en">{{ include.post.description | default: include.post.content | strip_html | truncatewords: 50 }}</span>
-                <span data-lang="de">{{ include.post.description_de | default: include.post.description | default: include.post.content | strip_html | truncatewords: 50 }}</span>
+                {{ include.post.description | default: include.post.content | strip_html | truncatewords: 50 }}
             </p>
         </div>
         <div class="mt-4">

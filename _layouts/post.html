@@ -50,14 +50,12 @@ layout: base
                     </p>
 
                     <h1 class="font-heading text-xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold {% unless page.bg_alternative %}text-white{% else %}text-gray-900 dark:text-white{% endunless %} leading-tight tracking-tight">
-                        <span data-lang="en">{{ page.title }}</span>
-                        <span data-lang="de">{{ page.title_de | default: page.title }}</span>
+                        {{ page.title }}
                     </h1>
 
-                    {% if page.description or page.description_de %}
+                    {% if page.description %}
                     <p class="mt-5 text-base md:text-lg {% unless page.bg_alternative %}text-white/80{% else %}text-gray-600 dark:text-gray-400{% endunless %} max-w-3xl">
-                        <span data-lang="en">{{ page.description }}</span>
-                        <span data-lang="de">{{ page.description_de | default: page.description }}</span>
+                        {{ page.description }}
                     </p>
                     {% endif %}
 
@@ -85,13 +83,11 @@ layout: base
                 {% endif %}
             </p>
             <h1 class="font-heading text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight leading-tight">
-                <span data-lang="en">{{ page.title }}</span>
-                <span data-lang="de">{{ page.title_de | default: page.title }}</span>
+                {{ page.title }}
             </h1>
-            {% if page.description or page.description_de %}
+            {% if page.description %}
             <p class="mt-4 text-gray-600 dark:text-gray-400 max-w-3xl">
-                <span data-lang="en">{{ page.description }}</span>
-                <span data-lang="de">{{ page.description_de | default: page.description }}</span>
+                {{ page.description }}
             </p>
             {% endif %}
         </div>
@@ -128,7 +124,7 @@ layout: base
                     <div id="article-content" class="prose prose-dismantle text-gray-900 dark:text-light dark:prose-invert max-w-none">
                         {{ content }}
 
-                        {% if page.prompt or page.prompt_de %}
+                        {% if page.prompt %}
                         <aside class="not-prose mt-10 rounded-xl overflow-hidden" style="border: 2px solid #5C2E0E; background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);">
                             <div class="flex items-center gap-2 px-5 py-3" style="background-color: #5C2E0E;">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-accent-cyan flex-shrink-0">
@@ -140,7 +136,7 @@ layout: base
                             </div>
                             <div class="px-5 py-4">
                                 <p class="text-sm text-gray-700 mb-3" data-i18n="post.aiPromptIntro">This project was created entirely with AI. The exact prompt used:</p>
-                                <pre class="text-sm font-mono text-gray-900 bg-white/70 rounded-lg p-4 border border-amber-200 m-0" style="white-space: pre-wrap; word-break: break-word; overflow-wrap: anywhere;"><span data-lang="en">{{ page.prompt | escape }}</span><span data-lang="de">{{ page.prompt_de | default: page.prompt | escape }}</span></pre>
+                                <pre class="text-sm font-mono text-gray-900 bg-white/70 rounded-lg p-4 border border-amber-200 m-0" style="white-space: pre-wrap; word-break: break-word; overflow-wrap: anywhere;">{{ page.prompt | escape }}</pre>
                             </div>
                         </aside>
                         {% endif %}
@@ -154,26 +150,12 @@ layout: base
                         {% if page.downloads %}
                         <div class="break-words min-w-0">
                             {% for dl in page.downloads %}
-                            {%- assign dl_url_en = dl.url | default: dl.url_de -%}
-                            {%- assign dl_url_de = dl.url_de | default: dl.url -%}
-                            {%- assign dl_name_en = dl.name | default: dl.name_de -%}
-                            {%- assign dl_name_de = dl.name_de | default: dl.name -%}
-                            <div data-lang="en">
-                                <a href="{{ dl_url_en | relative_url }}" download class="block hover:scale-105 transition-transform duration-200 mb-5 text-center">
-                                    <img src="{{ '/assets/img/download-button.png' | relative_url }}" alt="Download {{ dl_name_en }}" style="width: 100%; height: auto;">
-                                    {% if page.downloads.size > 1 %}
-                                    <span class="block mt-1 text-xs font-medium text-gray-600 dark:text-gray-400">{{ dl_name_en | split: '.' | first }}</span>
-                                    {% endif %}
-                                </a>
-                            </div>
-                            <div data-lang="de">
-                                <a href="{{ dl_url_de | relative_url }}" download class="block hover:scale-105 transition-transform duration-200 mb-5 text-center">
-                                    <img src="{{ '/assets/img/download-button.png' | relative_url }}" alt="Download {{ dl_name_de }}" style="width: 100%; height: auto;">
-                                    {% if page.downloads.size > 1 %}
-                                    <span class="block mt-1 text-xs font-medium text-gray-600 dark:text-gray-400">{{ dl_name_de | split: '.' | first }}</span>
-                                    {% endif %}
-                                </a>
-                            </div>
+                            <a href="{{ dl.url | relative_url }}" download class="block hover:scale-105 transition-transform duration-200 mb-5 text-center">
+                                <img src="{{ '/assets/img/download-button.png' | relative_url }}" alt="Download {{ dl.name }}" style="width: 100%; height: auto;">
+                                {% if page.downloads.size > 1 %}
+                                <span class="block mt-1 text-xs font-medium text-gray-600 dark:text-gray-400">{{ dl.name | split: '.' | first }}</span>
+                                {% endif %}
+                            </a>
                             {% endfor %}
                         </div>
                         {% endif %}
@@ -190,8 +172,25 @@ layout: base
                         </div>
                         {% endif %}
 
-                        <!-- Next/Previous Articles -->
-                        {% if page.previous.url or page.next.url %}
+                        {%- comment -%}
+                          Find the previous/next post in the same language. site.posts is reverse-chronological,
+                          so "previous" (older) is the next match after current, "next" (newer) is the one before.
+                        {%- endcomment -%}
+                        {%- assign _lang_posts = site.posts | where: 'lang', page.lang -%}
+                        {%- assign _idx = -1 -%}
+                        {%- for p in _lang_posts -%}
+                          {%- if p.url == page.url -%}{%- assign _idx = forloop.index0 -%}{%- break -%}{%- endif -%}
+                        {%- endfor -%}
+                        {%- assign _prev = nil -%}
+                        {%- assign _next = nil -%}
+                        {%- if _idx >= 0 -%}
+                          {%- assign _prev_i = _idx | plus: 1 -%}
+                          {%- assign _next_i = _idx | minus: 1 -%}
+                          {%- if _prev_i < _lang_posts.size -%}{%- assign _prev = _lang_posts[_prev_i] -%}{%- endif -%}
+                          {%- if _next_i >= 0 -%}{%- assign _next = _lang_posts[_next_i] -%}{%- endif -%}
+                        {%- endif -%}
+
+                        {% if _prev or _next %}
                         <div class="break-words min-w-0 pr-2">
                             <div class="mb-5 flex items-center gap-3">
                                 <h3 class="font-heading text-xs font-bold uppercase tracking-widest text-gray-900 dark:text-white whitespace-nowrap" data-i18n="post.keepReading">
@@ -200,26 +199,24 @@ layout: base
                                 <div class="flex-1 h-0.5 bg-gradient-to-r from-accent-cyan/50 to-transparent"></div>
                             </div>
                             <div class="space-y-6">
-                                {% if page.previous.url %}
-                                <a href="{{ page.previous.url | relative_url }}"
-                                   title="{{ page.previous.title }}"
+                                {% if _prev %}
+                                <a href="{{ _prev.url | relative_url }}"
+                                   title="{{ _prev.title }}"
                                    class="group block">
                                     <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-2" data-i18n="post.previous">← Previous Article</p>
                                     <h3 class="font-heading text-sm font-bold text-gray-900 dark:text-white group-hover:text-accent-cyan transition-colors leading-snug line-clamp-3">
-                                        <span data-lang="en">{{ page.previous.title }}</span>
-                                        <span data-lang="de">{{ page.previous.title_de | default: page.previous.title }}</span>
+                                        {{ _prev.title }}
                                     </h3>
                                 </a>
                                 {% endif %}
 
-                                {% if page.next.url %}
-                                <a href="{{ page.next.url | relative_url }}"
-                                   title="{{ page.next.title }}"
+                                {% if _next %}
+                                <a href="{{ _next.url | relative_url }}"
+                                   title="{{ _next.title }}"
                                    class="group block">
                                     <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-2" data-i18n="post.next">Next Article →</p>
                                     <h3 class="font-heading text-sm font-bold text-gray-900 dark:text-white group-hover:text-accent-cyan transition-colors leading-snug line-clamp-3">
-                                        <span data-lang="en">{{ page.next.title }}</span>
-                                        <span data-lang="de">{{ page.next.title_de | default: page.next.title }}</span>
+                                        {{ _next.title }}
                                     </h3>
                                 </a>
                                 {% endif %}
