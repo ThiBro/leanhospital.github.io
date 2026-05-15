@@ -22,7 +22,7 @@ redirect_from:
 
 Einen Milchviehbetrieb zu führen ist ein Zahlenspiel, das zweimal täglich gespielt wird, jeden Tag, ohne Ausnahme. Auf der Greenfields Dairy laufen 68 Kühe, aufgeteilt in die Herdengruppen Holstein, Jersey und Guernsey, durch die morgendliche und abendliche Melkschicht, und die Liter jeder Kuh werden von Hand erfasst. Die Herausforderung besteht darin, aus diesem wachsenden Stapel an Melkdaten etwas zu machen, mit dem der Betriebsleiter tatsächlich arbeiten kann, idealerweise bevor aus einem kleinen Ertragsrückgang eine Tierarztrechnung wird. Genau das leistet dieses Dashboard.
 
-![Greenfields Dairy Hauptansicht](/assets/2026-05-13-15-08-52/010.png)
+![Greenfields Dairy Hauptansicht](/assets/2026-05-13-15-08-52/010.png){: loading="lazy" width="1920" height="1080"}
 
 ## Die Haupt-KPI beantwortet die meistgestellte Frage auf dem Hof
 
@@ -34,7 +34,7 @@ Zwei unterstützende KPIs liegen darunter: 68 aktive Kühe und ein Durchschnitt 
 
 Das Balkendiagramm oben rechts listet die heute leistungsstärksten Milchgeber. **Bella #214**, **Daisy #107** und **Buttercup #318** führen das Feld an, in gestaffelten Grüntönen eingefärbt, damit das Auge zuerst oben auf der Liste landet. Für einen Herdenmanager hat diese Liste eine Doppelfunktion: Sie identifiziert die Kandidatinnen für das Zuchtprogramm und die wertvollen Tiere, die man im Blick behalten sollte, aber sie kennzeichnet auch das stille Versagen, das Papierprotokolle übersehen, den Moment, in dem eine sonst stets führende Kuh aus der Bestenliste fällt.
 
-![Top-Milchgeber und 30-Tage-Trend](/assets/2026-05-13-15-08-52/020.png)
+![Top-Milchgeber und 30-Tage-Trend](/assets/2026-05-13-15-08-52/020.png){: loading="lazy" width="1920" height="1080"}
 
 ## Der 30-Tage-Trend zeigt, was die Tagessumme verbirgt
 
@@ -46,7 +46,7 @@ Das ist die Art von Muster, die in Papierprotokollen schlicht nicht überlebt. E
 
 Auf der rechten Seite wird der aktuelle Monat als Raster farbiger Kacheln dargestellt. Bernstein für niedrige Erträge, gestaffelte Grüntöne für normale Erträge und ein harter **Rot-Alarm am 9. Mai**, an dem das Auge unweigerlich hängenbleibt. Die heutige Kachel, der **13. Mai**, erhält eine pfirsichfarbene Umrandung, damit der Manager immer weiß, wo er im Zyklus steht. Beim Antippen eines Tages öffnet sich ein Detaildialog mit der Tagessumme, der Aufteilung Morgen vs. Abend und dem Vergleich gegen den 7-Tage-Durchschnitt, sodass der Weg von "in der Heatmap sieht etwas seltsam aus" zu einer konkreten Zahl genau einen Tap dauert.
 
-![Melkung-erfassen-Dialog und Kalender](/assets/2026-05-13-15-08-52/030.png)
+![Melkung-erfassen-Dialog und Kalender](/assets/2026-05-13-15-08-52/030.png){: loading="lazy" width="1920" height="1080"}
 
 ## Erfassung aus dem Melkstand, nicht vom Schreibtisch
 

@@ -22,7 +22,7 @@ Dieser Anwendungsfall verwandelt das Wartezimmer einer Zahnarztpraxis mit einem 
 
 Oben werden Praxisname und eine freundliche Willkommensnachricht zusammen mit der aktuellen Uhrzeit angezeigt. Die linke Seite des Bildschirms zeigt die geschätzte Wartezeit als große, leicht lesbare Zahl in einer kreisförmigen Anzeige - so wissen Patienten sofort, was sie erwartet, ohne am Empfang nachfragen zu müssen. Rechts läuft eine rotierende Liste mit Gesundheitstipps durch Karten mit kurzen, praktischen Hinweisen und gibt den Wartenden etwas Nützliches zu lesen. Eine Laufleiste am unteren Rand zeigt wichtige Praxisinfos wie Öffnungszeiten und Telefonnummern.
 
-![screenshot]({{ site.baseurl }}/assets/2026-03-03-00-00-00/010.png)
+![screenshot]({{ site.baseurl }}/assets/2026-03-03-00-00-00/010.png){: loading="lazy" width="1940" height="1100"}
 
 Das Farbschema setzt auf helle Blau- und Weißtöne und schafft eine ruhige, klinische und doch freundliche Atmosphäre - genau das Umfeld, das eine Zahnarztpraxis vermitteln möchte. Auch das Personal profitiert: Statt ständig Fragen zur Wartezeit zu beantworten, übernimmt das Display diese Kommunikation automatisch. Die Gesundheitstipps dienen außerdem als dezenter Weg, Patienten über Mundhygiene und Prophylaxe zu informieren.
 

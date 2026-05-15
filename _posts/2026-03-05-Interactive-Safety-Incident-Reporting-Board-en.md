@@ -20,7 +20,7 @@ Workplace safety is everyone's responsibility - but keeping it visible and actio
 
 Mounted on large screens across the production area, the board opens with an unmistakable bright yellow "SAFETY FIRST" banner against a dark background - designed for maximum visibility even from a distance. The left side of the display tracks the metrics that matter: a prominent gauge showing the current streak of days without an incident, a progress bar comparing monthly incidents against the target, the total incident count for the year, and the most frequently reported incident type.
 
-![screenshot]({{ site.baseurl }}/assets/2026-03-05-09-21-51/010.png)
+![screenshot]({{ site.baseurl }}/assets/2026-03-05-09-21-51/010.png){: loading="lazy" width="1940" height="1100"}
 
 What makes this board truly powerful is the interactive reporting panel on the right. Workers can report a new incident directly on the touchscreen by selecting the type - near miss, minor injury, equipment damage, spill, ergonomic issue, or fire risk - choosing a severity level, and picking the affected factory zone. No paperwork, no delays. This lowers the barrier to reporting, especially for near-misses that often go undocumented but are critical for preventing serious accidents.
 

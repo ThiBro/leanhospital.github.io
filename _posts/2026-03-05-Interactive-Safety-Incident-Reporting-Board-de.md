@@ -20,7 +20,7 @@ Arbeitssicherheit ist eine Aufgabe für alle - aber sie auf einem belebten Produ
 
 Auf großen Bildschirmen quer durch den Produktionsbereich montiert, beginnt das Board mit einem unverkennbaren leuchtend gelben "SAFETY FIRST"-Banner auf dunklem Hintergrund - für maximale Sichtbarkeit selbst aus der Distanz. Die linke Seite zeigt die Kennzahlen, die zählen: ein prominentes Messgerät mit der aktuellen Anzahl unfallfreier Tage, ein Fortschrittsbalken, der monatliche Vorfälle gegen das Ziel vergleicht, die Gesamtzahl der Vorfälle im Jahr und der am häufigsten gemeldete Vorfalltyp.
 
-![screenshot]({{ site.baseurl }}/assets/2026-03-05-09-21-51/010.png)
+![screenshot]({{ site.baseurl }}/assets/2026-03-05-09-21-51/010.png){: loading="lazy" width="1940" height="1100"}
 
 Wirklich stark wird das Board durch das interaktive Meldepanel auf der rechten Seite. Mitarbeiter können einen neuen Vorfall direkt am Touchscreen melden, indem sie den Typ wählen - Beinahe-Unfall, leichte Verletzung, Sachschaden, Verschüttung, ergonomisches Problem oder Brandgefahr - eine Schwere festlegen und den betroffenen Produktionsbereich auswählen. Kein Papierkram, keine Verzögerungen. Das senkt die Hemmschwelle zur Meldung deutlich, vor allem bei Beinahe-Unfällen, die sonst oft undokumentiert bleiben, aber entscheidend zur Vorbeugung schwerer Unfälle beitragen.
 

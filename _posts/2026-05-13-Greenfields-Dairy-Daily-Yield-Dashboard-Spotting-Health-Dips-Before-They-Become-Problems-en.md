@@ -22,7 +22,7 @@ redirect_from:
 
 Running a dairy farm is a numbers game played twice a day, every day, no exceptions. At Greenfields Dairy, 68 cows split across Holstein, Jersey, and Guernsey herd groups go through the morning and evening parlor shifts, and every cow's liters are recorded by hand. The challenge is turning that growing pile of milking entries into something the farm manager can actually act on, ideally before a small dip in yield becomes a vet bill. That is exactly what this dashboard does.
 
-![Greenfields Dairy main view](/assets/2026-05-13-15-08-52/010.png)
+![Greenfields Dairy main view](/assets/2026-05-13-15-08-52/010.png){: loading="lazy" width="1920" height="1080"}
 
 ## The hero KPI answers the most-asked question on the farm
 
@@ -34,7 +34,7 @@ Two supporting KPIs sit underneath: 68 active cows and an average of 27.2 liters
 
 The bar chart in the upper right ranks today's strongest milk producers. **Bella #214**, **Daisy #107**, and **Buttercup #318** lead the pack, color-coded in graduated greens so the eye lands on the top of the list first. For a herd manager, this list does double duty: it identifies the breeding-program candidates and the high-value animals worth watching, but it also flags the silent failure that paper logs miss, the moment a usually-top producer falls off the leaderboard.
 
-![Top producers and 30-day trend](/assets/2026-05-13-15-08-52/020.png)
+![Top producers and 30-day trend](/assets/2026-05-13-15-08-52/020.png){: loading="lazy" width="1920" height="1080"}
 
 ## The 30-day trend catches what the daily total hides
 
@@ -46,7 +46,7 @@ This is the kind of pattern that simply does not survive paper records. A single
 
 On the right, the current month renders as a grid of colored tiles. Amber for low yields, graduated greens for normal yields, and a hard **red alert on May 9** that you cannot help but look at. Today's tile, **May 13**, gets a peach border so the manager always knows where they are in the cycle. Tapping a day opens a detail dialog with the total, the morning vs. evening split, and how the day compares against the 7-day average, so going from "something looks off in the heatmap" to a concrete number takes exactly one tap.
 
-![Log Milking dialog and calendar](/assets/2026-05-13-15-08-52/030.png)
+![Log Milking dialog and calendar](/assets/2026-05-13-15-08-52/030.png){: loading="lazy" width="1920" height="1080"}
 
 ## Logging entries from the parlor, not from a desk
 

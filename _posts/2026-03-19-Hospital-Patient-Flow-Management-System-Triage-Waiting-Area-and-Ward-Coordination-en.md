@@ -24,7 +24,7 @@ In most emergency departments, coordination is a patchwork of analog tools. A wh
 
 ## The triage nurse station
 
-![screenshot](/assets/2026-03-19-10-01-14/010.png)
+![screenshot](/assets/2026-03-19-10-01-14/010.png){: loading="lazy" width="1920" height="1080"}
 
 The triage nurse station is the command center of the system, running on a touchscreen monitor at the emergency department reception desk. When a patient arrives, the nurse opens a registration dialog that captures everything needed for triage in a single form: symptoms, vital signs, a pain level slider from 0 to 10, medical history flags for conditions like hypertension, diabetes, cardiac issues, and allergies, plus insurance provider and whether the patient arrived by ambulance. Most importantly, the nurse assigns a triage priority - Critical, Urgent, Standard, or Non-Urgent - which determines the patient's position in the queue and how they appear across all three dashboards.
 
@@ -32,7 +32,7 @@ The main view organizes information into three tabs. The **waiting queue** tab s
 
 ## The waiting area display
 
-![screenshot](/assets/2026-03-19-10-01-14/020.png)
+![screenshot](/assets/2026-03-19-10-01-14/020.png){: loading="lazy" width="3840" height="2150"}
 
 The waiting area display hangs on a large screen in the public waiting room and serves one critical purpose: reducing patient anxiety. At the top, four priority cards show the queue number currently being served in each triage category along with estimated wait times that refresh every 15 seconds. Patients can see at a glance where things stand without having to approach the desk.
 
@@ -42,7 +42,7 @@ This screen is entirely passive. No touch interaction, no buttons, no input. It 
 
 ## The ward management dashboard
 
-![screenshot](/assets/2026-03-19-10-01-14/030.png)
+![screenshot](/assets/2026-03-19-10-01-14/030.png){: loading="lazy" width="3840" height="2150"}
 
 The ward management dashboard sits on a touchscreen at the nursing station and serves charge nurses and ward coordinators. Its four-quadrant layout covers the full scope of ward operations.
 

@@ -22,7 +22,7 @@ Das Display startet mit einer kräftigen Überschrift "Heutiges Kursprogramm" in
 
 Rechts neben der Tabelle liefern drei senkrecht angeordnete KPI-Kacheln einen schnellen Überblick über den Puls des Studios: die Zahl der heute eingecheckten aktiven Mitglieder, die Gesamtzahl der angebotenen Kurse und ein Countdown, der die verbleibenden Minuten bis zum nächsten Kurs anzeigt. Dieser Countdown ist besonders praktisch für Mitglieder, die noch entscheiden, ob sie einen Kaffee holen oder direkt ins Studio gehen.
 
-![screenshot]({{ site.baseurl }}/assets/2026-03-03-16-34-54/010.png)
+![screenshot]({{ site.baseurl }}/assets/2026-03-03-16-34-54/010.png){: loading="lazy" width="1940" height="1100"}
 
 Am unteren Rand visualisiert ein Balkendiagramm die Auslastung jedes Kurses in Prozent. So sieht man auf einen Blick, welche Stunden fast voll sind und in welchen noch reichlich Platz ist. Das hilft Mitgliedern beim Vorausplanen und motiviert sie, weniger überfüllte Alternativen auszuprobieren.
 

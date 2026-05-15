@@ -68,3 +68,5 @@ impressum:
 
 site:
   tagline: "Das Dashboard-Dojo des Gurus"
+  description_fallback: "Echte Peakboard-Dashboard-Beispiele - Produktion, Logistik, Gastgewerbe, Healthcare - mit herunterladbaren PBMX-Dateien zum Auseinandernehmen, Remixen und Nutzen."
+  og_image_alt: "Peakboard Guru - echte Dashboard-Beispiele"

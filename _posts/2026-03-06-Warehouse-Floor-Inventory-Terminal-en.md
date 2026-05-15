@@ -20,7 +20,7 @@ Keeping accurate stock counts in a busy industrial warehouse is a constant battl
 
 The target audience is warehouse operatives, stock clerks, and shift supervisors. These are people wearing gloves, often in a hurry, who need a fast and foolproof way to record stock movements without walking back to an office PC or fumbling with a handheld scanner's tiny screen. The terminal is wall-mounted or bolted to a standing kiosk at the end of an aisle or near a receiving dock.
 
-![screenshot](/assets/2026-03-06-07-14-27/010.png)
+![screenshot](/assets/2026-03-06-07-14-27/010.png){: loading="lazy" width="1920" height="1080"}
 
 The screen is divided into three functional zones plus a running log. On the left, a large numeric keypad lets the operator punch in a four-digit Item ID or scan it via a connected barcode reader. The center panel immediately displays the matched item's name, its exact rack and shelf location, and a circular gauge showing the current stock level at a glance - green means healthy, trending toward cyan as stock drops. On the right, a linear gauge compares the current quantity against its minimum threshold, making it instantly obvious whether a reorder is needed. Two oversized buttons - "Add Stock" and "Remove Stock" - let the worker record an adjustment with a single tap. Every adjustment is timestamped and logged in a scrollable table at the bottom, giving supervisors a live audit trail of the last ten transactions.
 

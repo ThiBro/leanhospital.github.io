@@ -22,7 +22,7 @@ Großartiges Bier zu brauen ist zu gleichen Teilen Kunst und Wissenschaft. Währ
 
 Ein digitaler Gärungsmonitor, direkt im Brauereiraum montiert, verändert das grundlegend. Auf einen Blick sieht das Produktionsteam alles, was für den aktuellen Sud zählt: ein großes kreisförmiges Messgerät mit der Echtzeit-Tanktemperatur, in dem der ideale Gärbereich klar in Grün hervorgehoben ist - so wird sofort sichtbar, ob der Prozess auf Kurs ist oder aus dem Ruder läuft. Direkt daneben zeigt ein 48-Stunden-Temperaturverlauf Muster, die eine einzelne Messung übersehen würde - ein langsames Ansteigen über Nacht etwa signalisiert ein Kühlproblem, bevor es kritisch wird.
 
-![screenshot]({{ site.baseurl }}/assets/2026-03-03-16-55-55/010.png)
+![screenshot]({{ site.baseurl }}/assets/2026-03-03-16-55-55/010.png){: loading="lazy" width="1940" height="1100"}
 
 Drei zentrale Kennzahlen - pH-Wert, Stammwürze in Grad Plato und Restextrakt - werden mit farbcodierten Indikatoren angezeigt, sodass Bediener den Gärzustand bewerten können, ohne Rohzahlen interpretieren zu müssen. Ein laufendes Gärprotokoll am unteren Rand liefert eine vollständige Historie aus Zeitstempeln, Messwerten und durchgeführten Aktionen - unverzichtbar für die Qualitätsdokumentation und Sud-Rückverfolgbarkeit.
 

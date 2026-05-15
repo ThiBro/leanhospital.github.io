@@ -34,7 +34,7 @@ Die Lösung ist ein Touchscreen am Empfangstresen nahe dem Eingang. Er zeigt ein
 
 Jeder Tisch erscheint als beschriftetes Rechteck. Die Hintergrundfarbe sagt alles, was man auf einen Blick wissen muss: **Grün** heißt frei, **Rot** heißt belegt, **Gelb** heißt reserviert. Eine Kopfleiste oben zeigt das aktuelle Datum und die Uhrzeit zusammen mit einer laufenden Zählung freier, belegter und reservierter Tische - so beurteilt die Empfangskraft die Gesamtverfügbarkeit, ohne einzelne Kästchen zu zählen.
 
-![screenshot](/assets/2026-03-11-15-12-57/010.png)
+![screenshot](/assets/2026-03-11-15-12-57/010.png){: loading="lazy" width="1920" height="1080"}
 
 ## Eine Laufkundschaft platzieren
 

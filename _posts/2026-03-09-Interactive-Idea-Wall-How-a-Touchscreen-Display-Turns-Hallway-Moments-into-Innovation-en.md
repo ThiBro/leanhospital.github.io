@@ -28,7 +28,7 @@ What if every idea lived on a big screen in the lobby, right where people natura
 
 Picture a 55-inch touchscreen mounted at eye level in your office lobby or a central break area. The display shows a clean, dark-themed dashboard with two main zones.
 
-![image](/assets/2026-03-09-12-35-22/010.png)
+![image](/assets/2026-03-09-12-35-22/010.png){: loading="lazy" width="1920" height="1080"}
 
 At the top, a header bar displays the title "Interactive Idea Wall" alongside a pie chart breaking down idea categories - Efficiency, Product, Culture, Technology, and Fun. This gives leadership and passersby an instant pulse check on what the team is thinking about.
 

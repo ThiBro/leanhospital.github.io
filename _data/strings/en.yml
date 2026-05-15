@@ -68,3 +68,5 @@ impressum:
 
 site:
   tagline: "The Guru's Dashboard Dojo"
+  description_fallback: "Real-world Peakboard dashboard examples - production, logistics, hospitality, healthcare - with downloadable PBMX files you can take apart, remix, and use."
+  og_image_alt: "Peakboard Guru - real-world dashboard examples"

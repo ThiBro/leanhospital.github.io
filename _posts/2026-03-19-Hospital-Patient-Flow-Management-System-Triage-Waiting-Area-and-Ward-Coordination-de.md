@@ -24,7 +24,7 @@ In den meisten Notaufnahmen ist Koordination ein Flickenteppich aus analogen Wer
 
 ## Die Triage-Pflegekraft-Station
 
-![screenshot](/assets/2026-03-19-10-01-14/010.png)
+![screenshot](/assets/2026-03-19-10-01-14/010.png){: loading="lazy" width="1920" height="1080"}
 
 Die Triage-Pflegekraft-Station ist das Kommandozentrum des Systems und läuft auf einem Touchscreen-Monitor am Empfangstresen der Notaufnahme. Wenn ein Patient eintrifft, öffnet die Pflegekraft einen Registrierungsdialog, der alles für die Triage Erforderliche in einem einzigen Formular erfasst: Symptome, Vitalwerte, einen Schmerzregler von 0 bis 10, Vorerkrankungs-Marker für Bluthochdruck, Diabetes, Herzprobleme und Allergien, dazu Krankenversicherer und ob der Patient per Krankenwagen eingeliefert wurde. Am wichtigsten: Die Pflegekraft vergibt eine Triage-Priorität - kritisch, dringend, normal oder nicht dringend - die die Position in der Warteschlange bestimmt und festlegt, wie der Patient auf allen drei Dashboards erscheint.
 
@@ -32,7 +32,7 @@ Die Hauptansicht organisiert Informationen in drei Reiter. Der **Wartelisten-**R
 
 ## Das Wartebereichs-Display
 
-![screenshot](/assets/2026-03-19-10-01-14/020.png)
+![screenshot](/assets/2026-03-19-10-01-14/020.png){: loading="lazy" width="3840" height="2150"}
 
 Das Wartebereichs-Display hängt als großer Bildschirm im öffentlichen Wartebereich und erfüllt einen entscheidenden Zweck: die Angst der Patienten zu reduzieren. Oben zeigen vier Prioritätskarten die aktuell aufgerufene Wartenummer in jeder Triage-Kategorie zusammen mit geschätzten Wartezeiten, die alle 15 Sekunden aktualisiert werden. Patienten sehen auf einen Blick, wo sie stehen, ohne zum Tresen gehen zu müssen.
 
@@ -42,7 +42,7 @@ Dieser Bildschirm ist vollkommen passiv. Keine Touch-Interaktion, keine Schaltfl
 
 ## Das Stationsmanagement-Dashboard
 
-![screenshot](/assets/2026-03-19-10-01-14/030.png)
+![screenshot](/assets/2026-03-19-10-01-14/030.png){: loading="lazy" width="3840" height="2150"}
 
 Das Stationsmanagement-Dashboard sitzt auf einem Touchscreen an der Pflegestation und dient leitenden Pflegekräften und Stationskoordinatoren. Sein Vier-Quadranten-Layout deckt den gesamten Stationsbetrieb ab.
 

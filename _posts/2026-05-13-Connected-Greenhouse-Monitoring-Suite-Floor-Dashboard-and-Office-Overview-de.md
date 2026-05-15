@@ -26,15 +26,15 @@ Kommerzielle Gewächshausbetriebe haben ein wiederkehrendes Problem: Die Leute, 
 
 Die erste Anwendung ist für einen wandmontierten Touchscreen direkt in der Anbaufläche gebaut. Stellen Sie sich ein robustes 1920x1080-Panel vor, das in der Nähe des Hauptgangs eines Tomatenblocks an einer Stütze montiert ist und aus jeder Reihe sichtbar ist. Das vorbeigehende Team bekommt einen sofortigen, auf-einen-Blick-Überblick über jede Anbauzone in dieser Halle: Temperatur in Grad Celsius, relative Luftfeuchtigkeit, CO2-Konzentration in ppm und volumetrische Bodenfeuchte, jeweils in einem Sechser-Kachelraster mit Ampelfarbband (Grün für OK, Bernstein für WARN, Rot für CRIT) und Status-Pill.
 
-![Hallen-Dashboard Übersicht](/assets/2026-05-13-17-13-21/GreenhouseFloorDashboard_010.png)
+![Hallen-Dashboard Übersicht](/assets/2026-05-13-17-13-21/GreenhouseFloorDashboard_010.png){: loading="lazy" width="1920" height="1080"}
 
 Der Header trägt ein Standort-Status-Badge, das den schlechtesten Zonenstatus über das gesamte Gelände zusammenfasst (vom Büro heruntergepusht), das heutige Datum und die Uhrzeit sowie den Namen des aktuell diensthabenden Bedieners.
 
-![Zonen-Detail mit Feuchte-Dial und CO2-Balken](/assets/2026-05-13-17-13-21/GreenhouseFloorDashboard_020.png)
+![Zonen-Detail mit Feuchte-Dial und CO2-Balken](/assets/2026-05-13-17-13-21/GreenhouseFloorDashboard_020.png){: loading="lazy" width="1920" height="1080"}
 
 Ein Tipp auf eine beliebige Zonenkachel öffnet eine Detailansicht mit einer Feuchte-Anzeige, einem CO2-Balkendiagramm mit Zielbereich, einer animierten Bodenfeuchte-Anzeige und einer Temperatur-Sparkline der letzten 30 Minuten. Auf demselben Detailbildschirm gibt es eine besondere Geste zur Bestätigung des manuellen Checks: Statt eines schlichten "Ich habe diese Zone geprüft"-Buttons tippt der Mitarbeiter auf ein grünes Blatt und hält es zwei Sekunden lang gedrückt, während sich eine Fortschrittsleiste füllt und ein Countdown läuft. Diese bewusste Pause verhindert versehentliche Check-ins und schreibt eine Zeile in ein gemeinsames Check-Log, das das Büro später auditieren kann.
 
-![Liste aktiver Alarme auf dem Hallen-Screen](/assets/2026-05-13-17-13-21/GreenhouseFloorDashboard_030.png)
+![Liste aktiver Alarme auf dem Hallen-Screen](/assets/2026-05-13-17-13-21/GreenhouseFloorDashboard_030.png){: loading="lazy" width="1920" height="1080"}
 
 Ein dritter Bildschirm listet aktive, unquittierte Alarme im lokalen Haus auf, und der Footer trägt einen einzeiligen Hinweis, dass die Quittierung im Büro erfolgt, nicht hier auf der Hallenfläche.
 
@@ -42,15 +42,15 @@ Ein dritter Bildschirm listet aktive, unquittierte Alarme im lokalen Haus auf, u
 
 Die zweite Anwendung ist für ein Desktop- oder Wand-Display im Büro oder Leitstand gedacht und gibt dem Supervisor eine geländeweite Kartenansicht. Ein stilisiertes Kartenpanel links zeigt vier Gewächshäuser (GH-North, GH-South, GH-East, GH-West) als beschriftete Kacheln in geografischer Anordnung, jede standardmäßig orange, aber rot blinkend, sobald die unquittierte Alarmzahl je Gewächshaus über null steigt. Ein cyanfarbenes Badge auf jeder Kachel zeigt die Live-Anzahl.
 
-![Operations Center Kartenansicht mit Alarm-Feed](/assets/2026-05-13-17-13-21/GreenhouseOfficeOverview_010.png)
+![Operations Center Kartenansicht mit Alarm-Feed](/assets/2026-05-13-17-13-21/GreenhouseOfficeOverview_010.png){: loading="lazy" width="1920" height="1080"}
 
 Die rechte Seite der Übersicht ist ein Live-Alarm-Feed, der von der gemeinsamen Zonen-Messliste gespeist wird, gefiltert auf nur aktive, unquittierte Alarme über das gesamte Gelände, sortiert nach Schweregrad, mit einem farbigen Severity-Streifen und einer Inline-Schaltfläche **Quittieren** in jeder Zeile. Der große Call-to-Action unten ist ein türkisfarbener Button **Sammelquittierung**, der einen Vollbild-Dialog öffnet: eine Checkbox-Liste aller aktiven Alarme, Verknüpfungen für Alle auswählen / Zurücksetzen, ein Kommentarfeld, das an jede ausgewählte Zeile angehängt wird, und eine einzige Bestätigung, die die Quittierung zurück in die gemeinsame Liste schreibt.
 
-![Gelände-Trends mit Balkendiagrammen](/assets/2026-05-13-17-13-21/GreenhouseOfficeOverview_020.png)
+![Gelände-Trends mit Balkendiagrammen](/assets/2026-05-13-17-13-21/GreenhouseOfficeOverview_020.png){: loading="lazy" width="1920" height="1080"}
 
 Der Trends-Bildschirm zeigt vier nebeneinanderliegende Balkendiagramme, die durchschnittliche Temperatur, Luftfeuchtigkeit, CO2 und Bodenfeuchte über die vier Gewächshäuser hinweg vergleichen.
 
-![Heatmap der Zonenabweichungen](/assets/2026-05-13-17-13-21/GreenhouseOfficeOverview_030.png)
+![Heatmap der Zonenabweichungen](/assets/2026-05-13-17-13-21/GreenhouseOfficeOverview_030.png){: loading="lazy" width="1920" height="1080"}
 
 Der Heatmap-Bildschirm ist ein scrollbares Kachelraster, in dem jede Zone des Geländes nach einem berechneten Abweichungswert (Distanz zum Zielbereich) eingefärbt ist, sodass der Supervisor auf einen Blick triagieren kann, ohne Zahlen zu lesen.
 

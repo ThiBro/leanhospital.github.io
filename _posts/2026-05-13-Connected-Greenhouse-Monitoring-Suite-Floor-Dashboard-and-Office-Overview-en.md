@@ -26,15 +26,15 @@ Commercial greenhouse operations have a recurring problem: the people who can se
 
 The first application is built for a wall-mounted touch screen inside the growing area itself. Picture a ruggedized 1920x1080 panel bolted to a support column near the main aisle of a tomato block, visible from anywhere in the rows. The crew passing by gets an immediate, glanceable read of every cultivation zone in that house: temperature in degrees Celsius, relative humidity, CO2 concentration in ppm, and volumetric soil moisture, each presented in a six-up tile grid with a traffic-light color band (green for OK, amber for WARN, red for CRIT) and a status pill.
 
-![Greenhouse Floor Dashboard overview](/assets/2026-05-13-17-13-21/GreenhouseFloorDashboard_010.png)
+![Greenhouse Floor Dashboard overview](/assets/2026-05-13-17-13-21/GreenhouseFloorDashboard_010.png){: loading="lazy" width="1920" height="1080"}
 
 The header carries a site-status badge that rolls up the worst zone status across the whole property (pushed down from the office), today's date and clock, and the name of the operator currently on duty.
 
-![Zone detail with humidity dial and CO2 bar](/assets/2026-05-13-17-13-21/GreenhouseFloorDashboard_020.png)
+![Zone detail with humidity dial and CO2 bar](/assets/2026-05-13-17-13-21/GreenhouseFloorDashboard_020.png){: loading="lazy" width="1920" height="1080"}
 
 Tapping any zone tile drills into a detail screen with a humidity dial, a CO2 bar gauge with target band, an animated soil-moisture indicator, and a thirty-minute temperature sparkline. The same detail screen carries a unique manual-check confirmation gesture: instead of a plain "I checked this zone" button, the worker taps a green leaf, then holds it steady for two seconds while a progress bar fills and a countdown ticks down. This deliberate pause prevents accidental check-ins and writes a row to a shared check log that the office can audit later.
 
-![Active alarm list on the floor screen](/assets/2026-05-13-17-13-21/GreenhouseFloorDashboard_030.png)
+![Active alarm list on the floor screen](/assets/2026-05-13-17-13-21/GreenhouseFloorDashboard_030.png){: loading="lazy" width="1920" height="1080"}
 
 A third screen lists active, unacknowledged alarms in the local house, and the footer carries a one-line reminder that acknowledgement is performed by the office, not here on the floor.
 
@@ -42,15 +42,15 @@ A third screen lists active, unacknowledged alarms in the local house, and the f
 
 The second application is for a desktop or wall display in the office or control room and gives the supervisor a property-wide map view. A stylized map panel on the left shows four greenhouses (GH-North, GH-South, GH-East, GH-West) as labeled tiles arranged geographically, each painted orange by default but flashing red when their per-greenhouse unacknowledged-alarm count rises above zero. A cyan badge on each tile shows the live count.
 
-![Operations Center map view with alert feed](/assets/2026-05-13-17-13-21/GreenhouseOfficeOverview_010.png)
+![Operations Center map view with alert feed](/assets/2026-05-13-17-13-21/GreenhouseOfficeOverview_010.png){: loading="lazy" width="1920" height="1080"}
 
 The right side of the overview is a live alert feed driven by the shared zone-readings list, filtered to only active, unacknowledged alarms across the entire property, sorted by severity, with a colored severity stripe and an inline **Acknowledge** button on every row. The big call-to-action at the bottom is a teal **Bulk Acknowledge** button that opens a full-screen modal: a checkbox list of every active alarm, Select All / Clear shortcuts, a comment field that is attached to every selected row, and a single confirm that writes the acknowledgement back to the shared list.
 
-![Cross-property trends with bar charts](/assets/2026-05-13-17-13-21/GreenhouseOfficeOverview_020.png)
+![Cross-property trends with bar charts](/assets/2026-05-13-17-13-21/GreenhouseOfficeOverview_020.png){: loading="lazy" width="1920" height="1080"}
 
 The Trends screen shows four side-by-side bar charts comparing average temperature, humidity, CO2, and soil moisture across the four greenhouses.
 
-![Heatmap of zone deviation scores](/assets/2026-05-13-17-13-21/GreenhouseOfficeOverview_030.png)
+![Heatmap of zone deviation scores](/assets/2026-05-13-17-13-21/GreenhouseOfficeOverview_030.png){: loading="lazy" width="1920" height="1080"}
 
 The Heatmap screen is a scrollable tile grid where every zone in the property is colored by a computed deviation score (distance from target band), so the supervisor can triage at-a-glance without reading numbers.
 

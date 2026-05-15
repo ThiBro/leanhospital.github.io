@@ -34,7 +34,7 @@ The solution is a touchscreen mounted at the host stand near the entrance. It di
 
 Each table appears as a labeled rectangle. The background color tells you everything you need to know at a glance: **green** means free, **red** means occupied, and **yellow** means reserved. A header bar at the top shows the current date and time alongside a running tally of free, occupied, and reserved tables - so the host can judge overall availability without counting individual squares.
 
-![screenshot](/assets/2026-03-11-15-12-57/010.png)
+![screenshot](/assets/2026-03-11-15-12-57/010.png){: loading="lazy" width="1920" height="1080"}
 
 ## Seating a walk-in party
 

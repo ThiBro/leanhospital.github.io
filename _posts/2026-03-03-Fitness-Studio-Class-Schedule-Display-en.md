@@ -22,7 +22,7 @@ The display opens with a bold header showing "Today's Class Program" along with 
 
 To the right of the table, three KPI tiles stacked vertically provide a quick snapshot of the studio's pulse: the number of active members checked in today, the total number of classes offered, and a countdown showing how many minutes until the next class begins. This countdown is especially useful for members deciding whether to grab a coffee or head straight to the studio.
 
-![screenshot]({{ site.baseurl }}/assets/2026-03-03-16-34-54/010.png)
+![screenshot]({{ site.baseurl }}/assets/2026-03-03-16-34-54/010.png){: loading="lazy" width="1940" height="1100"}
 
 At the bottom, a bar chart visualizes the occupancy rate for each class as a percentage, making it easy to spot which sessions are nearly full and which still have plenty of room. This helps members plan ahead and encourages them to try less crowded alternatives.
 

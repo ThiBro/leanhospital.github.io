@@ -20,7 +20,7 @@ Genaue Bestandszahlen in einem ausgelasteten Industrielager zu halten, ist ein s
 
 Die Zielgruppe sind Lagerarbeiter, Bestandsverwalter und Schichtführer. Menschen mit Handschuhen, oft in Eile, die eine schnelle und narrensichere Möglichkeit brauchen, Bestandsbewegungen zu erfassen, ohne zurück zum Büro-PC zu laufen oder am winzigen Display eines Handscanners zu hantieren. Das Terminal wird wandmontiert oder als stehender Kiosk am Gangende oder nahe einer Wareneingangsrampe aufgestellt.
 
-![screenshot](/assets/2026-03-06-07-14-27/010.png)
+![screenshot](/assets/2026-03-06-07-14-27/010.png){: loading="lazy" width="1920" height="1080"}
 
 Der Bildschirm ist in drei funktionale Zonen plus ein Laufprotokoll unterteilt. Links lässt ein großes Zahlenfeld den Bediener eine vierstellige Artikel-ID eintippen oder über einen angeschlossenen Barcode-Scanner einscannen. Das mittlere Panel zeigt sofort den Artikelnamen, den exakten Regal- und Fachstandort sowie ein kreisförmiges Messgerät mit dem aktuellen Bestand auf einen Blick - grün bedeutet gesund, mit fallendem Bestand übergehend zu Cyan. Rechts vergleicht ein linearer Indikator die aktuelle Menge mit dem Mindestbestand, sodass sofort sichtbar ist, ob nachbestellt werden muss. Zwei übergroße Schaltflächen - "Bestand hinzufügen" und "Bestand entnehmen" - erlauben dem Mitarbeiter eine Korrektur mit einem einzigen Antippen. Jede Korrektur wird mit Zeitstempel im scrollbaren Protokoll am unteren Rand erfasst und liefert Vorgesetzten eine lückenlose Historie der letzten zehn Transaktionen.
 

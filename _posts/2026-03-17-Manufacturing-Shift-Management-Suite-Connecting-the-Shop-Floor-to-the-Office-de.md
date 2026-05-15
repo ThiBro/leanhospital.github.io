@@ -26,7 +26,7 @@ Die Shop-Floor-App ist für große Touchscreen-Displays gedacht, die am Ende jed
 
 Die Hauptansicht zeigt drei große Karten, eine pro Fertigungslinie, jede mit dem aktuell gefertigten Produkt, einem Live-Ist-gegen-Soll-Zähler, Ausschussmengen und einem Fortschrittsbalken, der sich Richtung Schichtziel füllt. Der linke Rand jeder Karte leuchtet grün, wenn die Linie läuft, rot bei Stillstand und gelb während der Wartung - so liefert die App einen visuellen Puls der gesamten Fabrik aus jeder Ecke des Raums.
 
-![Shop Floor App](/assets/2026-03-17-15-59-45/ShopFloorShiftApp_010.png)
+![Shop Floor App](/assets/2026-03-17-15-59-45/ShopFloorShiftApp_010.png){: loading="lazy" width="1920" height="1080"}
 
 Werker interagieren direkt mit dem Display: Ein Tipp auf eine Linienkarte öffnet einen Bearbeitungsdialog mit großen Schrittknöpfen zum Aktualisieren der Ist- und Ausschussmengen sowie ein Freitextfeld für Hinweise wie "Förderbandspannung muss nachgestellt werden" oder "Materialcharge #4872 läuft leicht außerhalb der Spezifikation". Diese Notizen werden in die nächste Schicht übernommen - der untere Bereich des Bildschirms zeigt dauerhaft die Übergabenotizen der vorherigen Schicht, damit ankommende Werker wissen, worauf sie achten müssen, ohne auf eine mündliche Übergabe angewiesen zu sein.
 
@@ -38,7 +38,7 @@ Die Office-Overview-App lebt auf einem wandmontierten Display im Büro des Produ
 
 Drei kreisförmige Messgeräte zeigen die Effizienz pro Linie auf einen Blick - Kartenränder werden rot, sobald eine Linie unter 85 % Effizienz fällt - ein optischer Alarm, der sofort ins Auge springt. Eine detaillierte Tabelle darunter listet jeden Produktionslauf der aktuellen Schicht, mit nach Leistung farbcodierten Zeilen: grün für im Plan, rot für im Rückstand, blau für Linien, die ihre Ziele überschreiten.
 
-![Office Overview App](/assets/2026-03-17-15-59-45/OfficeShiftOverview_010.png)
+![Office Overview App](/assets/2026-03-17-15-59-45/OfficeShiftOverview_010.png){: loading="lazy" width="1920" height="1080"}
 
 Der untere Bereich zeigt dieselben Übergabenotizen der vorherigen Schicht, sodass Manager beim morgendlichen Performance-Review sehen, was die Nachtschicht gemeldet hat - ohne in die Produktion gehen zu müssen.
 

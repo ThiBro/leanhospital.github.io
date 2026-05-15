@@ -26,7 +26,7 @@ The picker terminal is designed for use on handheld devices or mounted stations 
 
 When a picker arrives at the location and grabs the item, they confirm the pick through a simple dialog that includes a quantity check. Completed tasks are immediately marked as done in the Hub, and the progress bar at the bottom updates to show how many tasks the worker has finished versus how many remain. Color-coded status indicators make it easy to distinguish between open and in-progress tasks at a glance.
 
-![Picker Terminal](/assets/2026-03-13-13-53-07/PickerTerminal_010.png)
+![Picker Terminal](/assets/2026-03-13-13-53-07/PickerTerminal_010.png){: loading="lazy" width="1920" height="1080"}
 
 ## The Supervisor Dashboard
 
@@ -34,7 +34,7 @@ The supervisor dashboard is a wall-mounted screen that gives warehouse managers 
 
 A circular gauge in the center displays the overall completion percentage, making it immediately obvious how close the team is to finishing the current workload. Below that, a task table highlights overdue or critical items with color coding so nothing slips through the cracks. A separate worker performance table breaks down each picker's assigned, completed, and remaining tasks, while a bar chart visualizes the same data for quick comparison. Supervisors can spot bottlenecks, reassign work, or step in to help without ever leaving the dashboard screen.
 
-![Supervisor Dashboard](/assets/2026-03-13-13-53-07/SupervisorDashboard_010.png)
+![Supervisor Dashboard](/assets/2026-03-13-13-53-07/SupervisorDashboard_010.png){: loading="lazy" width="1920" height="1080"}
 
 ## How they work together
 

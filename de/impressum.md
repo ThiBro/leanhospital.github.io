@@ -4,7 +4,8 @@ layout: about
 lang: de
 permalink: /de/impressum/
 translation_url: /impressum/
-i18n_prefix: impressum
+description: "Impressum für peakboard-guru.com nach deutschem Recht inklusive Anbieterkennzeichnung, Kontaktangaben und Haftungshinweisen."
+noindex: true
 hero:
   title: Impressum
   subtitle: Impressum nach deutschem Recht

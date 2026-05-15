@@ -4,7 +4,7 @@ layout: about
 lang: en
 permalink: /about/
 translation_url: /de/about/
-i18n_prefix: about
+description: "About Peakboard Guru - a free collection of real-world Peakboard dashboard examples with downloadable PBMX project files, run by Thilo."
 hero:
   title: About This Blog
   subtitle: Peakboard Guru - The hottest apps on the planet

@@ -28,7 +28,7 @@ Was wäre, wenn jede Idee auf einem großen Bildschirm in der Lobby leben würde
 
 Stell dir einen 55-Zoll-Touchscreen auf Augenhöhe in deiner Bürolobby oder einem zentralen Pausenbereich vor. Das Display zeigt ein aufgeräumtes, dunkel gestaltetes Dashboard mit zwei Hauptzonen.
 
-![image](/assets/2026-03-09-12-35-22/010.png)
+![image](/assets/2026-03-09-12-35-22/010.png){: loading="lazy" width="1920" height="1080"}
 
 Oben zeigt eine Kopfleiste den Titel "Interaktive Ideenwand" und ein Tortendiagramm, das die Ideen nach Kategorien aufschlüsselt - Effizienz, Produkt, Kultur, Technologie und Fun. Damit sehen Führung und Vorbeigehende sofort, worüber das Team gerade nachdenkt.
 
