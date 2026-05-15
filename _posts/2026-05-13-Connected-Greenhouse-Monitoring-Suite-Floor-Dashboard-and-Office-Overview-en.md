@@ -15,7 +15,7 @@ downloads:
   url: /assets/2026-05-13-17-13-21/GreenhouseOfficeOverview.pbmx
 lang: en
 permalink: /en/connected-greenhouse-monitoring-suite-floor-dashboard-and-office-overview/
-translation_url: /de/connected-greenhouse-monitoring-suite-floor-dashboard-and-office-overview/
+translation_url: /de/vernetzte-gewaechshaus-ueberwachung-hallen-dashboard-und-buero-uebersicht/
 redirect_from:
 - /Connected-Greenhouse-Monitoring-Suite-Floor-Dashboard-and-Office-Overview.html
 ---

@@ -11,7 +11,7 @@ downloads:
   url: /assets/2026-03-09-12-35-22/Peakboard.pbmx
 lang: en
 permalink: /en/interactive-idea-wall-how-a-touchscreen-display-turns-hallway-moments-into-innovation/
-translation_url: /de/interactive-idea-wall-how-a-touchscreen-display-turns-hallway-moments-into-innovation/
+translation_url: /de/interaktive-ideenwand-wie-ein-touchscreen-display-flurmomente-zu-innovation-macht/
 redirect_from:
 - /Interactive-Idea-Wall-How-a-Touchscreen-Display-Turns-Hallway-Moments-into-Innovation.html
 ---

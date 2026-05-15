@@ -10,8 +10,10 @@ downloads:
 - name: Peakboard.pbmx
   url: /assets/2026-03-06-07-14-27/Peakboard.pbmx
 lang: de
-permalink: /de/warehouse-floor-inventory-terminal/
+permalink: /de/bestandsterminal-fuer-den-lagerboden/
 translation_url: /en/warehouse-floor-inventory-terminal/
+redirect_from:
+- /de/warehouse-floor-inventory-terminal/
 ---
 
 Genaue Bestandszahlen in einem ausgelasteten Industrielager zu halten, ist ein ständiger Kampf. Jede Fehlzählung bedeutet entweder eine stillstehende Produktionslinie, weil ein kritisches Teil fehlt, oder übermäßigen Bestand, der wertvollen Regalplatz blockiert. Papierbasierte Korrekturen werden hingekritzelt, Stunden später in ein ERP-System eingegeben und enthalten unvermeidlich Fehler. Dieses Projekt löst das Problem, indem es ein robustes Touchscreen-Terminal direkt im Lager platziert - genau dort, wo der Bestand liegt.

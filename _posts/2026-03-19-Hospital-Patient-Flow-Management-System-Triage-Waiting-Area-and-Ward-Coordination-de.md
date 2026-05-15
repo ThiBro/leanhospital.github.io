@@ -10,8 +10,10 @@ downloads:
 - name: Peakboard.pbmx
   url: /assets/2026-03-19-10-01-14/Peakboard.pbmx
 lang: de
-permalink: /de/hospital-patient-flow-management-system-triage-waiting-area-and-ward-coordination/
+permalink: /de/krankenhaus-patientenflusssteuerung-triage-wartebereich-und-stationskoordination/
 translation_url: /en/hospital-patient-flow-management-system-triage-waiting-area-and-ward-coordination/
+redirect_from:
+- /de/hospital-patient-flow-management-system-triage-waiting-area-and-ward-coordination/
 ---
 
 Notaufnahmen leben vom kontrollierten Chaos. Pflegekräfte am Triage-Tresen registrieren Patienten und beantworten gleichzeitig Fragen aus dem Wartebereich. Ärzte müssen wissen, welche Behandlungsräume frei sind. Stationspersonal jongliert mit Bettenverfügbarkeit, Patientenverlegungen und Raumreinigungen. Und mittendrin sitzen Patienten im Wartebereich, ohne zu wissen, wann sie an der Reihe sind, und fragen alle paar Minuten am Empfang "wie lange noch?". Dieses Projekt ersetzt Telefonate, Whiteboards und durch den Flur gerufene Updates durch drei zweckgebaute Dashboards, die jedem Beteiligten genau die Informationen liefern, die sie brauchen - dann, wenn sie sie brauchen. Alle drei Bildschirme teilen dieselben Daten über Peakboard-Hub-Listen, sodass ein an der Triage registrierter Patient sofort auf dem Wartebereichs-Display erscheint und für das Stationsteam sichtbar wird.

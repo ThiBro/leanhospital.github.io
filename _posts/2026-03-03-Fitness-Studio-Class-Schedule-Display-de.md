@@ -5,20 +5,15 @@ date: 2026-03-03 00:00:00 +0000
 tags: fitness
 image: /assets/2026-03-03-16-34-54/title.png
 bg_alternative: true
-description: Kursplan-Display für das Fitnessstudio - Ein Peakboard Digital-Signage-Dashboard-Projekt.
+description: Ein Lobby-Display fürs Fitnessstudio mit Tageskursplan, freien Plätzen und Countdown zum nächsten Kurs - Mitglieder fragen nicht mehr nach und kommen pünktlich.
 downloads:
 - name: Peakboard.pbmx
   url: /assets/2026-03-03-16-34-54/Peakboard.pbmx
-read_more_links:
-- name: Other UI design articles
-  name_de: Weitere UI-Design-Artikel
-  url: /category/ui
-- name: More use case examples
-  name_de: Mehr Anwendungsbeispiele
-  url: /category/usecase
 lang: de
-permalink: /de/fitness-studio-class-schedule-display/
+permalink: /de/kursplan-display-fuer-das-fitnessstudio/
 translation_url: /en/fitness-studio-class-schedule-display/
+redirect_from:
+- /de/fitness-studio-class-schedule-display/
 ---
 
 Ein gut besuchtes Fitnessstudio zu führen bedeutet, die Mitglieder über die heutigen Kurse zu informieren - und das auf eine Weise, die schon aus der Entfernung lesbar ist. Ein Digital-Signage-Bildschirm im Foyer oder nahe dem Eingang löst genau das.

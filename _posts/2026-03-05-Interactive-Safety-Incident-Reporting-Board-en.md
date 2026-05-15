@@ -5,20 +5,13 @@ date: 2026-03-05 00:00:00 +0000
 tags: production
 image: /assets/2026-03-05-09-21-51/title.png
 bg_alternative: true
-description: Interactive Safety Incident Reporting Board - A Peakboard digital signage dashboard project.
+description: A factory-floor safety board with touchscreen incident reporting, days-without-incident streak, monthly target progress, and a live feed - so near-misses get logged instead of forgotten.
 downloads:
 - name: Peakboard.pbmx
   url: /assets/2026-03-05-09-21-51/Peakboard.pbmx
-read_more_links:
-- name: Other UI design articles
-  name_de: Weitere UI-Design-Artikel
-  url: /category/ui
-- name: More use case examples
-  name_de: Mehr Anwendungsbeispiele
-  url: /category/usecase
 lang: en
 permalink: /en/interactive-safety-incident-reporting-board/
-translation_url: /de/interactive-safety-incident-reporting-board/
+translation_url: /de/interaktives-board-zur-meldung-von-sicherheitsvorfaellen/
 redirect_from:
 - /Interactive-Safety-Incident-Reporting-Board.html
 ---

@@ -14,8 +14,10 @@ downloads:
 - name: GreenhouseOfficeOverview.pbmx
   url: /assets/2026-05-13-17-13-21/GreenhouseOfficeOverview.pbmx
 lang: de
-permalink: /de/connected-greenhouse-monitoring-suite-floor-dashboard-and-office-overview/
+permalink: /de/vernetzte-gewaechshaus-ueberwachung-hallen-dashboard-und-buero-uebersicht/
 translation_url: /en/connected-greenhouse-monitoring-suite-floor-dashboard-and-office-overview/
+redirect_from:
+- /de/connected-greenhouse-monitoring-suite-floor-dashboard-and-office-overview/
 ---
 
 Kommerzielle Gewächshausbetriebe haben ein wiederkehrendes Problem: Die Leute, die die Pflanzen sehen können, sind nicht diejenigen, die entscheiden, wann eskaliert wird, und die Entscheider können nicht riechen, fühlen oder hören, was tatsächlich zwischen den Reihen passiert. Die Folge ist entweder Überalarmierung (jeder Ausschlag löst einen Anruf aus) oder mangelnde Quittierung (Alarme stehen auf einem Bildschirm, den niemand beobachtet, während eine kritische Zone zwei Stunden lang überhitzt). Die beiden Dashboards in dieser Suite schließen diesen Kreislauf mit einem gemeinsamen Datenrückgrat, sodass eine Aktion im Büro sofort auf der Hallenfläche sichtbar wird und ein manueller Check vor Ort dort protokolliert wird, wo das Büro ihn sehen kann.

@@ -13,7 +13,7 @@ downloads:
   url: /assets/2026-03-13-13-53-07/SupervisorDashboard.pbmx
 lang: en
 permalink: /en/warehouse-pick-and-pack-picker-terminal-and-supervisor-dashboard/
-translation_url: /de/warehouse-pick-and-pack-picker-terminal-and-supervisor-dashboard/
+translation_url: /de/lager-kommissionierung-picker-terminal-und-supervisor-dashboard/
 redirect_from:
 - /Warehouse-Pick-and-Pack-Picker-Terminal-and-Supervisor-Dashboard.html
 ---

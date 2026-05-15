@@ -10,8 +10,10 @@ downloads:
 - name: Peakboard.pbmx
   url: /assets/2026-03-09-12-35-22/Peakboard.pbmx
 lang: de
-permalink: /de/interactive-idea-wall-how-a-touchscreen-display-turns-hallway-moments-into-innovation/
+permalink: /de/interaktive-ideenwand-wie-ein-touchscreen-display-flurmomente-zu-innovation-macht/
 translation_url: /en/interactive-idea-wall-how-a-touchscreen-display-turns-hallway-moments-into-innovation/
+redirect_from:
+- /de/interactive-idea-wall-how-a-touchscreen-display-turns-hallway-moments-into-innovation/
 ---
 
 Gute Ideen entstehen überall im Arbeitsalltag - beim Kaffee, im Aufzug oder beim Vorbeigehen am Schreibtisch eines Kollegen. Aber ohne eine sichtbare, niederschwellige Möglichkeit, sie festzuhalten, verpuffen die meisten dieser Funken, bevor sie irgendjemand sonst hört. In diesem Artikel bauen wir eine interaktive Ideenwand, die einen einzelnen großen Touchscreen in eine unternehmensweite Vorschlagstafel verwandelt. Mitarbeitende können neue Ideen einreichen, durchstöbern, was andere vorgeschlagen haben, und ihre Favoriten hochwählen - alles in unter dreißig Sekunden, ohne App-Installation.

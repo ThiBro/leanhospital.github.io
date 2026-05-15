@@ -5,22 +5,15 @@ date: 2026-03-03 00:00:00 +0000
 tags: food-and-beverage
 image: /assets/2026-03-03-16-55-55/title.png
 bg_alternative: true
-description: Brewery Fermentation Process Monitor - A Peakboard digital signage dashboard project.
+description: A brewery-floor dashboard that monitors active fermentation tanks in real time - temperature, pH, gravity, and a 48-hour trend - so brewmasters catch deviations before a batch turns.
 prompt: |
   Build a Peakboard dashboard for a craft brewery that monitors an active fermentation tank in real time. Include a large circular temperature gauge with the ideal fermentation zone highlighted in green, a 48-hour temperature trend chart, and color-coded indicators for pH level, original gravity in degrees Plato, and residual extract. Add a running fermentation log at the bottom showing timestamps, readings, and actions taken. Use a warm rustic color scheme with dark brown tones and amber accents so the display fits the brewery environment.
 downloads:
 - name: Peakboard.pbmx
   url: /assets/2026-03-03-16-55-55/Peakboard.pbmx
-read_more_links:
-- name: Other UI design articles
-  name_de: Weitere UI-Design-Artikel
-  url: /category/ui
-- name: More use case examples
-  name_de: Mehr Anwendungsbeispiele
-  url: /category/usecase
 lang: en
 permalink: /en/brewery-fermentation-process-monitor/
-translation_url: /de/brewery-fermentation-process-monitor/
+translation_url: /de/brauerei-gaerprozess-monitor/
 redirect_from:
 - /Brewery-Fermentation-Process-Monitor.html
 ---

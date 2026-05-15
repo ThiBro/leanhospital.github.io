@@ -5,20 +5,15 @@ date: 2026-03-03 00:00:00 +0000
 tags: healthcare
 image: /assets/2026-03-03-00-00-00/title.png
 bg_alternative: true
-description: Wartezimmer-Display für Zahnarztpraxen - Ein Peakboard Digital-Signage-Dashboard-Projekt.
+description: 'Ein beruhigendes Wartezimmer-Display für Zahnarztpraxen: voraussichtliche Wartezeit als Kreisanzeige, rotierende Gesundheitstipps und Lauftext mit Öffnungszeiten - ohne Nachfragen am Empfang.'
 downloads:
 - name: Peakboard.pbmx
   url: /assets/2026-03-03-00-00-00/Peakboard.pbmx
-read_more_links:
-- name: Other UI design articles
-  name_de: Weitere UI-Design-Artikel
-  url: /category/ui
-- name: More use case examples
-  name_de: Mehr Anwendungsbeispiele
-  url: /category/usecase
 lang: de
-permalink: /de/dental-practice-waiting-room-display/
+permalink: /de/wartezimmer-display-fuer-zahnarztpraxen/
 translation_url: /en/dental-practice-waiting-room-display/
+redirect_from:
+- /de/dental-practice-waiting-room-display/
 ---
 
 Wartezimmer können stressig sein - besonders beim Zahnarzt. Patienten sitzen und fragen sich, wie lange sie noch warten müssen, mit nichts als veralteten Zeitschriften zur Ablenkung. Ein gut gestaltetes digitales Display kann dieses Erlebnis komplett verändern.

@@ -11,7 +11,7 @@ downloads:
   url: /assets/2026-03-06-07-14-27/Peakboard.pbmx
 lang: en
 permalink: /en/warehouse-floor-inventory-terminal/
-translation_url: /de/warehouse-floor-inventory-terminal/
+translation_url: /de/bestandsterminal-fuer-den-lagerboden/
 redirect_from:
 - /Warehouse-Floor-Inventory-Terminal.html
 ---

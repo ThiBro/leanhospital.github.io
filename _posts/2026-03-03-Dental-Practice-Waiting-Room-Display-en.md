@@ -5,20 +5,13 @@ date: 2026-03-03 00:00:00 +0000
 tags: healthcare
 image: /assets/2026-03-03-00-00-00/title.png
 bg_alternative: true
-description: Dental Practice Waiting Room Display - A Peakboard digital signage dashboard project.
+description: 'A calming waiting-room screen for dental practices: estimated wait time as a circular gauge, rotating health tips, and a ticker for opening hours - patients stay informed without asking.'
 downloads:
 - name: Peakboard.pbmx
   url: /assets/2026-03-03-00-00-00/Peakboard.pbmx
-read_more_links:
-- name: Other UI design articles
-  name_de: Weitere UI-Design-Artikel
-  url: /category/ui
-- name: More use case examples
-  name_de: Mehr Anwendungsbeispiele
-  url: /category/usecase
 lang: en
 permalink: /en/dental-practice-waiting-room-display/
-translation_url: /de/dental-practice-waiting-room-display/
+translation_url: /de/wartezimmer-display-fuer-zahnarztpraxen/
 redirect_from:
 - /Dental-Practice-Waiting-Room-Display.html
 ---

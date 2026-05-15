@@ -12,8 +12,10 @@ downloads:
 - name: SupervisorDashboard.pbmx
   url: /assets/2026-03-13-13-53-07/SupervisorDashboard.pbmx
 lang: de
-permalink: /de/warehouse-pick-and-pack-picker-terminal-and-supervisor-dashboard/
+permalink: /de/lager-kommissionierung-picker-terminal-und-supervisor-dashboard/
 translation_url: /en/warehouse-pick-and-pack-picker-terminal-and-supervisor-dashboard/
+redirect_from:
+- /de/warehouse-pick-and-pack-picker-terminal-and-supervisor-dashboard/
 ---
 
 Pick-and-Pack-Abläufe im Lager stehen und fallen mit Geschwindigkeit und Genauigkeit. Picker brauchen einen klaren Blick auf ihre nächste Aufgabe, und Supervisor müssen auf einen Blick sehen, ob das Team im Plan liegt oder zurückfällt. Dieses zweiteilige System verbindet ein mobiles Picker-Terminal mit einem wandmontierten Supervisor-Dashboard - beide kommunizieren in Echtzeit über Peakboard Hub.

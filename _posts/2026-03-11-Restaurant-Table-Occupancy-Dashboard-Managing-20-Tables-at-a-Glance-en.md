@@ -12,7 +12,7 @@ downloads:
   url: /assets/2026-03-11-15-12-57/Peakboard.pbmx
 lang: en
 permalink: /en/restaurant-table-occupancy-dashboard-managing-20-tables-at-a-glance/
-translation_url: /de/restaurant-table-occupancy-dashboard-managing-20-tables-at-a-glance/
+translation_url: /de/restaurant-tisch-belegungs-dashboard-20-tische-auf-einen-blick-verwalten/
 redirect_from:
 - /Restaurant-Table-Occupancy-Dashboard-Managing-20-Tables-at-a-Glance.html
 ---

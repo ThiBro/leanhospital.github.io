@@ -1,8 +1,8 @@
-<span>
-  {% assign words = include.content | number_of_words %}
-  {% if words < 200 %}
-    1 min
-  {% else %}
-    {{ words | divided_by:150 }} mins
-  {% endif %}
-</span>
+{%- assign _rt_lang = include.lang | default: page.lang | default: site.default_lang | default: 'en' -%}
+{%- assign _rt_words = include.content | number_of_words -%}
+{%- if _rt_words < 200 -%}
+  {%- assign _rt_mins = 1 -%}
+{%- else -%}
+  {%- assign _rt_mins = _rt_words | divided_by: 150 -%}
+{%- endif -%}
+<span>{% if _rt_lang == 'de' %}{{ _rt_mins }} Min.{% else %}{{ _rt_mins }} min{% endif %}</span>

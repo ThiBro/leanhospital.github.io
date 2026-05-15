@@ -5,20 +5,15 @@ date: 2026-03-05 00:00:00 +0000
 tags: production
 image: /assets/2026-03-05-09-21-51/title.png
 bg_alternative: true
-description: Interaktives Board zur Meldung von Sicherheitsvorfällen - Ein Peakboard Digital-Signage-Dashboard-Projekt.
+description: Ein Sicherheitsboard für die Werkshalle mit Touchscreen-Vorfallmeldung, Tage-ohne-Unfall-Anzeige, Monatszielwert und Live-Feed - so werden Beinahe-Unfälle dokumentiert statt vergessen.
 downloads:
 - name: Peakboard.pbmx
   url: /assets/2026-03-05-09-21-51/Peakboard.pbmx
-read_more_links:
-- name: Other UI design articles
-  name_de: Weitere UI-Design-Artikel
-  url: /category/ui
-- name: More use case examples
-  name_de: Mehr Anwendungsbeispiele
-  url: /category/usecase
 lang: de
-permalink: /de/interactive-safety-incident-reporting-board/
+permalink: /de/interaktives-board-zur-meldung-von-sicherheitsvorfaellen/
 translation_url: /en/interactive-safety-incident-reporting-board/
+redirect_from:
+- /de/interactive-safety-incident-reporting-board/
 ---
 
 Arbeitssicherheit ist eine Aufgabe für alle - aber sie auf einem belebten Produktionsboden sichtbar und nutzbar zu machen, ist eine echte Herausforderung. Papierbasierte Vorfallsprotokolle verschwinden in Schubladen, Sicherheitskennzahlen verstecken sich in Tabellen, und Beinahe-Unfälle werden gar nicht erst gemeldet, weil der Prozess umständlich wirkt. Diese Digital-Signage-Lösung rückt das Thema Sicherheit dorthin, wo es hingehört: in den Mittelpunkt.

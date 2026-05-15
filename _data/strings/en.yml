@@ -1,0 +1,70 @@
+header:
+  search:
+    placeholder: "Search..."
+    aria: "Search"
+  lang:
+    aria: "Switch language"
+
+footer:
+  about:
+    text: "The Guru shows you how to build the hottest Peakboard apps on the planet. No theory lectures, no 47-page whitepapers - just real projects you can steal, learn from, and actually use. May your dashboards always be real-time and your data sources never timeout."
+    label: "About"
+  quicklinks: "Quick Links"
+  search: "Search"
+  legal: "Legal Notice"
+  copyright:
+    suffix: "All rights reserved."
+
+home:
+  hero:
+    title: "Welcome to the Guru's Dashboard Dojo"
+    p1_before: "Looking for ready-made Peakboard projects you can download, take apart, remix, and make your own? You've come to the right place - and it's completely free if you grab the"
+    p1_link: "Community Edition of Peakboard Designer"
+    p1_after: "."
+    p2_html: "You'll find dashboards for <strong>production</strong>, <strong>logistics</strong>, <strong>restaurants</strong>, <strong>hotels</strong>, <strong>personal use</strong>, and things that fall squarely into the <em>\"why not?\"</em> category. Whether it's a shopfloor monitor or a craft-beer brewing tracker - grab what you need and make it yours."
+    p3: "No fine print, no strings attached, no obligation to subscribe to yet another newsletter. Just download and go."
+  all_articles: "All Articles"
+
+card:
+  read_article: "Read Article →"
+
+post:
+  published_in: "Published in"
+  uncategorized: "Uncategorized"
+  read: "read"
+  copy_link: "Copy link"
+  copy_link_alert: "Link copied to clipboard!"
+  resources: "Resources"
+  keep_reading: "Keep Reading"
+  previous: "← Previous Article"
+  next: "Next Article →"
+  related_links: "Related Links"
+  ai_prompt_header: "AI-generated project"
+  ai_prompt_intro: "This project was created entirely with AI. The exact prompt used:"
+
+archive:
+  title: "Article Archive"
+
+sidemenu:
+  home: "Home"
+  about: "About"
+  archive: "Archive"
+
+search:
+  title: "Search Articles"
+  placeholder: "Type to search articles..."
+  read_more: "Read More"
+  no_results: "No results found for"
+
+about:
+  hero:
+    title: "About This Blog"
+    subtitle: "Peakboard Guru - The hottest apps on the planet"
+
+impressum:
+  hero:
+    title: "Legal Notice"
+    subtitle: "Impressum according to German law"
+
+site:
+  tagline: "The Guru's Dashboard Dojo"

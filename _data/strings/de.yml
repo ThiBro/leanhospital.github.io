@@ -1,0 +1,70 @@
+header:
+  search:
+    placeholder: "Suchen..."
+    aria: "Suchen"
+  lang:
+    aria: "Sprache wechseln"
+
+footer:
+  about:
+    text: "Der Guru zeigt dir, wie du die heißesten Peakboard-Apps des Planeten baust. Keine Theorie-Vorträge, keine 47-seitigen Whitepapers - nur echte Projekte, die du klauen, von denen du lernen und die du tatsächlich nutzen kannst. Mögen deine Dashboards stets in Echtzeit sein und deine Datenquellen niemals einen Timeout haben."
+    label: "Über"
+  quicklinks: "Schnelllinks"
+  search: "Suche"
+  legal: "Impressum"
+  copyright:
+    suffix: "Alle Rechte vorbehalten."
+
+home:
+  hero:
+    title: "Willkommen im Dashboard-Dojo des Gurus"
+    p1_before: "Du suchst fertige Peakboard-Projekte zum Herunterladen, Auseinandernehmen, Remixen und Anpassen? Du bist hier richtig - und es ist komplett kostenlos, wenn du dir die"
+    p1_link: "Community Edition des Peakboard Designers"
+    p1_after: "holst."
+    p2_html: "Du findest hier Dashboards für <strong>Produktion</strong>, <strong>Logistik</strong>, <strong>Restaurants</strong>, <strong>Hotels</strong>, den <strong>privaten Gebrauch</strong> und Dinge, die ganz klar in die Kategorie <em>\"Warum eigentlich nicht?\"</em> fallen. Ob Shopfloor-Monitor oder Craft-Beer-Brau-Tracker - schnapp dir, was du brauchst, und mach es dir zu eigen."
+    p3: "Kein Kleingedrucktes, keine Hintertüren, keine Pflicht, noch einen weiteren Newsletter zu abonnieren. Einfach herunterladen und loslegen."
+  all_articles: "Alle Artikel"
+
+card:
+  read_article: "Artikel lesen →"
+
+post:
+  published_in: "Veröffentlicht in"
+  uncategorized: "Ohne Kategorie"
+  read: "Lesezeit"
+  copy_link: "Link kopieren"
+  copy_link_alert: "Link in die Zwischenablage kopiert!"
+  resources: "Ressourcen"
+  keep_reading: "Weiterlesen"
+  previous: "← Vorheriger Artikel"
+  next: "Nächster Artikel →"
+  related_links: "Verwandte Links"
+  ai_prompt_header: "KI-generiertes Projekt"
+  ai_prompt_intro: "Dieses Projekt wurde vollständig mit KI erstellt. Der verwendete Prompt:"
+
+archive:
+  title: "Artikel-Archiv"
+
+sidemenu:
+  home: "Startseite"
+  about: "Über"
+  archive: "Archiv"
+
+search:
+  title: "Artikel suchen"
+  placeholder: "Tippen, um Artikel zu suchen..."
+  read_more: "Weiterlesen"
+  no_results: "Keine Ergebnisse gefunden für"
+
+about:
+  hero:
+    title: "Über dieses Blog"
+    subtitle: "Peakboard Guru - Die heißesten Apps des Planeten"
+
+impressum:
+  hero:
+    title: "Impressum"
+    subtitle: "Impressum nach deutschem Recht"
+
+site:
+  tagline: "Das Dashboard-Dojo des Gurus"

@@ -11,8 +11,10 @@ downloads:
 - name: Peakboard.pbmx
   url: /assets/2026-03-11-15-12-57/Peakboard.pbmx
 lang: de
-permalink: /de/restaurant-table-occupancy-dashboard-managing-20-tables-at-a-glance/
+permalink: /de/restaurant-tisch-belegungs-dashboard-20-tische-auf-einen-blick-verwalten/
 translation_url: /en/restaurant-table-occupancy-dashboard-managing-20-tables-at-a-glance/
+redirect_from:
+- /de/restaurant-table-occupancy-dashboard-managing-20-tables-at-a-glance/
 ---
 
 Ein gut besuchtes Restaurant mit 20 Tischen verteilt auf vier Bereiche zu führen, ist eine Koordinationsherausforderung. Die Empfangskraft am Eingang muss wissen, welche Tische frei, welche belegt und welche reserviert sind - alles ohne in Papierlisten zu blättern oder durch den Raum zu rufen. In diesem Artikel bauen wir ein lebendiges, interaktives Grundriss-Dashboard, das die Tischverwaltung von einem Gedächtnisspiel in einen Drei-Sekunden-Blick auf eine farbcodierte Karte verwandelt.

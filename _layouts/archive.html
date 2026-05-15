@@ -1,10 +1,12 @@
 ---
 layout: base
 ---
+{%- assign _lang = page.lang | default: site.default_lang | default: 'en' -%}
+{%- assign t = site.data.strings[_lang] -%}
 
 <div class="mx-auto max-w-7xl px-6 lg:px-8">
   <div class="mt-10">
-    <h1 class="text-3xl font-bold mb-8" data-i18n="archive.title">Article Archive</h1>
+    <h1 class="text-3xl font-bold mb-8">{{ t.archive.title }}</h1>
 
     {% assign lang_posts = site.posts | where: "lang", page.lang %}
     {% assign postsByYear = lang_posts | group_by_exp:"post", "post.date | date: '%Y'" %}
@@ -23,10 +25,20 @@ layout: base
                 <div class="bg-white dark:bg-blackground p-6 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-secondary dark:hover:border-secondary transition-colors flex flex-col h-full">
                   <div class="flex flex-1">
                     <div class="flex-1">
+                      {%- assign _months_en = "January,February,March,April,May,June,July,August,September,October,November,December" | split: "," -%}
+                      {%- assign _months_de = "Januar,Februar,März,April,Mai,Juni,Juli,August,September,Oktober,November,Dezember" | split: "," -%}
+                      {%- assign _month_idx = post.date | date: "%m" | plus: 0 | minus: 1 -%}
+                      {%- assign _d = post.date | date: "%-d" -%}
+                      {%- assign _y = post.date | date: "%Y" -%}
+                      {%- if _lang == 'de' -%}
+                        {%- assign _post_date_label = _d | append: ". " | append: _months_de[_month_idx] | append: " " | append: _y -%}
+                      {%- else -%}
+                        {%- assign _post_date_label = _months_en[_month_idx] | append: " " | append: _d | append: ", " | append: _y -%}
+                      {%- endif -%}
                       <div class="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400 mb-2">
-                        <span>{{ post.date | date: "%B %d, %Y" }}</span>
+                        <span>{{ _post_date_label }}</span>
                         <span>•</span>
-                        <span>{% include reading_time.html content=post.content %} <span data-i18n="post.read">read</span></span>
+                        <span>{% include reading_time.html content=post.content lang=_lang %} {{ t.post.read }}</span>
                       </div>
                       
                       <h4 class="text-lg font-semibold">

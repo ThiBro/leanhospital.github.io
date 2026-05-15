@@ -1,18 +1,27 @@
-{% assign year = post.date | date: "%Y" %}
-{% assign month = post.date | date: "%m" %}
-
+{%- assign _lang = page.lang | default: site.default_lang | default: 'en' -%}
+{%- assign t = site.data.strings[_lang] -%}
+{%- assign _months_en = "January,February,March,April,May,June,July,August,September,October,November,December" | split: "," -%}
+{%- assign _months_de = "Januar,Februar,März,April,Mai,Juni,Juli,August,September,Oktober,November,Dezember" | split: "," -%}
+{%- assign _month_idx = include.post.date | date: "%m" | plus: 0 | minus: 1 -%}
+{%- assign _d = include.post.date | date: "%-d" -%}
+{%- assign _y = include.post.date | date: "%Y" -%}
+{%- if _lang == 'de' -%}
+  {%- assign _date_label = _d | append: ". " | append: _months_de[_month_idx] | append: " " | append: _y -%}
+{%- else -%}
+  {%- assign _date_label = _months_en[_month_idx] | append: " " | append: _d | append: ", " | append: _y -%}
+{%- endif -%}
 <article class="flex flex-col overflow-hidden rounded-xl bg-white dark:bg-blackground shadow-sm border border-gray-200 dark:border-gray-800">
     <div class="relative w-full">
         <a href="{{ include.post.url | relative_url }}">
-            <img src="{{ include.post.image | relative_url }}" alt="{{ include.post.title }}" class="aspect-[16/9] w-full object-cover sm:aspect-[2/1] lg:aspect-[3/2]">
+            <img src="{{ include.post.image | relative_url }}" alt="{{ include.post.title | escape }}" loading="lazy" width="1280" height="720" class="aspect-[16/9] w-full object-cover sm:aspect-[2/1] lg:aspect-[3/2]">
         </a>
     </div>
     <div class="flex flex-col justify-between flex-1 p-6">
         <div>
             <div class="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400 mb-4">
-                <span>{{ include.post.date | date: "%B %d, %Y" }}</span>
+                <span>{{ _date_label }}</span>
                 <span>•</span>
-                <span>{% include reading_time.html content=include.post.content %} <span data-i18n="post.read">read</span></span>
+                <span>{% include reading_time.html content=include.post.content lang=_lang %} {{ t.post.read }}</span>
             </div>
             <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                 <a href="{{ include.post.url | relative_url }}">
@@ -21,7 +30,7 @@
             </h3>
             <div class="flex flex-wrap gap-2 mt-2">
                 {% for tag in include.post.tags %}
-                    <a href="{{ tag | slugify | prepend: '/category/' | relative_url }}" class="text-sm text-gray-500 dark:text-gray-400 hover:text-secondary">#{{ tag }}</a>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">#{{ tag }}</span>
                 {% endfor %}
             </div>
             <p class="mt-4 text-gray-500 dark:text-gray-400">
@@ -30,7 +39,7 @@
         </div>
         <div class="mt-4">
             <a href="{{ include.post.url | relative_url }}" class="inline-flex items-center px-4 py-2 rounded-full bg-secondary text-white hover:bg-secondary/90 transition-colors">
-                <span data-i18n="search.readMore">Read more</span>
+                <span>{{ t.search.read_more }}</span>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 ml-2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
                 </svg>

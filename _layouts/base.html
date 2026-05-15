@@ -1,5 +1,7 @@
+{%- assign _lang = page.lang | default: site.default_lang | default: 'en' -%}
+{%- assign t = site.data.strings[_lang] -%}
 <!doctype html>
-<html lang="{{ page.lang | default: site.default_lang | default: 'en' }}" class="h-full">
+<html lang="{{ _lang }}" class="h-full">
 <head>
     {% include head.html %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">

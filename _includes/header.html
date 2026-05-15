@@ -13,11 +13,11 @@
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
             <!-- Logo/Home - Desktop: large image, Mobile: smaller image -->
-            <a href="{{ _home_url | relative_url }}" class="hidden md:block">
-                <img src="{{ '/assets/img/logo-header.png' | relative_url }}" alt="{{ site.title }}" style="height: 250px; width: auto; position: fixed; top: -55px; left: 16px;" class="pointer-events-auto z-50">
+            <a href="{{ _home_url | relative_url }}" class="hidden md:block" aria-label="{{ site.title }}">
+                <img src="{{ '/assets/img/logo-header.png' | relative_url }}" alt="" width="1536" height="1024" style="height: 250px; width: auto; position: fixed; top: -55px; left: 16px;" class="pointer-events-auto z-50">
             </a>
-            <a href="{{ _home_url | relative_url }}" id="mobile-logo" class="block md:hidden">
-                <img src="{{ '/assets/img/logo-header.png' | relative_url }}" alt="{{ site.title }}" style="height: 125px; width: auto; position: fixed; top: -25px; left: 8px;" class="pointer-events-auto z-50">
+            <a href="{{ _home_url | relative_url }}" id="mobile-logo" class="block md:hidden" aria-label="{{ site.title }}">
+                <img src="{{ '/assets/img/logo-header.png' | relative_url }}" alt="" width="1536" height="1024" style="height: 125px; width: auto; position: fixed; top: -25px; left: 8px;" class="pointer-events-auto z-50">
             </a>
 
             <!-- Search + Language -->
@@ -26,15 +26,13 @@
                 <form id="header-search-form" action="{{ _search_action | relative_url }}" method="get"
                       class="hidden items-center mr-2" onsubmit="return headerSearchSubmit()">
                     <input type="text" name="q" id="header-search-input"
-                           placeholder="Search..."
-                           data-i18n-attr="placeholder:header.search.placeholder"
+                           placeholder="{{ t.header.search.placeholder }}"
                            class="w-48 md:w-64 px-3 py-1.5 text-sm border border-gray-300 rounded-lg
                                   focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent
                                   bg-white dark:bg-blackground dark:border-gray-700 dark:text-light" />
                 </form>
                 <!-- Search icon button -->
-                <button onclick="toggleHeaderSearch()" aria-label="Search"
-                        data-i18n-attr="aria-label:header.search.aria"
+                <button onclick="toggleHeaderSearch()" aria-label="{{ t.header.search.aria }}"
                         class="text-gray-700 dark:text-gray-300 hover:text-accent-cyan transition-colors p-1">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
@@ -71,8 +69,6 @@
         <div id="reading-progress" class="h-full bg-secondary w-0 transition-all duration-150"></div>
     </div>
 </header>
-
-<script src="{{ '/assets/js/i18n.js' | relative_url }}?{{ site.time | date: '%s%N' }}"></script>
 
 <script>
     function toggleHeaderSearch() {

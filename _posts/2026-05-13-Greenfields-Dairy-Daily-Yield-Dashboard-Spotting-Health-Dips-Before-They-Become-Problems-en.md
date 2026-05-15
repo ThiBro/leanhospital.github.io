@@ -13,7 +13,7 @@ downloads:
   url: /assets/2026-05-13-15-08-52/Peakboard.pbmx
 lang: en
 permalink: /en/greenfields-dairy-daily-yield-dashboard-spotting-health-dips-before-they-become-problems/
-translation_url: /de/greenfields-dairy-daily-yield-dashboard-spotting-health-dips-before-they-become-problems/
+translation_url: /de/greenfields-dairy-tagesertrags-dashboard-gesundheitsprobleme-frueh-erkennen/
 redirect_from:
 - /Greenfields-Dairy-Daily-Yield-Dashboard-Spotting-Health-Dips-Before-They-Become-Problems.html
 ---

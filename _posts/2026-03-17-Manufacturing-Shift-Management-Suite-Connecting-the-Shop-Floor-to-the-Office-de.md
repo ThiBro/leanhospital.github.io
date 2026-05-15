@@ -12,8 +12,10 @@ downloads:
 - name: OfficeShiftOverview.pbmx
   url: /assets/2026-03-17-15-59-45/OfficeShiftOverview.pbmx
 lang: de
-permalink: /de/manufacturing-shift-management-suite-connecting-the-shop-floor-to-the-office/
+permalink: /de/schichtmanagement-suite-fuer-die-fertigung-produktion-und-buero-verbinden/
 translation_url: /en/manufacturing-shift-management-suite-connecting-the-shop-floor-to-the-office/
+redirect_from:
+- /de/manufacturing-shift-management-suite-connecting-the-shop-floor-to-the-office/
 ---
 
 Auf einem ausgelasteten Produktionsboden mit drei parallelen Fertigungslinien und rotierenden Früh-, Spät- und Nachtschichten ist es eine ständige Herausforderung, alle auf Ausstoßziele, Qualitätskennzahlen und schichtübergreifende Kommunikation auszurichten. Mündliche Übergaben gehen im Lärm der Fabrik verloren, Papierprotokolle sind veraltet, sobald jemand sie liest, und Manager im Büro haben keinen Echtzeitblick auf das, was im Werk passiert. Diese zweiteilige App-Suite löst dieses Problem, indem sie Werker und Büromanagement jeweils genau die Informationen und Interaktionen bietet, die sie brauchen - angezeigt auf Bildschirmen genau dort, wo Entscheidungen fallen.

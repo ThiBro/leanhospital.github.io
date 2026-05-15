@@ -13,7 +13,7 @@ downloads:
   url: /assets/2026-03-17-15-59-45/OfficeShiftOverview.pbmx
 lang: en
 permalink: /en/manufacturing-shift-management-suite-connecting-the-shop-floor-to-the-office/
-translation_url: /de/manufacturing-shift-management-suite-connecting-the-shop-floor-to-the-office/
+translation_url: /de/schichtmanagement-suite-fuer-die-fertigung-produktion-und-buero-verbinden/
 redirect_from:
 - /Manufacturing-Shift-Management-Suite-Connecting-the-Shop-Floor-to-the-Office.html
 ---

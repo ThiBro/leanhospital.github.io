@@ -11,7 +11,7 @@ downloads:
   url: /assets/2026-03-19-10-01-14/Peakboard.pbmx
 lang: en
 permalink: /en/hospital-patient-flow-management-system-triage-waiting-area-and-ward-coordination/
-translation_url: /de/hospital-patient-flow-management-system-triage-waiting-area-and-ward-coordination/
+translation_url: /de/krankenhaus-patientenflusssteuerung-triage-wartebereich-und-stationskoordination/
 redirect_from:
 - /Hospital-Patient-Flow-Management-System-Triage-Waiting-Area-and-Ward-Coordination.html
 ---

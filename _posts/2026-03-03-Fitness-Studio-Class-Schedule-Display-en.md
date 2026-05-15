@@ -5,20 +5,13 @@ date: 2026-03-03 00:00:00 +0000
 tags: fitness
 image: /assets/2026-03-03-16-34-54/title.png
 bg_alternative: true
-description: Fitness Studio Class Schedule Display - A Peakboard digital signage dashboard project.
+description: A lobby display for fitness studios that shows today's class schedule, free spots, and a countdown to the next session - so members stop asking and start showing up on time.
 downloads:
 - name: Peakboard.pbmx
   url: /assets/2026-03-03-16-34-54/Peakboard.pbmx
-read_more_links:
-- name: Other UI design articles
-  name_de: Weitere UI-Design-Artikel
-  url: /category/ui
-- name: More use case examples
-  name_de: Mehr Anwendungsbeispiele
-  url: /category/usecase
 lang: en
 permalink: /en/fitness-studio-class-schedule-display/
-translation_url: /de/fitness-studio-class-schedule-display/
+translation_url: /de/kursplan-display-fuer-das-fitnessstudio/
 redirect_from:
 - /Fitness-Studio-Class-Schedule-Display.html
 ---
