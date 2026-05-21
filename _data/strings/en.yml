@@ -7,7 +7,7 @@ header:
 
 footer:
   about:
-    text: "The Guru shows you how to build the hottest Peakboard apps on the planet. No theory lectures, no 47-page whitepapers - just real projects you can steal, learn from, and actually use. May your dashboards always be real-time and your data sources never timeout."
+    text: "The Guru shows you how to build the hottest Peakboard apps on the planet. Real projects to steal, learn from, and actually use. May your dashboards always be real-time and your data sources never timeout."
     label: "About"
   quicklinks: "Quick Links"
   search: "Search"
@@ -22,7 +22,7 @@ home:
     p1_link: "Community Edition of Peakboard Designer"
     p1_after: "."
     p2_html: "You'll find dashboards for <strong>production</strong>, <strong>logistics</strong>, <strong>restaurants</strong>, <strong>hotels</strong>, <strong>personal use</strong>, and things that fall squarely into the <em>\"why not?\"</em> category. Whether it's a shopfloor monitor or a craft-beer brewing tracker - grab what you need and make it yours."
-    p3: "No fine print, no strings attached, no obligation to subscribe to yet another newsletter. Just download and go."
+    p3: "Everything's free and ready to use. Just download and go."
   all_articles: "All Articles"
 
 card:

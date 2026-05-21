@@ -7,7 +7,7 @@ header:
 
 footer:
   about:
-    text: "Der Guru zeigt dir, wie du die heißesten Peakboard-Apps des Planeten baust. Keine Theorie-Vorträge, keine 47-seitigen Whitepapers - nur echte Projekte, die du klauen, von denen du lernen und die du tatsächlich nutzen kannst. Mögen deine Dashboards stets in Echtzeit sein und deine Datenquellen niemals einen Timeout haben."
+    text: "Der Guru zeigt dir, wie du die heißesten Peakboard-Apps des Planeten baust. Echte Projekte zum Klauen, Lernen und Einsetzen. Mögen deine Dashboards stets in Echtzeit sein und deine Datenquellen niemals einen Timeout haben."
     label: "Über"
   quicklinks: "Schnelllinks"
   search: "Suche"
@@ -20,9 +20,9 @@ home:
     title: "Willkommen im Dashboard-Dojo des Gurus"
     p1_before: "Du suchst fertige Peakboard-Projekte zum Herunterladen, Auseinandernehmen, Remixen und Anpassen? Du bist hier richtig - und es ist komplett kostenlos, wenn du dir die"
     p1_link: "Community Edition des Peakboard Designers"
-    p1_after: "holst."
+    p1_after: " holst."
     p2_html: "Du findest hier Dashboards für <strong>Produktion</strong>, <strong>Logistik</strong>, <strong>Restaurants</strong>, <strong>Hotels</strong>, den <strong>privaten Gebrauch</strong> und Dinge, die ganz klar in die Kategorie <em>\"Warum eigentlich nicht?\"</em> fallen. Ob Shopfloor-Monitor oder Craft-Beer-Brau-Tracker - schnapp dir, was du brauchst, und mach es dir zu eigen."
-    p3: "Kein Kleingedrucktes, keine Hintertüren, keine Pflicht, noch einen weiteren Newsletter zu abonnieren. Einfach herunterladen und loslegen."
+    p3: "Alles kostenlos und sofort einsetzbar. Einfach herunterladen und loslegen."
   all_articles: "Alle Artikel"
 
 card:
