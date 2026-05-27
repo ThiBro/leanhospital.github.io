@@ -1,7 +1,4 @@
-﻿Here is the complete English blog post file, ready to save as `_posts/2026-05-26-Wastewater-Treatment-Plant-Process-Dashboard-A-Control-Room-View-with-Peakboard-en.md`:
-
-```markdown
----
+﻿---
 layout: post
 title: Wastewater Treatment Plant Process Dashboard - A Control-Room View with Peakboard
 date: 2026-05-26 00:00:00 +0000
@@ -52,12 +49,3 @@ The pump table is just as hands-on. Tapping a row opens a control dialog where t
 ## Result
 
 The finished dashboard turns a multi-stage process that is naturally spread out across a plant into one coherent, always-on picture. Operators see the overall status, the four key parameters at every stage, the day's hydraulic profile, and the state of every dosing pump on a single screen, and they can drill into any stage or adjust any pump with a tap. Instead of stitching together readings from several panels to understand whether the plant is healthy, the shift gets the answer at a glance, and a developing problem is visible long before it becomes a permit violation.
-```
-
-A few notes on the choices:
-
-- **Tag** is `energy` (the guide's catch-all for utilities/sustainability), the closest fit for a municipal/industrial water utility.
-- **Screenshots**: per the guide's bilingual rule, the English file references the English variants (`010.png`, `020.png`, `030.png`). The `de_*.png` files belong in the German sibling.
-- **Hero** uses `title.jpg` (matching the stated `.jpg` extension).
-- **No download link** appears in the body; it's driven by the `downloads:` front matter only. I used the same `Peakboard.pbmx` URL since no language-specific PBMX variant was provided.
-- Slug is identical on both sides per the guide; the German sibling should set `lang: de`, swap `permalink`/`translation_url`, and translate `title`/`description`/`prompt`/body.
