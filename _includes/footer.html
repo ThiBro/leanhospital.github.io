@@ -28,12 +28,22 @@
           {%- assign _about_url = '/about/' -%}
           {%- assign _search_url = '/search/' -%}
           {%- assign _impressum_url = '/impressum/' -%}
+          {%- assign _deploy_url = '/how-to-deploy/' -%}
+        {%- endif -%}
+        {%- if _lang == 'de' -%}
+          {%- assign _deploy_url = '/de/how-to-deploy/' -%}
         {%- endif -%}
         <ul class="grid grid-cols-2 gap-x-8 gap-y-2.5">
           <li>
             <a href="{{ _about_url | relative_url }}" class="text-sm hover:text-accent-amber transition-colors inline-flex items-center group" style="color: rgba(255,255,255,0.7);">
               <i class="fas fa-user-circle mr-2 text-accent-amber"></i>
               <span>{{ t.footer.about.label }}</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{ _deploy_url | relative_url }}" class="text-sm hover:text-accent-amber transition-colors inline-flex items-center group" style="color: rgba(255,255,255,0.7);">
+              <i class="fas fa-upload mr-2 text-accent-amber"></i>
+              <span>{{ t.footer.deploy }}</span>
             </a>
           </li>
           <li>

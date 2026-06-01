@@ -10,6 +10,7 @@ footer:
     text: "The Guru shows you how to build the hottest Peakboard apps on the planet. Real projects to steal, learn from, and actually use. May your dashboards always be real-time and your data sources never timeout."
     label: "About"
   quicklinks: "Quick Links"
+  deploy: "Deploy to Box"
   search: "Search"
   legal: "Legal Notice"
   copyright:

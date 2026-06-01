@@ -10,6 +10,7 @@ footer:
     text: "Der Guru zeigt dir, wie du die heißesten Peakboard-Apps des Planeten baust. Echte Projekte zum Klauen, Lernen und Einsetzen. Mögen deine Dashboards stets in Echtzeit sein und deine Datenquellen niemals einen Timeout haben."
     label: "Über"
   quicklinks: "Schnelllinks"
+  deploy: "Auf die Box laden"
   search: "Suche"
   legal: "Impressum"
   copyright:
