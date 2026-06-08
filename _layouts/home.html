@@ -25,6 +25,10 @@ layout: base
       </p>
       <p>{{ t.home.hero.p2_html }}</p>
       <p class="text-sm text-gray-700">{{ t.home.hero.p3 }}</p>
+      <p class="text-base md:text-lg font-semibold">
+        {{ t.home.hero.deploy_before }}
+        <a href="{{ site.baseurl }}{% if page.lang == 'de' %}/de{% endif %}/how-to-install/" class="font-bold underline decoration-2 underline-offset-2" style="color: #9A4400;">{{ t.home.hero.deploy_link }}</a>{{ t.home.hero.deploy_after }}
+      </p>
     </div>
   </div>
 </div>

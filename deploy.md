@@ -1,9 +1,9 @@
 ---
-title: How to Deploy
+title: How to Install
 layout: about
 lang: en
-permalink: /how-to-deploy/
-translation_url: /de/how-to-deploy/
+permalink: /how-to-install/
+translation_url: /de/how-to-install/
 description: "Step-by-step guide: how to get a downloaded Peakboard Guru project (PBMX) running on a Peakboard Box or your own BYOD hardware - open it in Peakboard Designer, pair the box, and upload."
 hero:
   title: Get the Project on Screen
@@ -11,6 +11,7 @@ hero:
   image_header: /assets/img/header.jpg
 redirect_from:
   - /deploy.html
+  - /how-to-deploy/
 ---
 
 So you've grabbed one of the Guru's projects. Now you want it running on an actual screen on the wall - not just previewing on your laptop. Here's how the PBMX file makes its way onto a **Peakboard Box** (the little box we sell) or your own **BYOD** hardware (Bring Your Own Device - any Windows machine running the Peakboard Runtime).
@@ -31,6 +32,20 @@ Double-click the downloaded `.pbmx` file, or drag it onto the Peakboard Designer
 When you're happy, look at the top-right corner. The **Preview** button lets you test-drive it locally; the **Upload** button is the one that ships it to a box.
 
 ![The Peakboard Designer - Preview and Upload sit in the top-right corner]({{ site.baseurl }}/assets/img/deploy/en_designer-03.png)
+
+## Optional - Create the data structures in Peakboard Hub
+
+Many of the projects here read and write their data through **Peakboard Hub Lists** - shared tables and variables that live in your Peakboard Hub. The project references them by name, so those lists and variables have to exist in the Hub before the visualization has anything to talk to. Good news: the Designer can create them all for you in one go.
+
+Open the **Peakboard Hub** dialog from the toolbar (the **h** icon). Enter your Hub URL and credentials and hit **Connect** - the Status section should light up green once you're in.
+
+![The Peakboard Hub dialog in the Designer, with the Transfer to Hub button at the bottom]({{ site.baseurl }}/assets/img/deploy/Peakboard-Hub_Transfer-open.png)
+
+Now click **Transfer to Hub**. The Designer scans the project and lists every Hub List and variable it expects, with the name each will get in the Hub. The **Status** column tells you what's already there (*Found*) and what still needs creating. Pick whether to ship some preview data along, then hit **Transfer** to create the missing ones.
+
+![The Transfer to Hub dialog listing the project's Hub Lists and variables with their status]({{ site.baseurl }}/assets/img/deploy/Peakboard-Hub_Transfer-data.png)
+
+Once everything reads *Found*, your Hub holds all the structures the project needs and you're ready to deploy.
 
 ## Step 2 - Boot and connect your Box / BYOD
 

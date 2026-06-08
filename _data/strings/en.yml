@@ -10,7 +10,7 @@ footer:
     text: "The Guru shows you how to build the hottest Peakboard apps on the planet. Real projects to steal, learn from, and actually use. May your dashboards always be real-time and your data sources never timeout."
     label: "About"
   quicklinks: "Quick Links"
-  deploy: "Deploy to Box"
+  deploy: "Install the App"
   search: "Search"
   legal: "Legal Notice"
   copyright:
@@ -24,6 +24,9 @@ home:
     p1_after: "."
     p2_html: "You'll find dashboards for <strong>production</strong>, <strong>logistics</strong>, <strong>restaurants</strong>, <strong>hotels</strong>, <strong>personal use</strong>, and things that fall squarely into the <em>\"why not?\"</em> category. Whether it's a shopfloor monitor or a craft-beer brewing tracker - grab what you need and make it yours."
     p3: "Everything's free and ready to use. Just download and go."
+    deploy_before: "Got your project picked out? Here's"
+    deploy_link: "how to get it running on a Peakboard Box or your own hardware"
+    deploy_after: "."
   all_articles: "All Articles"
 
 card:
