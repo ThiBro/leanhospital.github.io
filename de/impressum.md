@@ -4,7 +4,7 @@ layout: about
 lang: de
 permalink: /de/impressum/
 translation_url: /impressum/
-description: "Impressum für leanhospital.com nach deutschem Recht inklusive Anbieterkennzeichnung, Kontaktangaben und Haftungshinweisen."
+description: "Impressum für lean-hospital.de nach deutschem Recht inklusive Anbieterkennzeichnung, Kontaktangaben und Haftungshinweisen."
 noindex: true
 hero:
   title: Impressum

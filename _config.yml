@@ -1,7 +1,7 @@
 title: Lean Hospital
 description: "Lean Hospital - efficient processes for modern healthcare"
 baseurl: ""
-url: "https://leanhospital.com"
+url: "https://lean-hospital.de"
 permalink: /:title:output_ext
 default_lang: en
 port: 4001

@@ -4,7 +4,7 @@ layout: about
 lang: en
 permalink: /impressum/
 translation_url: /de/impressum/
-description: "Legal notice for leanhospital.com - Impressum according to German law including operator information, contact details, and disclaimers."
+description: "Legal notice for lean-hospital.de - Impressum according to German law including operator information, contact details, and disclaimers."
 noindex: true
 hero:
   title: Legal Notice

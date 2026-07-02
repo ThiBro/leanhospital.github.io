@@ -53,7 +53,7 @@ Required fields for every new post:
 
 The slug is the lower-cased, hyphenated form of the title. For example,
 `_posts/2026-07-02-My-Article-en.md` becomes
-`https://leanhospital.com/en/my-article/`.
+`https://lean-hospital.de/en/my-article/`.
 
 ### Established tags
 
