@@ -4,12 +4,11 @@ layout: about
 lang: de
 permalink: /de/impressum/
 translation_url: /impressum/
-description: "Impressum für peakboard-guru.com nach deutschem Recht inklusive Anbieterkennzeichnung, Kontaktangaben und Haftungshinweisen."
+description: "Impressum für leanhospital.com nach deutschem Recht inklusive Anbieterkennzeichnung, Kontaktangaben und Haftungshinweisen."
 noindex: true
 hero:
   title: Impressum
   subtitle: Impressum nach deutschem Recht
-  image_header: /assets/img/header.jpg
 ---
 
 ## Angaben gemäß § 5 DDG
@@ -41,4 +40,4 @@ Diese Webseite enthält Links zu externen Webseiten Dritter, auf deren Inhalte i
 
 ### Urheberrecht
 
-Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Die bereitgestellten Peakboard-Projektdateien (PBMX) dürfen frei verwendet, modifiziert und weiterverbreitet werden.
+Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.

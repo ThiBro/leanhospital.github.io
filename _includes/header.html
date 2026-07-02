@@ -1,4 +1,4 @@
-<header class="dark:bg-blackground border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50" style="background: linear-gradient(to right, #ffffff, #fffbeb);">
+<header class="dark:bg-blackground border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50" style="background: linear-gradient(to right, #ffffff, #eff6ff);">
     <!-- Thin accent line -->
     <div class="h-0.5 w-full bg-gradient-to-r from-transparent via-accent-cyan to-transparent"></div>
 
@@ -12,12 +12,16 @@
     {%- endif -%}
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
-            <!-- Logo/Home - Desktop: large image, Mobile: smaller image -->
-            <a href="{{ _home_url | relative_url }}" class="hidden md:block" aria-label="{{ site.title }}">
-                <img src="{{ '/assets/img/logo-header.png' | relative_url }}" alt="" width="1536" height="1024" style="height: 250px; width: auto; position: fixed; top: -55px; left: 16px;" class="pointer-events-auto z-50">
-            </a>
-            <a href="{{ _home_url | relative_url }}" id="mobile-logo" class="block md:hidden" aria-label="{{ site.title }}">
-                <img src="{{ '/assets/img/logo-header.png' | relative_url }}" alt="" width="1536" height="1024" style="height: 125px; width: auto; position: fixed; top: -25px; left: 8px;" class="pointer-events-auto z-50">
+            <!-- Logo/Home - text wordmark -->
+            <a href="{{ _home_url | relative_url }}" class="flex items-center gap-2.5 group" aria-label="{{ site.title }}">
+                <span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-primary text-white shadow-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                        <path d="M3 12h4l2 5 4-10 2 5h6" />
+                    </svg>
+                </span>
+                <span class="font-heading text-xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-none">
+                    Lean<span class="text-primary">Hospital</span>
+                </span>
             </a>
 
             <!-- Search + Language -->

@@ -4,29 +4,24 @@ layout: about
 lang: en
 permalink: /about/
 translation_url: /de/about/
-description: "About Peakboard Guru - a free collection of real-world Peakboard dashboard examples with downloadable PBMX project files, run by Thilo."
+description: "About Lean Hospital - a blog about efficient processes in healthcare: patient flow, lean management, and process improvement."
 hero:
   title: About This Blog
-  subtitle: Peakboard Guru - The hottest apps on the planet
-  image_header: /assets/img/header.jpg
+  subtitle: Lean Hospital - Efficient processes for modern healthcare
 redirect_from:
   - /about.html
 ---
 
-## Namaste, dear visitor!
+## Welcome!
 
-Welcome to **Peakboard Guru** - your go-to collection of real-world Peakboard example projects. Whether you're looking for inspiration for your next factory dashboard, a waiting room display, or a fermentation monitor for your craft brewery (yes, really), you've come to the right place.
+Welcome to **Lean Hospital** - a blog about efficient processes in healthcare. Whether you work in an emergency department, on a ward, in the operating room, in pharmacy, or in administration, the goal is the same: spend less time on waste and more time on patients.
 
-Every article comes with a downloadable PBMX file so you can open it in Peakboard Designer and start tinkering right away. Practical examples to take apart, learn from, and adapt to your own use case.
+Every article looks at a concrete workflow - how it works today, where the delays and hand-offs hide, and what a leaner version could look like. Practical examples to learn from and adapt to your own setting.
 
 ### A few things to keep in mind
 
-1. All projects are provided as-is. If something doesn't work, it's probably not a bug - it's a *surprise feature*.
-2. Articles refer to the Peakboard Designer version available at the time of writing. Things evolve, buttons move, and occasionally a hack becomes unnecessary because the product team actually listens.
-3. Got questions, ideas, or complaints about the Guru's fashion choices? Reach out to me or visit the [Peakboard subreddit](https://www.reddit.com/r/Peakboard/).
+1. The ideas here are meant as inspiration, not prescriptions. Every hospital is different, and what works in one department may need adjusting in another.
+2. Lean is a mindset, not a checklist. The point is continuous improvement - small, steady changes that add up over time.
+3. Got questions, ideas, or a workflow you'd like to see covered? Feel free to get in touch.
 
-May your dashboards always be real-time and your data sources never timeout.
-
-Cheers, Thilo
-
-![The Peakboard Guru]({{ site.baseurl }}/assets/img/guru.png)
+Here's to shorter waiting times and smoother processes.

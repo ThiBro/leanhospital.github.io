@@ -60,18 +60,18 @@ module.exports = {
                 }
             }),
             colors: {
-                blackground: '#1C1C1C',
-                blueground: '#2A1F14',
-                primary: '#7A3B10',
-                secondary: '#E8820C',
-                light: '#ECEBE4',
-                'accent-cyan': '#F0A030',
-                'accent-amber': '#FFD449',
+                blackground: '#0F172A',
+                blueground: '#F1F5F9',
+                primary: '#0E6BA8',
+                secondary: '#12A594',
+                light: '#F8FAFC',
+                'accent-cyan': '#0E6BA8',
+                'accent-amber': '#12A594',
             },
             keyframes: {
                 highlight: {
                     '0%': { backgroundColor: 'transparent' },
-                    '50%': { backgroundColor: 'rgb(232 130 12 / 0.1)' },
+                    '50%': { backgroundColor: 'rgb(18 165 148 / 0.1)' },
                     '100%': { backgroundColor: 'transparent' },
                 },
             },

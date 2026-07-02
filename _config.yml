@@ -1,7 +1,7 @@
-title: Peakboard Guru
-description: "Peakboard Guru shows you fancy Peakboard projects"
+title: Lean Hospital
+description: "Lean Hospital - efficient processes for modern healthcare"
 baseurl: ""
-url: "https://peakboard-guru.com"
+url: "https://leanhospital.com"
 permalink: /:title:output_ext
 default_lang: en
 port: 4001

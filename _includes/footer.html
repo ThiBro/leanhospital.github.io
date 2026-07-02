@@ -1,4 +1,4 @@
-<footer class="mt-24" style="background-color: #9A4400;">
+<footer class="mt-24" style="background-color: #0E6BA8;">
   <!-- Thin accent line -->
   <div class="h-0.5 w-full bg-gradient-to-r from-transparent via-accent-amber to-transparent"></div>
 
@@ -28,22 +28,12 @@
           {%- assign _about_url = '/about/' -%}
           {%- assign _search_url = '/search/' -%}
           {%- assign _impressum_url = '/impressum/' -%}
-          {%- assign _deploy_url = '/how-to-install/' -%}
-        {%- endif -%}
-        {%- if _lang == 'de' -%}
-          {%- assign _deploy_url = '/de/how-to-install/' -%}
         {%- endif -%}
         <ul class="grid grid-cols-2 gap-x-8 gap-y-2.5">
           <li>
             <a href="{{ _about_url | relative_url }}" class="text-sm hover:text-accent-amber transition-colors inline-flex items-center group" style="color: rgba(255,255,255,0.7);">
               <i class="fas fa-user-circle mr-2 text-accent-amber"></i>
               <span>{{ t.footer.about.label }}</span>
-            </a>
-          </li>
-          <li>
-            <a href="{{ _deploy_url | relative_url }}" class="text-sm hover:text-accent-amber transition-colors inline-flex items-center group" style="color: rgba(255,255,255,0.7);">
-              <i class="fas fa-upload mr-2 text-accent-amber"></i>
-              <span>{{ t.footer.deploy }}</span>
             </a>
           </li>
           <li>
@@ -56,24 +46,6 @@
             <a href="{{ _impressum_url | relative_url }}" class="text-sm hover:text-accent-amber transition-colors inline-flex items-center group" style="color: rgba(255,255,255,0.7);">
               <i class="fas fa-gavel mr-2 text-accent-amber"></i>
               <span>{{ t.footer.legal }}</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.youtube.com/@PeakboardGuru" target="_blank" rel="noopener" class="text-sm hover:text-accent-amber transition-colors inline-flex items-center group" style="color: rgba(255,255,255,0.7);">
-              <i class="fab fa-youtube mr-2 text-accent-amber"></i>
-              YouTube
-            </a>
-          </li>
-          <li>
-            <a href="https://www.reddit.com/r/Peakboard/" target="_blank" rel="noopener" class="text-sm hover:text-accent-amber transition-colors inline-flex items-center group" style="color: rgba(255,255,255,0.7);">
-              <i class="fab fa-reddit mr-2 text-accent-amber"></i>
-              Reddit
-            </a>
-          </li>
-          <li>
-            <a href="https://www.peakboard.com/downloads/peakboard-designer" target="_blank" rel="noopener" class="text-sm hover:text-accent-amber transition-colors inline-flex items-center group" style="color: rgba(255,255,255,0.7);">
-              <i class="fas fa-download mr-2 text-accent-amber"></i>
-              Peakboard Designer
             </a>
           </li>
         </ul>

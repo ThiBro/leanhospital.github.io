@@ -4,5 +4,5 @@ layout: home
 lang: en
 permalink: /
 translation_url: /de/
-description: "Real-world Peakboard dashboard examples with downloadable PBMX files - production, logistics, hospitality, healthcare. Take them apart, remix them, ship them."
+description: "Lean Hospital - a blog about efficient processes in healthcare: patient flow, lean management, and process improvement, with practical, real-world examples."
 ---

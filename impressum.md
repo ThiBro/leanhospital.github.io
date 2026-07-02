@@ -4,12 +4,11 @@ layout: about
 lang: en
 permalink: /impressum/
 translation_url: /de/impressum/
-description: "Legal notice for peakboard-guru.com - Impressum according to German law including operator information, contact details, and disclaimers."
+description: "Legal notice for leanhospital.com - Impressum according to German law including operator information, contact details, and disclaimers."
 noindex: true
 hero:
   title: Legal Notice
   subtitle: Impressum according to German law
-  image_header: /assets/img/header.jpg
 redirect_from:
   - /impressum.html
 ---
@@ -43,4 +42,4 @@ This website contains links to external third-party websites, the content of whi
 
 ### Copyright
 
-The content and works created by the site operator on these pages are subject to German copyright law. Duplication, processing, distribution and any kind of use beyond the limits of copyright law require the written consent of the respective author or creator. Downloads and copies of this site are only permitted for private, non-commercial use. The provided Peakboard project files (PBMX) may be freely used, modified and redistributed.
+The content and works created by the site operator on these pages are subject to German copyright law. Duplication, processing, distribution and any kind of use beyond the limits of copyright law require the written consent of the respective author or creator. Downloads and copies of this site are only permitted for private, non-commercial use.

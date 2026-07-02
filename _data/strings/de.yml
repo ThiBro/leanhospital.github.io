@@ -7,10 +7,10 @@ header:
 
 footer:
   about:
-    text: "Der Guru zeigt dir, wie du die heißesten Peakboard-Apps des Planeten baust. Echte Projekte zum Klauen, Lernen und Einsetzen. Mögen deine Dashboards stets in Echtzeit sein und deine Datenquellen niemals einen Timeout haben."
+    text: "Lean Hospital ist ein Blog über effiziente Prozesse im Gesundheitswesen. Praxisnahe Ideen, echte Arbeitsabläufe und Erfahrungen, die Krankenhäusern helfen, weniger Zeit zu verschwenden und bessere Versorgung zu leisten."
     label: "Über"
   quicklinks: "Schnelllinks"
-  deploy: "App installieren"
+  deploy: "Loslegen"
   search: "Suche"
   legal: "Impressum"
   copyright:
@@ -18,15 +18,10 @@ footer:
 
 home:
   hero:
-    title: "Willkommen im Dashboard-Dojo des Gurus"
-    p1_before: "Du suchst fertige Peakboard-Projekte zum Herunterladen, Auseinandernehmen, Remixen und Anpassen? Du bist hier richtig - und es ist komplett kostenlos, wenn du dir die"
-    p1_link: "Community Edition des Peakboard Designers"
-    p1_after: " holst."
-    p2_html: "Du findest hier Dashboards für <strong>Produktion</strong>, <strong>Logistik</strong>, <strong>Restaurants</strong>, <strong>Hotels</strong>, den <strong>privaten Gebrauch</strong> und Dinge, die ganz klar in die Kategorie <em>\"Warum eigentlich nicht?\"</em> fallen. Ob Shopfloor-Monitor oder Craft-Beer-Brau-Tracker - schnapp dir, was du brauchst, und mach es dir zu eigen."
-    p3: "Alles kostenlos und sofort einsetzbar. Einfach herunterladen und loslegen."
-    deploy_before: "Projekt ausgesucht? Hier geht's zur Anleitung,"
-    deploy_link: "wie du es auf eine Peakboard Box oder deine eigene Hardware bekommst"
-    deploy_after: "."
+    eyebrow: "Lean-Prinzipien fürs Gesundheitswesen"
+    title: "Effiziente Prozesse für Krankenhäuser, die Zeit ernst nehmen"
+    p2_html: "Lean Hospital zeigt, wie Klinik-Teams Wartezeiten verkürzen, Verschwendung beseitigen und sich besser abstimmen - in der <strong>Notaufnahme</strong>, auf <strong>Stationen</strong>, im <strong>OP</strong>, in der <strong>Apotheke</strong> und in der <strong>Verwaltung</strong>. Echte Abläufe, ehrliche Erkenntnisse und praktische Ideen zum Umsetzen."
+    p3: "Neue Artikel zu Prozessverbesserung, Patientenfluss und Lean Management im Gesundheitswesen."
   all_articles: "Alle Artikel"
 
 card:
@@ -43,8 +38,8 @@ post:
   previous: "← Vorheriger Artikel"
   next: "Nächster Artikel →"
   related_links: "Verwandte Links"
-  ai_prompt_header: "KI-generiertes Projekt"
-  ai_prompt_intro: "Dieses Projekt wurde vollständig mit KI erstellt. Der verwendete Prompt:"
+  ai_prompt_header: "KI-generierter Artikel"
+  ai_prompt_intro: "Dieser Artikel wurde mit KI erstellt. Der verwendete Prompt:"
 
 archive:
   title: "Artikel-Archiv"
@@ -63,7 +58,7 @@ search:
 about:
   hero:
     title: "Über dieses Blog"
-    subtitle: "Peakboard Guru - Die heißesten Apps des Planeten"
+    subtitle: "Lean Hospital - Effiziente Prozesse für modernes Gesundheitswesen"
 
 impressum:
   hero:
@@ -71,6 +66,6 @@ impressum:
     subtitle: "Impressum nach deutschem Recht"
 
 site:
-  tagline: "Das Dashboard-Dojo des Gurus"
-  description_fallback: "Echte Peakboard-Dashboard-Beispiele - Produktion, Logistik, Gastgewerbe, Healthcare - mit herunterladbaren PBMX-Dateien zum Auseinandernehmen, Remixen und Nutzen."
-  og_image_alt: "Peakboard Guru - echte Dashboard-Beispiele"
+  tagline: "Effiziente Prozesse für modernes Gesundheitswesen"
+  description_fallback: "Lean Hospital - ein Blog über effiziente Prozesse im Gesundheitswesen: Patientenfluss, Lean Management und Prozessverbesserung, mit praxisnahen Beispielen."
+  og_image_alt: "Lean Hospital - effiziente Prozesse im Gesundheitswesen"

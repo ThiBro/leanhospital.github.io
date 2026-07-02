@@ -1,6 +1,6 @@
 {
-  "name": "Peakboard Guru",
-  "short_name": "PB Guru",
+  "name": "Lean Hospital",
+  "short_name": "Lean Hospital",
   "icons": [
     {
       "src": "/assets/img/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#9A4400",
+  "theme_color": "#0E6BA8",
   "background_color": "#ffffff",
   "display": "standalone"
 }
