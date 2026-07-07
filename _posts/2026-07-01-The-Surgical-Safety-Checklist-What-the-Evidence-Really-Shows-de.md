@@ -5,6 +5,8 @@ date: 2026-07-01 00:00:00 +0000
 tags: patientensicherheit
 description: Die WHO-OP-Sicherheitscheckliste halbierte in ihrer Pilotstudie 2009 die Sterblichkeit - und bewegte dann bei einer verpflichtenden Einführung in Ontario die Zahlen nicht. Die Lücke zwischen beiden Studien ist die eigentliche Lehre.
 lang: de
+image: /assets/img/posts/surgical-safety-checklist.png
+image_header: /assets/img/posts/surgical-safety-checklist.png
 permalink: /de/die-op-sicherheitscheckliste-was-die-evidenz-wirklich-zeigt/
 translation_url: /en/the-surgical-safety-checklist-what-the-evidence-really-shows/
 redirect_from:

@@ -5,6 +5,8 @@ date: 2026-06-29 00:00:00 +0000
 tags: kommunikation
 description: Kommunikationsfehler sind eine der häufigsten Grundursachen für schweren Schaden im Krankenhaus. Zwei strukturierte Übergabemethoden - SBAR und I-PASS - belegen, dass die Standardisierung des Gesprächs Fehler reduziert.
 lang: de
+image: /assets/img/posts/handoff-ipass-sbar.png
+image_header: /assets/img/posts/handoff-ipass-sbar.png
 permalink: /de/die-uebergabe-ist-die-bruchstelle-wie-i-pass-und-sbar-sie-reparieren/
 translation_url: /en/the-handoff-is-where-care-breaks-how-i-pass-and-sbar-fix-it/
 redirect_from:

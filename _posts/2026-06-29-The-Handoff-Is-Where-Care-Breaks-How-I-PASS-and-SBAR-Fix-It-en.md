@@ -5,6 +5,8 @@ date: 2026-06-29 00:00:00 +0000
 tags: communication
 description: Communication failures are a leading root cause of serious harm in hospitals. Two structured handoff methods - SBAR and I-PASS - have the evidence to show that standardizing the conversation reduces errors.
 lang: en
+image: /assets/img/posts/handoff-ipass-sbar.png
+image_header: /assets/img/posts/handoff-ipass-sbar.png
 permalink: /en/the-handoff-is-where-care-breaks-how-i-pass-and-sbar-fix-it/
 translation_url: /de/die-uebergabe-ist-die-bruchstelle-wie-i-pass-und-sbar-sie-reparieren/
 redirect_from:

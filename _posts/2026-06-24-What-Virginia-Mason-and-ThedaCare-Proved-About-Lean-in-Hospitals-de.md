@@ -5,6 +5,8 @@ date: 2026-06-24 00:00:00 +0000
 tags: lean-management
 description: Zwei US-Gesundheitssysteme übernahmen das Toyota-Produktionssystem und maßen die Ergebnisse - freigewordene Fläche, kürzere Durchlaufzeiten und sicherere Versorgung. Was die Evidenz wirklich zeigt.
 lang: de
+image: /assets/img/posts/virginia-mason-thedacare.png
+image_header: /assets/img/posts/virginia-mason-thedacare.png
 permalink: /de/was-virginia-mason-und-thedacare-ueber-lean-im-krankenhaus-bewiesen-haben/
 translation_url: /en/what-virginia-mason-and-thedacare-proved-about-lean-in-hospitals/
 redirect_from:

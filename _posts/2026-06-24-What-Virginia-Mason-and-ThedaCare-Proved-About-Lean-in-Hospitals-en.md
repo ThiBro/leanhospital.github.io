@@ -5,6 +5,8 @@ date: 2026-06-24 00:00:00 +0000
 tags: lean-management
 description: Two American health systems adopted the Toyota Production System and measured the results - freed space, shorter lead times, and safer care. Here is what the evidence actually shows.
 lang: en
+image: /assets/img/posts/virginia-mason-thedacare.png
+image_header: /assets/img/posts/virginia-mason-thedacare.png
 permalink: /en/what-virginia-mason-and-thedacare-proved-about-lean-in-hospitals/
 translation_url: /de/was-virginia-mason-und-thedacare-ueber-lean-im-krankenhaus-bewiesen-haben/
 redirect_from:

@@ -5,6 +5,8 @@ date: 2026-07-02 00:00:00 +0000
 tags: patientensicherheit
 description: Auf den Intensivstationen Michigans senkte eine Fünf-Schritt-Checkliste für das Legen zentraler Venenkatheter die Blutstrominfektionen auf null und rettete nach einer Schätzung in achtzehn Monaten mehr als 1.500 Leben. Wie eine einfache Liste ein hartnäckiges Problem besiegte.
 lang: de
+image: /assets/img/posts/central-line-checklist.png
+image_header: /assets/img/posts/central-line-checklist.png
 permalink: /de/die-fuenf-punkt-checkliste-die-infektionen-auf-null-brachte/
 translation_url: /en/the-five-line-checklist-that-drove-infections-to-zero/
 redirect_from:

@@ -5,6 +5,8 @@ date: 2026-07-02 00:00:00 +0000
 tags: patient-safety
 description: In Michigan's intensive care units, a five-step checklist for inserting central lines cut bloodstream infections to zero and, by one estimate, saved more than 1,500 lives in eighteen months. Here is how a simple list beat a stubborn problem.
 lang: en
+image: /assets/img/posts/central-line-checklist.png
+image_header: /assets/img/posts/central-line-checklist.png
 permalink: /en/the-five-line-checklist-that-drove-infections-to-zero/
 translation_url: /de/die-fuenf-punkt-checkliste-die-infektionen-auf-null-brachte/
 redirect_from:

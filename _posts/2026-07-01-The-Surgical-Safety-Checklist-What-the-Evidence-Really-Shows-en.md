@@ -5,6 +5,8 @@ date: 2026-07-01 00:00:00 +0000
 tags: patient-safety
 description: The WHO Surgical Safety Checklist cut deaths in half in its 2009 pilot - and then failed to move the numbers in a mandated rollout across Ontario. The gap between those two studies is the real lesson.
 lang: en
+image: /assets/img/posts/surgical-safety-checklist.png
+image_header: /assets/img/posts/surgical-safety-checklist.png
 permalink: /en/the-surgical-safety-checklist-what-the-evidence-really-shows/
 translation_url: /de/die-op-sicherheitscheckliste-was-die-evidenz-wirklich-zeigt/
 redirect_from:

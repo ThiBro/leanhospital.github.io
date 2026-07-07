@@ -5,6 +5,8 @@ date: 2026-06-26 00:00:00 +0000
 tags: patient-flow
 description: The evidence linking ED crowding and boarding to higher mortality - and the process changes, from split-flow to the four-hour standard, that measurably move the needle.
 lang: en
+image: /assets/img/posts/ed-crowding.png
+image_header: /assets/img/posts/ed-crowding.png
 permalink: /en/why-emergency-department-crowding-is-a-safety-problem/
 translation_url: /de/warum-ueberfuellung-der-notaufnahme-ein-sicherheitsproblem-ist/
 redirect_from:
