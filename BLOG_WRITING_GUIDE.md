@@ -107,7 +107,7 @@ Only list sources you actually relied on, and only URLs that resolve. Prefer the
 
 ## Optional front matter
 
-- `image` - hero/card image path under `/assets/...`. If omitted, the post uses a clean text hero and the card renders without an image.
+- `image` - hero/card image path under `/assets/...`. If omitted, the post uses a clean text hero and the card renders without an image. For AI-generated hero images, follow [IMAGE_PROMPT_GUIDE.md](IMAGE_PROMPT_GUIDE.md) so the set stays visually consistent.
 - `image_header` - a wider hero image used only at the top of the article.
 - `read_more_links` - list of `{title, url}` related links shown in the right sidebar under "Resources".
 
