@@ -22,6 +22,8 @@ home:
     title: "Efficient processes for hospitals that care about time"
     p2_html: "Lean Hospital explores how healthcare teams cut waiting times, remove waste, and coordinate better across <strong>emergency departments</strong>, <strong>wards</strong>, <strong>operating rooms</strong>, <strong>pharmacy</strong>, and <strong>administration</strong>. Real workflows, honest lessons, and practical ideas you can put to work."
     p3: "New articles on process improvement, patient flow, and lean management in healthcare."
+    cta_label: "Book an appointment"
+    cta_note: "Free 30-minute call - no strings attached"
   all_articles: "All Articles"
 
 card:

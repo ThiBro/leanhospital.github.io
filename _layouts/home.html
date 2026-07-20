@@ -18,6 +18,22 @@ layout: base
       <p>{{ t.home.hero.p2_html }}</p>
       <p class="text-sm text-white/75">{{ t.home.hero.p3 }}</p>
     </div>
+
+    <!-- Booking CTA -->
+    <div class="mt-9 flex flex-col items-center">
+      <a href="https://meetings-eu1.hubspot.com/peakboard/book-a-demo-hospital"
+         target="_blank" rel="noopener"
+         class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-primary font-bold text-sm md:text-base uppercase tracking-wider shadow-lg hover:bg-accent-cyan hover:text-black transition-colors group/cta">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3M3 11h18M5 5h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z" />
+        </svg>
+        {{ t.home.hero.cta_label }}
+        <svg class="w-5 h-5 transition-transform group-hover/cta:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+      <p class="mt-3 text-xs text-white/70">{{ t.home.hero.cta_note }}</p>
+    </div>
   </div>
 </div>
 
