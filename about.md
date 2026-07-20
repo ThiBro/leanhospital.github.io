@@ -25,3 +25,7 @@ Every article looks at a concrete workflow - how it works today, where the delay
 3. Got questions, ideas, or a workflow you'd like to see covered? Feel free to get in touch.
 
 Here's to shorter waiting times and smoother processes.
+
+## About the author
+
+This blog is written by **Martin Neumann**. You can find him on [LinkedIn](https://www.linkedin.com/in/-martin-neumann/) or [book an appointment](https://meetings-eu1.hubspot.com/peakboard/book-a-demo-hospital) directly in the calendar.

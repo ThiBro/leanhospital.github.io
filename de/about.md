@@ -23,3 +23,7 @@ Jeder Artikel betrachtet einen konkreten Ablauf - wie er heute funktioniert, wo 
 3. Fragen, Ideen oder ein Ablauf, den du gern behandelt sehen würdest? Melde dich einfach.
 
 Auf kürzere Wartezeiten und reibungslosere Prozesse.
+
+## Über den Autor
+
+Dieses Blog wird von **Martin Neumann** geschrieben. Du findest ihn auf [LinkedIn](https://www.linkedin.com/in/-martin-neumann/) oder kannst direkt [einen Termin buchen](https://meetings-eu1.hubspot.com/peakboard/book-a-demo-hospital).
