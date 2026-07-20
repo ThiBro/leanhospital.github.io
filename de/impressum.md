@@ -14,8 +14,8 @@ hero:
 ## Angaben gemäß § 5 DDG
 
 Martin Neumann
-Lindenstraße 42
-70173 Stuttgart
+Wolle-Kriwanek-Straße 13a
+70439 Stuttgart
 Deutschland
 
 ## Kontakt
@@ -31,8 +31,8 @@ Sie möchten persönlich sprechen? [Buchen Sie einen Demo-Termin](https://meetin
 ## Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
 
 Martin Neumann
-Lindenstraße 42
-70173 Stuttgart
+Wolle-Kriwanek-Straße 13a
+70439 Stuttgart
 
 ## Haftungsausschluss
 

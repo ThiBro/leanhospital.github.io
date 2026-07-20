@@ -16,8 +16,8 @@ redirect_from:
 ## Information according to § 5 DDG
 
 Martin Neumann
-Lindenstraße 42
-70173 Stuttgart
+Wolle-Kriwanek-Straße 13a
+70439 Stuttgart
 Germany
 
 ## Contact
@@ -33,8 +33,8 @@ Would you like to talk in person? [Book a demo appointment](https://meetings-eu1
 ## Responsible for content according to § 18 (2) MStV
 
 Martin Neumann
-Lindenstraße 42
-70173 Stuttgart
+Wolle-Kriwanek-Straße 13a
+70439 Stuttgart
 
 ## Disclaimer
 
