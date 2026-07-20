@@ -13,20 +13,26 @@ hero:
 
 ## Angaben gemäß § 5 DDG
 
-Thilo Brosinsky
-Goethestr. 13
-71560 Sulzbach an der Murr
+Martin Neumann
+Lindenstraße 42
+70173 Stuttgart
 Deutschland
 
 ## Kontakt
 
-E-Mail: t@brosinsky.de
+E-Mail: kontakt@lean-hospital.de
+
+LinkedIn: [linkedin.com/in/-martin-neumann](https://www.linkedin.com/in/-martin-neumann/)
+
+## Termin buchen
+
+Sie möchten persönlich sprechen? [Buchen Sie einen Demo-Termin](https://meetings-eu1.hubspot.com/peakboard/book-a-demo-hospital) direkt im Kalender.
 
 ## Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
 
-Thilo Brosinsky
-Goethestr. 13
-71560 Sulzbach an der Murr
+Martin Neumann
+Lindenstraße 42
+70173 Stuttgart
 
 ## Haftungsausschluss
 
