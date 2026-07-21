@@ -36,6 +36,7 @@ post:
   copy_link: "Link kopieren"
   copy_link_alert: "Link in die Zwischenablage kopiert!"
   resources: "Ressourcen"
+  downloads: "Downloads"
   keep_reading: "Weiterlesen"
   previous: "← Vorheriger Artikel"
   next: "Nächster Artikel →"

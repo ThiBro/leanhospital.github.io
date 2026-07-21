@@ -36,6 +36,7 @@ post:
   copy_link: "Copy link"
   copy_link_alert: "Link copied to clipboard!"
   resources: "Resources"
+  downloads: "Downloads"
   keep_reading: "Keep Reading"
   previous: "← Previous Article"
   next: "Next Article →"

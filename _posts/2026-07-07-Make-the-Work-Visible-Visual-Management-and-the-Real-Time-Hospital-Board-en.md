@@ -9,6 +9,9 @@ image: /assets/img/posts/ward-status-board.png
 image_header: /assets/img/posts/ward-status-board.png
 permalink: /en/make-the-work-visible-visual-management-and-the-real-time-hospital-board/
 translation_url: /de/die-arbeit-sichtbar-machen-visuelles-management-im-krankenhaus/
+downloads:
+  - url: /assets/pbmx/ward-status-board.pbmx
+    name: ward-status-board.pbmx
 read_more_links:
   - url: /en/what-virginia-mason-and-thedacare-proved-about-lean-in-hospitals/
     name: "What Virginia Mason and ThedaCare Proved About Lean in Hospitals"

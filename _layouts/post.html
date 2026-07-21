@@ -155,14 +155,24 @@ layout: base
                         <!-- Resources (Downloads & Links) -->
                         {% if page.downloads %}
                         <div class="break-words min-w-0">
-                            {% for dl in page.downloads %}
-                            <a href="{{ dl.url | relative_url }}" download class="block hover:scale-105 transition-transform duration-200 mb-5 text-center">
-                                <img src="{{ '/assets/img/download-button.png' | relative_url }}" alt="{% if _lang == 'de' %}{{ dl.name }} herunterladen{% else %}Download {{ dl.name }}{% endif %}" loading="lazy" width="1536" height="1024" style="width: 100%; height: auto;">
-                                {% if page.downloads.size > 1 %}
-                                <span class="block mt-1 text-xs font-medium text-gray-600 dark:text-gray-400">{{ dl.name | split: '.' | first }}</span>
-                                {% endif %}
-                            </a>
-                            {% endfor %}
+                            <div class="mb-5 flex items-center gap-3">
+                                <h2 class="font-heading text-xs font-bold uppercase tracking-widest text-gray-900 dark:text-white whitespace-nowrap">
+                                    {{ t.post.downloads }}
+                                </h2>
+                                <div class="flex-1 h-0.5 bg-gradient-to-r from-accent-cyan/50 to-transparent"></div>
+                            </div>
+                            <div class="space-y-2">
+                                {% for dl in page.downloads %}
+                                <a href="{{ dl.url | relative_url }}" download
+                                   title="{% if _lang == 'de' %}{{ dl.name }} herunterladen{% else %}Download {{ dl.name }}{% endif %}"
+                                   class="group flex items-start gap-2 w-full text-sm font-bold text-gray-700 dark:text-gray-300 hover:text-accent-cyan transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5 mt-1 flex-shrink-0 transition-transform group-hover:translate-y-0.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                                    </svg>
+                                    <span class="break-words">{{ dl.name }}</span>
+                                </a>
+                                {% endfor %}
+                            </div>
                         </div>
                         {% endif %}
 
