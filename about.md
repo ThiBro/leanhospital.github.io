@@ -28,4 +28,8 @@ Here's to shorter waiting times and smoother processes.
 
 ## About the author
 
-This blog is written by **Martin Neumann**. You can find him on [LinkedIn](https://www.linkedin.com/in/-martin-neumann/) or [book an appointment](https://meetings-eu1.hubspot.com/peakboard/book-a-demo-hospital) directly in the calendar.
+This blog is written by **Martin Neumann** and runs as his personal project on lean management in hospitals — patient flow, daily management, and the path from paper boards to real-time ward dashboards.
+
+Martin works in sales at **Peakboard GmbH**, a low-code platform for real-time dashboards from industry (manufacturing and logistics) whose boards work just as well for wards, emergency departments, and operating rooms. **Lean Hospital is independent and not an official Peakboard offering** — the connection is disclosed openly here and under every article. The articles are editorially neutral and reflect the author's own assessment; practical examples come exclusively from public sources (Virginia Mason, ThedaCare, published studies).
+
+You can find Martin on [LinkedIn](https://www.linkedin.com/in/-martin-neumann/) or [book an appointment](https://meetings-eu1.hubspot.com/peakboard/book-a-demo-hospital) directly in the calendar.

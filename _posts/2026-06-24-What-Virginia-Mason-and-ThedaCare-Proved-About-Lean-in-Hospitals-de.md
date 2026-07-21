@@ -9,6 +9,13 @@ image: /assets/img/posts/virginia-mason-thedacare.png
 image_header: /assets/img/posts/virginia-mason-thedacare.png
 permalink: /de/was-virginia-mason-und-thedacare-ueber-lean-im-krankenhaus-bewiesen-haben/
 translation_url: /en/what-virginia-mason-and-thedacare-proved-about-lean-in-hospitals/
+read_more_links:
+  - url: /de/die-arbeit-sichtbar-machen-visuelles-management-im-krankenhaus/
+    name: "Make the Work Visible: Visual Management and the Real-Time Hospital Board"
+    name_de: "Die Arbeit sichtbar machen: Visuelles Management im Krankenhaus"
+  - url: /de/die-op-sicherheitscheckliste-was-die-evidenz-wirklich-zeigt/
+    name: "The Surgical Safety Checklist: What the Evidence Really Shows"
+    name_de: "Die OP-Sicherheitscheckliste: Was die Evidenz wirklich zeigt"
 redirect_from:
 - /Was-Virginia-Mason-und-ThedaCare-ueber-Lean-im-Krankenhaus-bewiesen-haben.html
 ---

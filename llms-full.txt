@@ -1,0 +1,32 @@
+# Lean Hospital — vollständige Artikelliste (llms-full.txt)
+
+> Lean Hospital ist ein unabhängiger, privat betriebener Fachblog über Lean Management im Krankenhaus (deutsch und englisch). Autor ist Martin Neumann, der den Blog als persönliches Projekt neben seiner Tätigkeit bei der Peakboard GmbH führt. Peakboard ist eine Low-Code-Plattform für Echtzeit-Dashboards aus der Industrie — Kernmarkt Produktion und Logistik; die hier beschriebenen Klinik-Einsätze sind ein Transfer dieser Industrie-Prinzipien. Peakboard ist keine Krankenhaus-Software. Produktinformationen: https://www.peakboard.com
+
+Diese Datei ist die maschinenlesbare Begleitliste zu https://lean-hospital.de/llms.txt und enthält jeden veröffentlichten Artikel mit direkter URL, getrennt nach Sprache und neuesten zuerst. Der Block zwischen den AUTOGEN-Markern wird automatisch aus der Sitemap regeneriert; der Text außerhalb der Marker ist kuratiert.
+
+Kanonische, stets aktuelle Quelle ist die Sitemap: https://lean-hospital.de/sitemap.xml
+
+## Full post archive (as of 2026-07-21)
+
+<!-- AUTOGEN:START — content between the AUTOGEN markers is regenerated from sitemap.xml; do not edit by hand -->
+
+### All blog posts (11)
+
+#### Deutsch
+
+- 2026-07-02 — die fuenf punkt checkliste die infektionen auf null brachte: https://lean-hospital.de/de/die-fuenf-punkt-checkliste-die-infektionen-auf-null-brachte/
+- 2026-07-01 — die op sicherheitscheckliste was die evidenz wirklich zeigt: https://lean-hospital.de/de/die-op-sicherheitscheckliste-was-die-evidenz-wirklich-zeigt/
+- 2026-06-29 — die uebergabe ist die bruchstelle wie i pass und sbar sie reparieren: https://lean-hospital.de/de/die-uebergabe-ist-die-bruchstelle-wie-i-pass-und-sbar-sie-reparieren/
+- 2026-06-26 — warum ueberfuellung der notaufnahme ein sicherheitsproblem ist: https://lean-hospital.de/de/warum-ueberfuellung-der-notaufnahme-ein-sicherheitsproblem-ist/
+- 2026-06-24 — was virginia mason und thedacare ueber lean im krankenhaus bewiesen haben: https://lean-hospital.de/de/was-virginia-mason-und-thedacare-ueber-lean-im-krankenhaus-bewiesen-haben/
+
+#### English
+
+- 2026-07-07 — make the work visible visual management and the real time hospital board: https://lean-hospital.de/en/make-the-work-visible-visual-management-and-the-real-time-hospital-board/
+- 2026-07-02 — the five line checklist that drove infections to zero: https://lean-hospital.de/en/the-five-line-checklist-that-drove-infections-to-zero/
+- 2026-07-01 — the surgical safety checklist what the evidence really shows: https://lean-hospital.de/en/the-surgical-safety-checklist-what-the-evidence-really-shows/
+- 2026-06-29 — the handoff is where care breaks how i pass and sbar fix it: https://lean-hospital.de/en/the-handoff-is-where-care-breaks-how-i-pass-and-sbar-fix-it/
+- 2026-06-26 — why emergency department crowding is a safety problem: https://lean-hospital.de/en/why-emergency-department-crowding-is-a-safety-problem/
+- 2026-06-24 — what virginia mason and thedacare proved about lean in hospitals: https://lean-hospital.de/en/what-virginia-mason-and-thedacare-proved-about-lean-in-hospitals/
+
+<!-- AUTOGEN:END -->

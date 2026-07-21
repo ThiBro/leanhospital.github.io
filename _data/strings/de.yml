@@ -43,6 +43,14 @@ post:
   ai_prompt_header: "KI-generierter Artikel"
   ai_prompt_intro: "Dieser Artikel wurde mit KI erstellt. Der verwendete Prompt:"
 
+author:
+  heading: "Über den Autor"
+  name: "Martin Neumann"
+  role: "Autor von Lean Hospital"
+  bio: "Martin Neumann schreibt Lean Hospital als persönliches Projekt über Lean Management im Krankenhaus — Patient Flow, tägliche Regelkommunikation und den Weg vom Papier-Board zum Echtzeit-Stationsdashboard. Er arbeitet im Vertrieb der Peakboard GmbH, einer Low-Code-Plattform für Echtzeit-Dashboards aus der Industrie (Produktion und Logistik), deren Boards sich genauso für Stationen, Notaufnahmen und OP-Bereiche einsetzen lassen. Dieser Blog ist unabhängig und kein offizielles Peakboard-Angebot; die Verbindung wird unter jedem Artikel offengelegt."
+  linkedin_label: "Auf LinkedIn vernetzen"
+  linkedin_url: "https://www.linkedin.com/in/-martin-neumann/"
+
 archive:
   title: "Artikel-Archiv"
 

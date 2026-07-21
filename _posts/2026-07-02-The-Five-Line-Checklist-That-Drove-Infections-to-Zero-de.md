@@ -9,6 +9,13 @@ image: /assets/img/posts/central-line-checklist.png
 image_header: /assets/img/posts/central-line-checklist.png
 permalink: /de/die-fuenf-punkt-checkliste-die-infektionen-auf-null-brachte/
 translation_url: /en/the-five-line-checklist-that-drove-infections-to-zero/
+read_more_links:
+  - url: /de/die-op-sicherheitscheckliste-was-die-evidenz-wirklich-zeigt/
+    name: "The Surgical Safety Checklist: What the Evidence Really Shows"
+    name_de: "Die OP-Sicherheitscheckliste: Was die Evidenz wirklich zeigt"
+  - url: /de/was-virginia-mason-und-thedacare-ueber-lean-im-krankenhaus-bewiesen-haben/
+    name: "What Virginia Mason and ThedaCare Proved About Lean in Hospitals"
+    name_de: "Was Virginia Mason und ThedaCare über Lean im Krankenhaus bewiesen haben"
 redirect_from:
 - /Die-fuenf-Punkt-Checkliste-die-Infektionen-auf-null-brachte.html
 ---

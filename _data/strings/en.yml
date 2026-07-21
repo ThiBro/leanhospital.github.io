@@ -43,6 +43,14 @@ post:
   ai_prompt_header: "AI-generated article"
   ai_prompt_intro: "This article was created with AI. The exact prompt used:"
 
+author:
+  heading: "About the author"
+  name: "Martin Neumann"
+  role: "Author of Lean Hospital"
+  bio: "Martin Neumann writes Lean Hospital as a personal project about lean management in hospitals — patient flow, daily management, and the path from paper boards to real-time ward dashboards. He works in sales at Peakboard GmbH, a low-code platform for real-time dashboards from industry (manufacturing and logistics) whose boards work just as well for wards, emergency departments, and operating rooms. This blog is independent and not an official Peakboard offering; the connection is disclosed openly under every article."
+  linkedin_label: "Connect on LinkedIn"
+  linkedin_url: "https://www.linkedin.com/in/-martin-neumann/"
+
 archive:
   title: "Article Archive"
 

@@ -9,6 +9,13 @@ image: /assets/img/posts/surgical-safety-checklist.png
 image_header: /assets/img/posts/surgical-safety-checklist.png
 permalink: /en/the-surgical-safety-checklist-what-the-evidence-really-shows/
 translation_url: /de/die-op-sicherheitscheckliste-was-die-evidenz-wirklich-zeigt/
+read_more_links:
+  - url: /en/the-five-line-checklist-that-drove-infections-to-zero/
+    name: "The Five-Line Checklist That Drove Infections to Zero"
+    name_de: "Die Fünf-Punkt-Checkliste, die Infektionen auf null brachte"
+  - url: /en/the-handoff-is-where-care-breaks-how-i-pass-and-sbar-fix-it/
+    name: "The Handoff Is Where Care Breaks: How I-PASS and SBAR Fix It"
+    name_de: "Die Übergabe ist die Bruchstelle: Wie I-PASS und SBAR sie reparieren"
 redirect_from:
 - /The-Surgical-Safety-Checklist-What-the-Evidence-Really-Shows.html
 ---

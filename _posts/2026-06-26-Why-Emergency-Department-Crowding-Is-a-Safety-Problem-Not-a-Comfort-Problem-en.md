@@ -9,6 +9,13 @@ image: /assets/img/posts/ed-crowding.png
 image_header: /assets/img/posts/ed-crowding.png
 permalink: /en/why-emergency-department-crowding-is-a-safety-problem/
 translation_url: /de/warum-ueberfuellung-der-notaufnahme-ein-sicherheitsproblem-ist/
+read_more_links:
+  - url: /en/the-handoff-is-where-care-breaks-how-i-pass-and-sbar-fix-it/
+    name: "The Handoff Is Where Care Breaks: How I-PASS and SBAR Fix It"
+    name_de: "Die Übergabe ist die Bruchstelle: Wie I-PASS und SBAR sie reparieren"
+  - url: /en/make-the-work-visible-visual-management-and-the-real-time-hospital-board/
+    name: "Make the Work Visible: Visual Management and the Real-Time Hospital Board"
+    name_de: "Die Arbeit sichtbar machen: Visuelles Management im Krankenhaus"
 redirect_from:
 - /Why-Emergency-Department-Crowding-Is-a-Safety-Problem.html
 ---

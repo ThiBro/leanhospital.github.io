@@ -3,12 +3,19 @@ layout: post
 title: Die Arbeit sichtbar machen - Visuelles Management und das Echtzeit-Board im Krankenhaus
 date: 2026-07-07 00:00:00 +0000
 tags: lean-management
-description: Die Lean-Wurzeln des visuellen Managements, die Evidenz, dass sichtbare Statusboards und tägliche Huddles Schaden verringern - und die ehrliche Grenze: Das Board taugt nur so viel wie die Reaktion dahinter.
+description: "Die Lean-Wurzeln des visuellen Managements, die Evidenz, dass sichtbare Statusboards und tägliche Huddles Schaden verringern - und die ehrliche Grenze: Das Board taugt nur so viel wie die Reaktion dahinter."
 lang: de
 image: /assets/img/posts/ward-status-board.png
 image_header: /assets/img/posts/ward-status-board.png
 permalink: /de/die-arbeit-sichtbar-machen-visuelles-management-im-krankenhaus/
 translation_url: /en/make-the-work-visible-visual-management-and-the-real-time-hospital-board/
+read_more_links:
+  - url: /de/was-virginia-mason-und-thedacare-ueber-lean-im-krankenhaus-bewiesen-haben/
+    name: "What Virginia Mason and ThedaCare Proved About Lean in Hospitals"
+    name_de: "Was Virginia Mason und ThedaCare über Lean im Krankenhaus bewiesen haben"
+  - url: /de/warum-ueberfuellung-der-notaufnahme-ein-sicherheitsproblem-ist/
+    name: "Why Emergency Department Crowding Is a Safety Problem"
+    name_de: "Warum Überfüllung der Notaufnahme ein Sicherheitsproblem ist"
 redirect_from:
 - /Die-Arbeit-sichtbar-machen-Visuelles-Management-im-Krankenhaus.html
 ---

@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /search/
+Disallow: /de/search/
+Disallow: /assets/js/
+Disallow: /IMAGE_PROMPT_GUIDE.html
+
+Sitemap: https://lean-hospital.de/sitemap.xml

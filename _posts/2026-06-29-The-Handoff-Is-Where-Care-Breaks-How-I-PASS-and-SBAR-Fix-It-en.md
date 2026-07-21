@@ -9,6 +9,13 @@ image: /assets/img/posts/handoff-ipass-sbar.png
 image_header: /assets/img/posts/handoff-ipass-sbar.png
 permalink: /en/the-handoff-is-where-care-breaks-how-i-pass-and-sbar-fix-it/
 translation_url: /de/die-uebergabe-ist-die-bruchstelle-wie-i-pass-und-sbar-sie-reparieren/
+read_more_links:
+  - url: /en/the-surgical-safety-checklist-what-the-evidence-really-shows/
+    name: "The Surgical Safety Checklist: What the Evidence Really Shows"
+    name_de: "Die OP-Sicherheitscheckliste: Was die Evidenz wirklich zeigt"
+  - url: /en/why-emergency-department-crowding-is-a-safety-problem/
+    name: "Why Emergency Department Crowding Is a Safety Problem"
+    name_de: "Warum Überfüllung der Notaufnahme ein Sicherheitsproblem ist"
 redirect_from:
 - /The-Handoff-Is-Where-Care-Breaks-How-I-PASS-and-SBAR-Fix-It.html
 ---

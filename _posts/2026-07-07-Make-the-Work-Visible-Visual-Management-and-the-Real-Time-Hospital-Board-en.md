@@ -9,6 +9,13 @@ image: /assets/img/posts/ward-status-board.png
 image_header: /assets/img/posts/ward-status-board.png
 permalink: /en/make-the-work-visible-visual-management-and-the-real-time-hospital-board/
 translation_url: /de/die-arbeit-sichtbar-machen-visuelles-management-im-krankenhaus/
+read_more_links:
+  - url: /en/what-virginia-mason-and-thedacare-proved-about-lean-in-hospitals/
+    name: "What Virginia Mason and ThedaCare Proved About Lean in Hospitals"
+    name_de: "Was Virginia Mason und ThedaCare über Lean im Krankenhaus bewiesen haben"
+  - url: /en/why-emergency-department-crowding-is-a-safety-problem/
+    name: "Why Emergency Department Crowding Is a Safety Problem"
+    name_de: "Warum Überfüllung der Notaufnahme ein Sicherheitsproblem ist"
 redirect_from:
 - /Make-the-Work-Visible-Visual-Management-and-the-Real-Time-Hospital-Board.html
 ---

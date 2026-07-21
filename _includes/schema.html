@@ -1,0 +1,155 @@
+{%- comment -%}
+  _includes/schema.html
+  =====================
+  Strukturierte Daten (JSON-LD) für lean-hospital.de.
+  In <head> einbinden: in _includes/head.html die Zeile
+      {% include schema.html %}
+  vor dem schließenden Block ergänzen.
+
+  Gibt aus:
+    - WebSite + Blog (einmal, für die Blog-Entität — bewusst NICHT als Peakboard-Org)
+    - BlogPosting (nur auf Post-Seiten)
+    - Person (Autor Martin Neumann, mit worksFor → Peakboard GmbH)
+    - BreadcrumbList (auf Post-Seiten)
+    - FAQPage (nur wenn der Post ein front-matter-Feld `faq` hat)
+
+  Voraussetzungen im Post-Front-Matter (Beispiel):
+    ---
+    title: "..."
+    description: "..."
+    date: 2026-07-02
+    last_modified_at: 2026-07-10        # optional, sonst = date
+    image: /assets/img/posts/xy.png
+    lang: de
+    faq:                                 # optional — nur wenn FAQ im Artikel
+      - q: "Frage genau wie im sichtbaren FAQ?"
+        a: "Antwort wortgleich zum sichtbaren FAQ-Block."
+      - q: "Zweite Frage?"
+        a: "Zweite Antwort."
+    ---
+{%- endcomment -%}
+
+{%- assign _lang = page.lang | default: site.default_lang | default: 'en' -%}
+{%- assign _canonical = page.url | replace:'index.html','' | replace:'.html','' | absolute_url -%}
+{%- assign _img = page.image_header | default: page.image | default: '/assets/img/og.png' -%}
+{%- assign _img_abs = _img | absolute_url -%}
+{%- assign _pub = page.date | date_to_xmlschema -%}
+{%- assign _mod = page.last_modified_at | default: page.date | date_to_xmlschema -%}
+
+{%- comment -%} ---------- Autor (Person) als wiederverwendbarer Node ---------- {%- endcomment -%}
+{%- capture _author_node -%}
+{
+  "@type": "Person",
+  "@id": "{{ '/#martin-neumann' | absolute_url }}",
+  "name": "Martin Neumann",
+  "url": "{{ '/about/' | absolute_url }}",
+  "sameAs": ["https://www.linkedin.com/in/-martin-neumann/"],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Peakboard GmbH",
+    "url": "https://www.peakboard.com"
+  }
+}
+{%- endcapture -%}
+
+{%- comment -%} ---------- WebSite + Blog (Entität des Blogs selbst) ---------- {%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{ '/#website' | absolute_url }}",
+      "url": "{{ '/' | absolute_url }}",
+      "name": "Lean Hospital",
+      "description": "Unabhängiger Fachblog über Lean Management im Krankenhaus.",
+      "inLanguage": "{{ _lang }}",
+      "publisher": { "@id": "{{ '/#martin-neumann' | absolute_url }}" }
+    },
+    {
+      "@type": "Blog",
+      "@id": "{{ '/#blog' | absolute_url }}",
+      "url": "{{ '/' | absolute_url }}",
+      "name": "Lean Hospital",
+      "description": "Lean Management, Patientensicherheit und Prozessverbesserung im Krankenhaus — ein privat betriebener Fachblog.",
+      "inLanguage": "{{ _lang }}",
+      "author": {{ _author_node }}
+    }
+  ]
+}
+</script>
+
+{%- if page.layout == 'post' -%}
+{%- comment -%} ---------- BlogPosting ---------- {%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "{{ _canonical }}#article",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ _canonical }}" },
+  "headline": {{ page.title | strip_html | normalize_whitespace | jsonify }},
+  "description": {{ page.description | strip_html | normalize_whitespace | jsonify }},
+  "image": "{{ _img_abs }}",
+  "datePublished": "{{ _pub }}",
+  "dateModified": "{{ _mod }}",
+  "inLanguage": "{{ _lang }}",
+  "isPartOf": { "@id": "{{ '/#blog' | absolute_url }}" },
+  "author": {{ _author_node }},
+  "publisher": {{ _author_node }}
+}
+</script>
+
+{%- comment -%} ---------- BreadcrumbList ----------
+  Zwei Ebenen: Startseite → Artikel. Sobald Hub-Seiten existieren, eine
+  mittlere Ebene ergänzen (Startseite → Hub → Artikel).
+{%- endcomment -%}
+{%- assign _home = '/' | absolute_url -%}
+{%- if _lang == 'de' -%}{%- assign _home = '/de/' | absolute_url -%}{%- assign _home_name = 'Startseite' -%}{%- else -%}{%- assign _home_name = 'Home' -%}{%- endif -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "{{ _home_name }}",
+      "item": "{{ _home }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ page.title | strip_html | normalize_whitespace | jsonify }},
+      "item": "{{ _canonical }}"
+    }
+  ]
+}
+</script>
+
+{%- comment -%} ---------- FAQPage (nur wenn page.faq gesetzt) ----------
+  Fragen/Antworten müssen WORTGLEICH zum sichtbaren FAQ-Block im Artikel sein.
+{%- endcomment -%}
+{%- if page.faq and page.faq.size > 0 -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "{{ _canonical }}#faq",
+  "inLanguage": "{{ _lang }}",
+  "mainEntity": [
+    {%- for item in page.faq -%}
+    {
+      "@type": "Question",
+      "name": {{ item.q | strip_html | normalize_whitespace | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ item.a | strip_html | normalize_whitespace | jsonify }}
+      }
+    }{%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor -%}
+  ]
+}
+</script>
+{%- endif -%}
+
+{%- endif -%}

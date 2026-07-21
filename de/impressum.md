@@ -18,6 +18,8 @@ Wolle-Kriwanek-Straße 13a
 70439 Stuttgart
 Deutschland
 
+lean-hospital.de ist ein privat betriebener Fachblog, den Martin Neumann als persönliches Projekt führt. Er ist unabhängig und kein Angebot der Peakboard GmbH. Martin arbeitet im Vertrieb der Peakboard GmbH und legt diese Verbindung offen; Näheres steht auf der [Über-Seite](/de/about/).
+
 ## Kontakt
 
 E-Mail: kontakt@lean-hospital.de

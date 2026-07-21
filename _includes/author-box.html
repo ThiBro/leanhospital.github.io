@@ -1,0 +1,24 @@
+{%- assign _lang = page.lang | default: site.default_lang | default: 'en' -%}
+{%- assign t = site.data.strings[_lang] -%}
+{%- assign a = t.author -%}
+<aside class="not-prose mt-12 rounded-xl overflow-hidden" style="border: 1px solid #E2E8F0;" itemscope itemtype="https://schema.org/Person">
+  <div class="flex items-center gap-2 px-5 py-3" style="background-color: #0E6BA8;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-accent-cyan flex-shrink-0">
+      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+    </svg>
+    <span class="font-heading text-xs font-bold uppercase tracking-widest text-white">{{ a.heading }}</span>
+  </div>
+  <div class="px-5 py-5 bg-white dark:bg-blackground">
+    <p class="font-heading text-base font-extrabold text-gray-900 dark:text-white" itemprop="name">{{ a.name }}</p>
+    <p class="text-xs font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-3" itemprop="jobTitle">{{ a.role }}</p>
+    <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 mb-4" itemprop="description">{{ a.bio }}</p>
+    <a href="{{ a.linkedin_url }}" target="_blank" rel="me noopener"
+       itemprop="sameAs"
+       class="inline-flex items-center gap-2 text-sm font-bold text-accent-cyan hover:underline">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 flex-shrink-0">
+        <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/>
+      </svg>
+      {{ a.linkedin_label }}
+    </a>
+  </div>
+</aside>

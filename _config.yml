@@ -23,6 +23,11 @@ plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
 
+# Ship these plain-text files as static assets (LLM discovery files).
+include:
+  - llms.txt
+  - llms-full.txt
+
 # Exclude from processing.
 exclude:
   - .sass-cache/
@@ -32,6 +37,7 @@ exclude:
   - Gemfile.lock
   - EDITOR_GUIDE.md
   - BLOG_WRITING_GUIDE.md
+  - IMAGE_PROMPT_GUIDE.md
   - node_modules/
   - vendor/bundle/
   - vendor/cache/

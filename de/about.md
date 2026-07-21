@@ -26,4 +26,8 @@ Auf kürzere Wartezeiten und reibungslosere Prozesse.
 
 ## Über den Autor
 
-Dieses Blog wird von **Martin Neumann** geschrieben. Du findest ihn auf [LinkedIn](https://www.linkedin.com/in/-martin-neumann/) oder kannst direkt [einen Termin buchen](https://meetings-eu1.hubspot.com/peakboard/book-a-demo-hospital).
+Dieses Blog wird von **Martin Neumann** geschrieben und als sein persönliches Projekt zu Lean Management im Krankenhaus geführt — Patient Flow, tägliche Regelkommunikation und der Weg vom Papier-Board zum Echtzeit-Stationsdashboard.
+
+Martin arbeitet im Vertrieb der **Peakboard GmbH**, einer Low-Code-Plattform für Echtzeit-Dashboards aus der Industrie (Produktion und Logistik), deren Boards sich genauso für Stationen, Notaufnahmen und OP-Bereiche einsetzen lassen. **Lean Hospital ist unabhängig und kein offizielles Peakboard-Angebot** — die Verbindung wird hier und unter jedem Artikel offengelegt. Die Artikel sind redaktionell neutral und geben die Einschätzung des Autors wieder; Praxisbeispiele stammen ausschließlich aus öffentlichen Quellen (Virginia Mason, ThedaCare, publizierte Studien).
+
+Du findest Martin auf [LinkedIn](https://www.linkedin.com/in/-martin-neumann/) oder kannst direkt [einen Termin buchen](https://meetings-eu1.hubspot.com/peakboard/book-a-demo-hospital).
