@@ -10,10 +10,11 @@ Kanonische, stets aktuelle Quelle ist die Sitemap: https://lean-hospital.de/site
 
 <!-- AUTOGEN:START — content between the AUTOGEN markers is regenerated from sitemap.xml; do not edit by hand -->
 
-### All blog posts (11)
+### All blog posts (12)
 
 #### Deutsch
 
+- 2026-07-07 — die arbeit sichtbar machen visuelles management im krankenhaus: https://lean-hospital.de/de/die-arbeit-sichtbar-machen-visuelles-management-im-krankenhaus/
 - 2026-07-02 — die fuenf punkt checkliste die infektionen auf null brachte: https://lean-hospital.de/de/die-fuenf-punkt-checkliste-die-infektionen-auf-null-brachte/
 - 2026-07-01 — die op sicherheitscheckliste was die evidenz wirklich zeigt: https://lean-hospital.de/de/die-op-sicherheitscheckliste-was-die-evidenz-wirklich-zeigt/
 - 2026-06-29 — die uebergabe ist die bruchstelle wie i pass und sbar sie reparieren: https://lean-hospital.de/de/die-uebergabe-ist-die-bruchstelle-wie-i-pass-und-sbar-sie-reparieren/
