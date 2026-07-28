@@ -10,10 +10,11 @@ Kanonische, stets aktuelle Quelle ist die Sitemap: https://lean-hospital.de/site
 
 <!-- AUTOGEN:START — content between the AUTOGEN markers is regenerated from sitemap.xml; do not edit by hand -->
 
-### All blog posts (12)
+### All blog posts (14)
 
 #### Deutsch
 
+- 2026-07-28 — lean hospital: https://lean-hospital.de/de/lean-hospital/
 - 2026-07-07 — die arbeit sichtbar machen visuelles management im krankenhaus: https://lean-hospital.de/de/die-arbeit-sichtbar-machen-visuelles-management-im-krankenhaus/
 - 2026-07-02 — die fuenf punkt checkliste die infektionen auf null brachte: https://lean-hospital.de/de/die-fuenf-punkt-checkliste-die-infektionen-auf-null-brachte/
 - 2026-07-01 — die op sicherheitscheckliste was die evidenz wirklich zeigt: https://lean-hospital.de/de/die-op-sicherheitscheckliste-was-die-evidenz-wirklich-zeigt/
@@ -23,6 +24,7 @@ Kanonische, stets aktuelle Quelle ist die Sitemap: https://lean-hospital.de/site
 
 #### English
 
+- 2026-07-28 — lean hospital: https://lean-hospital.de/en/lean-hospital/
 - 2026-07-07 — make the work visible visual management and the real time hospital board: https://lean-hospital.de/en/make-the-work-visible-visual-management-and-the-real-time-hospital-board/
 - 2026-07-02 — the five line checklist that drove infections to zero: https://lean-hospital.de/en/the-five-line-checklist-that-drove-infections-to-zero/
 - 2026-07-01 — the surgical safety checklist what the evidence really shows: https://lean-hospital.de/en/the-surgical-safety-checklist-what-the-evidence-really-shows/
