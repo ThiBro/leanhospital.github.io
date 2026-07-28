@@ -38,6 +38,8 @@ exclude:
   - EDITOR_GUIDE.md
   - BLOG_WRITING_GUIDE.md
   - IMAGE_PROMPT_GUIDE.md
+  - REDAKTIONSPLAN.md
+  - redaktionsplan/
   - node_modules/
   - vendor/bundle/
   - vendor/cache/
