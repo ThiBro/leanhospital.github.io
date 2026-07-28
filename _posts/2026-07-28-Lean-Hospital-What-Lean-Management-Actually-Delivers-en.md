@@ -5,6 +5,8 @@ date: 2026-07-28 00:00:00 +0000
 tags: lean-management
 description: "Lean reliably shortens length of stay and waiting times. It does not move mortality, and done badly it damages staff morale and the budget. An honest account of the lean hospital."
 lang: en
+image: /assets/img/posts/lean-hospital.png
+image_header: /assets/img/posts/lean-hospital.png
 permalink: /en/lean-hospital/
 translation_url: /de/lean-hospital/
 read_more_links:

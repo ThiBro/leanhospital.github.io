@@ -5,6 +5,8 @@ date: 2026-07-28 00:00:00 +0000
 tags: lean-management
 description: "Lean verkürzt Verweildauern und Wartezeiten - das ist gut belegt. Auf Mortalität wirkt es nicht, und schlecht gemacht schadet es Personal und Bilanz. Eine ehrliche Bestandsaufnahme des Lean Hospital."
 lang: de
+image: /assets/img/posts/lean-hospital.png
+image_header: /assets/img/posts/lean-hospital.png
 permalink: /de/lean-hospital/
 translation_url: /en/lean-hospital/
 read_more_links:

@@ -19,6 +19,7 @@ STYLE = (" — Editorial vector illustration, flat modern minimal style, clean g
 
 # slug -> one concrete scene sentence (the article's visual metaphor).
 JOBS = {
+    # "lean-hospital": "A hospital seen as one connected system from above, a single stylized patient pathway flowing from admission through diagnostics and an operating theatre to discharge, the treatment segments along the path glowing brightly while the waiting gaps between them sit dim and hollow",
     # "ed-crowding": "An emergency department viewed from above transitioning from ...",
 }
 
