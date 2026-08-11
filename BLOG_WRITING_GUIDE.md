@@ -21,9 +21,10 @@ This guide documents the conventions for writing articles on the Jekyll blog **"
 
 ## Workflow: so entsteht ein Artikel (`/blogartikel`)
 
-Der Slash-Command **`/blogartikel`** (liegt unter `~/.claude/commands/blogartikel.md`, analog zu `/pbspec`)
-lädt die drei Regelwerke und gibt den Erstellungsweg vor. Er ist die Kurzform dieses Abschnitts — wer ohne
-den Command arbeitet, hält sich an dieselben sieben Schritte:
+Der Skill **`/blogartikel`** liegt versioniert im Repo unter `.claude/skills/blogartikel/SKILL.md` und ist
+damit auf jedem Checkout verfügbar — lokal wie auf dem Server. Er lädt die drei Regelwerke und gibt den
+Erstellungsweg vor. Er ist die Kurzform dieses Abschnitts — wer ohne den Skill arbeitet, hält sich an
+dieselben sieben Schritte:
 
 1. **Planzeile ziehen.** Artikel in `REDAKTIONSPLAN.md` suchen; Fokuskeyword, H1, Metas, Pflichtlinks,
    CTA und Briefing übernehmen. Abweichungen begründen und im Redaktionsplan nachtragen.
@@ -36,8 +37,8 @@ den Command arbeitet, hält sich an dieselben sieben Schritte:
    technisch.
 5. **Bauen und messen statt behaupten:**
 
-   ```powershell
-   cd C:\Source\leanhospital.github.io; bundle exec jekyll build --quiet
+   ```
+   bundle exec jekyll build --quiet
    ```
 
    Danach an `_site/de/<slug>/index.html` prüfen: `<title>` ≤ 60 Zeichen, `meta name="description"`
@@ -48,9 +49,10 @@ den Command arbeitet, hält sich an dieselben sieben Schritte:
 
 Referenzartikel für den Aufbau: `_posts/2026-07-28-Lean-Hospital-…-de.md` / `-en.md`.
 
-> **Warum die Regelwerke nicht im Git liegen:** `SCHREIBANWEISUNG.md` und `REDAKTIONSPLAN.md` enthalten
-> interne Brand- und Keyword-Strategie und sind in `.gitignore` ausgenommen. Dieses Repo ist öffentlich.
-> Beide Dateien liegen lokal im Repo-Root und müssen auf einem neuen Rechner dorthin kopiert werden.
+> **Alle Regelwerke sind versioniert.** `SCHREIBANWEISUNG.md` und `REDAKTIONSPLAN.md` liegen seit
+> 11.08.2026 im Repo-Root und im Git, damit der Skill auf jedem Checkout funktioniert. Beide sind in
+> `_config.yml` von Jekyll ausgeschlossen, erscheinen also nicht auf der Website — im öffentlichen
+> GitHub-Repo sind sie aber lesbar. Nur die xlsx-Rohdaten unter `redaktionsplan/` bleiben ausgeschlossen.
 
 ## What an article is
 
