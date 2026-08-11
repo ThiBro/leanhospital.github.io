@@ -13,7 +13,7 @@ footer:
   deploy: "Get Started"
   search: "Search"
   legal: "Legal Notice"
-  test: "Test"
+  hello: "Hello World"
   copyright:
     suffix: "All rights reserved."
 

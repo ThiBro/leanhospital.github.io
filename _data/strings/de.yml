@@ -13,7 +13,7 @@ footer:
   deploy: "Loslegen"
   search: "Suche"
   legal: "Impressum"
-  test: "Test"
+  hello: "Hello World"
   copyright:
     suffix: "Alle Rechte vorbehalten."
 
