@@ -19,6 +19,39 @@ This guide documents the conventions for writing articles on the Jekyll blog **"
 > ersetzt die alte 800–1.200-Wörter-Regel unten. Referenzartikel für den neuen Aufbau:
 > `_posts/2026-07-28-Lean-Hospital-…-de.md`.
 
+## Workflow: so entsteht ein Artikel (`/blogartikel`)
+
+Der Slash-Command **`/blogartikel`** (liegt unter `~/.claude/commands/blogartikel.md`, analog zu `/pbspec`)
+lädt die drei Regelwerke und gibt den Erstellungsweg vor. Er ist die Kurzform dieses Abschnitts — wer ohne
+den Command arbeitet, hält sich an dieselben sieben Schritte:
+
+1. **Planzeile ziehen.** Artikel in `REDAKTIONSPLAN.md` suchen; Fokuskeyword, H1, Metas, Pflichtlinks,
+   CTA und Briefing übernehmen. Abweichungen begründen und im Redaktionsplan nachtragen.
+2. **Deutsche Fassung schreiben** in der Rollenlänge. Aufbau: TL;DR direkt unter der H1 → erster H2
+   „Was ist [Fokuskeyword]?" mit 40–60-Wort-Definition → Hauptteil mit H2 alle 150–300 Wörter →
+   sichtbarer FAQ-Block → `## Quellen`.
+3. **Englische Fassung strukturgleich nachziehen** (`-en.md`), verknüpft über `translation_url`.
+4. **Front Matter setzen** — insbesondere `meta_title`, `faq:`, `last_modified_at` und `downloads:`
+   (siehe [Optional front matter](#optional-front-matter)); über diese Felder wirken die SEO-/GEO-Regeln
+   technisch.
+5. **Bauen und messen statt behaupten:**
+
+   ```powershell
+   cd C:\Source\leanhospital.github.io; bundle exec jekyll build --quiet
+   ```
+
+   Danach an `_site/de/<slug>/index.html` prüfen: `<title>` ≤ 60 Zeichen, `meta name="description"`
+   ≤ 155 Zeichen, genau **eine** `<h1>`, `FAQPage` im Markup, **kein** sichtbarer `href` auf
+   `peakboard.com`. Wortzahl über den Body ohne Front Matter zählen.
+6. **Selbstcheck** am Ende von `SCHREIBANWEISUNG.md` Zeile für Zeile mit ✓ / ✗ abarbeiten, jedes ✗ begründen.
+7. **Redaktionsplan nachziehen**: Status ✅, verwendete Quellen, Abweichungen, offene Punkte.
+
+Referenzartikel für den Aufbau: `_posts/2026-07-28-Lean-Hospital-…-de.md` / `-en.md`.
+
+> **Warum die Regelwerke nicht im Git liegen:** `SCHREIBANWEISUNG.md` und `REDAKTIONSPLAN.md` enthalten
+> interne Brand- und Keyword-Strategie und sind in `.gitignore` ausgenommen. Dieses Repo ist öffentlich.
+> Beide Dateien liegen lokal im Repo-Root und müssen auf einem neuen Rechner dorthin kopiert werden.
+
 ## What an article is
 
 Each article is a **thorough, evidence-based essay about an efficient-process or patient-safety topic in healthcare** - lean management, patient flow, waiting times, hand-offs, checklists, waste reduction. An article is not a listicle and not marketing. It tells the story of a real problem and what the evidence says actually works.
