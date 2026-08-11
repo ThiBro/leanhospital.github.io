@@ -4,7 +4,15 @@
 {%- assign _head_lang = page.lang | default: site.default_lang | default: 'en' -%}
 {%- assign _strings = site.data.strings[_head_lang] -%}
 
-{%- if page.title and page.url != "/" and page.url != "/de/" -%}
+{%- comment -%}
+  `meta_title` im Front Matter überschreibt den <title> vollständig (inkl. Suffix).
+  Damit lässt sich die 60-Zeichen-Regel exakt einhalten und die Pillar-Ausnahme
+  (kein " | Lean Hospital"-Suffix) abbilden. Ohne `meta_title` bleibt das
+  bisherige Verhalten: Seitentitel + " - Lean Hospital".
+{%- endcomment -%}
+{%- if page.meta_title -%}
+<title>{{ page.meta_title | strip_html | normalize_whitespace }}</title>
+{%- elsif page.title and page.url != "/" and page.url != "/de/" -%}
 <title>{{ page.title | strip_html | normalize_whitespace }} - {{ site.title }}</title>
 {%- else -%}
 <title>{{ site.title }} - {{ _strings.site.tagline }}</title>
@@ -32,9 +40,10 @@
 <link rel="manifest" href="{{ '/assets/img/site.webmanifest' | relative_url }}">
 {%- assign _desc = page.description | default: page.excerpt | strip_html | normalize_whitespace | truncate: 160 | escape -%}
 {%- if _desc == "" or _desc == nil -%}{%- assign _desc = _strings.site.description_fallback | strip_html | normalize_whitespace | truncate: 160 | escape -%}{%- endif -%}
-<meta name="title" content="{{ page.title }}">
-<meta property="og:title" content="{{ page.title }} - {{ site.title }}">
-<meta name="twitter:title" content="{{ page.title }} - {{ site.title }}">
+{%- if page.meta_title -%}{%- assign _meta_title = page.meta_title -%}{%- else -%}{%- assign _meta_title = page.title | append: ' - ' | append: site.title -%}{%- endif -%}
+<meta name="title" content="{{ _meta_title }}">
+<meta property="og:title" content="{{ _meta_title }}">
+<meta name="twitter:title" content="{{ _meta_title }}">
 <meta name="description" content="{{ _desc }}">
 <meta property="og:description" content="{{ _desc }}">
 <meta name="twitter:description" content="{{ _desc }}">

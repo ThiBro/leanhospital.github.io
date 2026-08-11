@@ -2,6 +2,23 @@
 
 This guide documents the conventions for writing articles on the Jekyll blog **"Lean Hospital"**. Follow these rules when creating new posts.
 
+> ## ⚠️ Regelhierarchie (Stand 11.08.2026)
+>
+> **[SCHREIBANWEISUNG.md](SCHREIBANWEISUNG.md) ist das verbindliche Regelwerk für alle deutschen Artikel** —
+> SEO (Meta Title ≤ 60 Zeichen, Meta Description ≤ 155, Slug, H1, Keyword-Platzierung), GEO
+> (TL;DR-Block, Definitionsblock, Chunking, FAQ, JSON-LD), CTA-System, Brand-/Peakboard-Regeln,
+> Stilverbote und der Selbstcheck vor Abgabe.
+> **Bei Widerspruch gilt die SCHREIBANWEISUNG**, mit zwei Ausnahmen, die dieser Guide ergänzt:
+>
+> 1. **Zweisprachigkeit.** Jeder Artikel existiert als `-de.md` + `-en.md`; die englische Fassung wird
+>    strukturgleich nachgezogen. Die Meta-Title-Suffix-Regel („ | Lean Hospital") gilt fürs Deutsche.
+> 2. **Quellenpflicht.** Jede Zahl braucht eine verifizierbare Primärquelle plus die `## Quellen`-Liste
+>    am Artikelende. `[verify]`-Platzhalter werden vor dem Publish aufgelöst oder die Zahl fällt raus.
+>
+> Die Längenvorgabe der SCHREIBANWEISUNG (Spoke 1.200–1.800 / Hub 1.800–2.500 / Pillar 2.500–3.500 Wörter)
+> ersetzt die alte 800–1.200-Wörter-Regel unten. Referenzartikel für den neuen Aufbau:
+> `_posts/2026-07-28-Lean-Hospital-…-de.md`.
+
 ## What an article is
 
 Each article is a **thorough, evidence-based essay about an efficient-process or patient-safety topic in healthcare** - lean management, patient flow, waiting times, hand-offs, checklists, waste reduction. An article is not a listicle and not marketing. It tells the story of a real problem and what the evidence says actually works.
@@ -107,6 +124,16 @@ Only list sources you actually relied on, and only URLs that resolve. Prefer the
 
 ## Optional front matter
 
+- `meta_title` - overrides the `<title>` tag and the OG/Twitter titles **completely**, including the
+  automatic `- Lean Hospital` suffix. Use it to hit the ≤ 60-character rule exactly and to drop the suffix
+  on the pillar page. Without it, the title stays `{{ page.title }} - Lean Hospital`.
+- `faq` - list of `{q, a}` pairs. Renders **no** HTML on its own; it feeds the `FAQPage` JSON-LD in
+  `_includes/schema.html`. The entries must be **wortgleich** with the visible FAQ section in the body
+  (`## Häufige Fragen …` with one `###` per question).
+- `last_modified_at` - `YYYY-MM-DD 00:00:00 +0000`; feeds `dateModified` in the BlogPosting schema.
+  Set it whenever an existing article is reworked.
+- `downloads` - list of `{url, name}`; renders the download box (used for the `.pbmx` board templates,
+  which is how the Peakboard-Designer CTA stays inside the blog without linking to peakboard.com).
 - `image` - hero/card image path under `/assets/...`. If omitted, the post uses a clean text hero and the card renders without an image. For AI-generated hero images, follow [IMAGE_PROMPT_GUIDE.md](IMAGE_PROMPT_GUIDE.md) so the set stays visually consistent.
 - `image_header` - a wider hero image used only at the top of the article.
 - `read_more_links` - list of `{title, url}` related links shown in the right sidebar under "Resources".

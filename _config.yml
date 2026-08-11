@@ -37,6 +37,7 @@ exclude:
   - Gemfile.lock
   - EDITOR_GUIDE.md
   - BLOG_WRITING_GUIDE.md
+  - SCHREIBANWEISUNG.md
   - IMAGE_PROMPT_GUIDE.md
   - REDAKTIONSPLAN.md
   - redaktionsplan/
