@@ -10,6 +10,9 @@ image: /assets/img/posts/reporting-obligations.png
 image_header: /assets/img/posts/reporting-obligations.png
 permalink: /en/hospital-reporting-obligations/
 translation_url: /de/berichtspflichten-krankenhaus/
+downloads:
+  - url: /assets/pbmx/team-huddle-board-klinikum.pbmx
+    name: team-huddle-board-klinikum.pbmx
 faq:
   - q: "Which reporting obligations does a German hospital have?"
     a: "Every licensed hospital delivers its case and structural data to the InEK by 31 March each year under § 21 KHEntgG, publishes a structured quality report under § 136b SGB V, proves minimum volumes and reports nurse staffing quarterly under the Pflegepersonalbemessungsverordnung. The transparency directory under § 135d SGB V draws on the same data."
@@ -97,6 +100,12 @@ The answer from [lean management in hospitals](/en/lean-hospital/) is to capture
 Peakboard is a low-code platform for real-time dashboards from industry (manufacturing and logistics), whose boards work just as well for wards, emergency departments and operating theatres. Such a board reads values out of systems like SAP, SQL Server databases, OPC UA or Excel and keeps them current without extra data entry; values a team enters itself are stored centrally in Peakboard Hub Lists. The documented deployments come predominantly from production and warehousing, so a ward board extends those industrial principles rather than reporting a published clinical outcome.
 
 **This can be tried without an IT project: the Peakboard Designer is free, and for hospitals there is a ready-made template, the [digital huddle board for daily management in the hospital](https://templates.peakboard.com/Daily-Huddle-Board-Hospital/index).** It visualises the five most important KPIs of a ward, staff confirm on the touchscreen each day whether they were met, and the board keeps that history for an automatic trend evaluation.
+
+![Digital huddle board for an inpatient ward showing five KPIs as a month calendar, a monthly comparison and a trend line](/assets/img/posts/huddle-board-klinikum.webp)
+
+*What the template looks like in daily use: one circle per day and KPI — green for met, purple for missed — with the comparison of recent months and the trend line below.*
+
+The board can be seen without installing anything in the [live demo in your browser](https://templates.peakboard.rocks/Team-Huddle-Board-Klinikum/index). The project file is available here on the blog: download [team-huddle-board-klinikum.pbmx](/assets/pbmx/team-huddle-board-klinikum.pbmx), open it in the free Peakboard Designer and adapt it to the KPIs of your own ward.
 
 ## What the limit of a digital board is
 

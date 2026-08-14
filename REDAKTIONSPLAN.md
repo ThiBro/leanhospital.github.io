@@ -101,7 +101,9 @@ Innerhalb P1 zuerst #14 Entlassmanagement (1.300 SV, größte Einzelchance) und 
   (14.08.2026, Auftragsartikel außerhalb des Plans, nach SCHREIBANWEISUNG geschrieben)
   - **Fokuskeyword:** berichtspflichten krankenhaus · **Sekundär:** dokumentationsaufwand krankenhaus,
     qualitätsbericht krankenhaus, § 21 KHEntgG, bundes-klinik-atlas, pflegepersonalbemessung
-  - **Rolle:** Spoke (1.705 W DE / 1.796 W EN). **Interne Links:** → Pillar #1, → Visuelles Management
+  - **Rolle:** Spoke (nach der Ergänzung vom 14.08.2026 rund 1.770 W DE / 1.870 W EN; EN liegt damit knapp
+    über der Spoke-Spanne — die zusätzlichen Sätze waren vom Auftraggeber verlangt und werden nicht
+    zurückgekürzt). **Interne Links:** → Pillar #1, → Visuelles Management
   - **Abgrenzung zu #4 (kennzahlen krankenhaus):** dieser Artikel behandelt die *Meldepflichten*, die den
     Kennzahlenaufwand erzeugen (Gesetze, Fristen, Adressaten). Der KPI-**Katalog** mit Formeln und Zielwerten
     bleibt #4. Beim Schreiben von #4 hierher verlinken und Doppelungen zum Gesetzesteil vermeiden.
@@ -111,9 +113,14 @@ Innerhalb P1 zuerst #14 Entlassmanagement (1.300 SV, größte Einzelchance) und 
     erreichen. Sonst kein sichtbarer Peakboard-Link; das Herkunfts-Framing der Schreibanweisung steht wörtlich
     im Text. Sauberer wäre langfristig, die `.pbmx` wie bei `ward-status-board.pbmx` über `downloads:` im Blog
     selbst anzubieten.
-  - **Offen:** Hero-/Inline-Bilder fehlen (Vorschläge: `berichtspflichten-krankenhaus-fristen.webp` — Zeitstrahl
-    31.03. / Quartalsmeldung / monatlicher Atlas; `berichtspflichten-krankenhaus-stationsboard.webp` — Huddle vor
-    Stationsboard). Autorenbox/CTA-Bausteine wie bei #1.
+  - **Nachtrag 14.08.2026 (Auftrag des Auftraggebers):** Die Vorlage liegt jetzt zusätzlich im Blog selbst —
+    `assets/pbmx/team-huddle-board-klinikum.pbmx` über `downloads:` und als Inline-Link, dazu das Board-Bild
+    `assets/img/posts/huddle-board-klinikum.webp` und ein sichtbarer Link auf die Live-Demo
+    `templates.peakboard.rocks/Team-Huddle-Board-Klinikum/index`. Beides stammt von der Vorlagenseite. Damit ist
+    der oben genannte „sauberere" Weg umgesetzt; der eine Link auf `templates.peakboard.com` bleibt daneben stehen.
+  - **Offen:** Ein zweites Inline-Bild fehlt (`berichtspflichten-krankenhaus-fristen.webp` — Zeitstrahl
+    31.03. / Quartalsmeldung / monatlicher Atlas). Hero-Bild (`reporting-obligations.png`) und das
+    Stationsboard-Motiv sind gesetzt. Autorenbox/CTA-Bausteine wie bei #1.
 - Warum Überfüllung der Notaufnahme ein Sicherheitsproblem ist — `/de/warum-ueberfuellung-der-notaufnahme-ein-sicherheitsproblem-ist/`
 - Die OP-Sicherheitscheckliste: Was die Evidenz wirklich zeigt — `/de/die-op-sicherheitscheckliste-was-die-evidenz-wirklich-zeigt/`
 - Die Fünf-Punkt-Checkliste, die Infektionen auf null brachte — `/de/die-fuenf-punkt-checkliste-die-infektionen-auf-null-brachte/`

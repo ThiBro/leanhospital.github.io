@@ -10,6 +10,9 @@ image: /assets/img/posts/reporting-obligations.png
 image_header: /assets/img/posts/reporting-obligations.png
 permalink: /de/berichtspflichten-krankenhaus/
 translation_url: /en/hospital-reporting-obligations/
+downloads:
+  - url: /assets/pbmx/team-huddle-board-klinikum.pbmx
+    name: team-huddle-board-klinikum.pbmx
 faq:
   - q: "Welche Berichtspflichten hat ein Krankenhaus in Deutschland?"
     a: "Ein zugelassenes Krankenhaus liefert jährlich bis zum 31. März seine Fall- und Strukturdaten nach § 21 KHEntgG an das InEK, veröffentlicht einen strukturierten Qualitätsbericht nach § 136b SGB V, weist Mindestmengen nach und meldet die Pflegepersonalbesetzung quartalsweise nach der Pflegepersonalbemessungsverordnung. Aus denselben Daten speist sich das Transparenzverzeichnis nach § 135d SGB V."
@@ -97,6 +100,12 @@ Die Antwort aus dem [Lean Management im Krankenhaus](/de/lean-hospital/) lautet:
 Peakboard ist eine Low-Code-Plattform für Echtzeit-Dashboards aus der Industrie (Produktion und Logistik), deren Boards sich genauso für Stationen, Notaufnahmen und OP-Bereiche einsetzen lassen. Ein solches Board liest Werte aus Systemen wie SAP, SQL-Server-Datenbanken, OPC UA oder Excel und hält sie ohne zusätzliche Erfassungsarbeit aktuell; Werte, die ein Team selbst einträgt, liegen zentral in Peakboard Hub Listen. Die dokumentierten Einsätze stammen überwiegend aus Fertigung und Lager; die Übertragung auf ein Stationsboard ist eine Erweiterung dieser Industrie-Prinzipien und keine Behauptung publizierter klinischer Ergebnisse.
 
 **Ausprobieren lässt sich das ohne IT-Projekt: Der Peakboard Designer ist kostenlos, und für Kliniken gibt es eine fertige Vorlage, das [digitale Huddle Board für das Daily Management im Klinikum](https://templates.peakboard.com/Daily-Huddle-Board-Hospital/index).** Die Vorlage visualisiert die fünf wichtigsten Kennzahlen einer Station, das Team bestätigt täglich per Touchscreen, ob sie erreicht wurden, und das Board hält diese Historie für eine automatische Trendauswertung fest.
+
+![Digitales Huddle Board für den stationären Bereich mit fünf Kennzahlen als Monatskalender, Monatsvergleich und Trendverlauf](/assets/img/posts/huddle-board-klinikum.webp)
+
+*So sieht die Vorlage im Betrieb aus: je Kennzahl ein Kreis pro Tag — grün erfüllt, violett nicht erfüllt —, darunter der Vergleich der letzten Monate und der Trendverlauf.*
+
+Ansehen lässt sich das Board ohne Installation in der [Live-Demo im Browser](https://templates.peakboard.rocks/Team-Huddle-Board-Klinikum/index). Die Projektdatei liegt hier im Blog bereit: [team-huddle-board-klinikum.pbmx](/assets/pbmx/team-huddle-board-klinikum.pbmx) herunterladen, im kostenlosen Peakboard Designer öffnen und auf die Kennzahlen der eigenen Station anpassen.
 
 ## Welche Grenze ein digitales Board hat
 
