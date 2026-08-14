@@ -6,9 +6,54 @@ layout: base
 
 {%- assign hero_image = page.image_header | default: page.image -%}
 
+{%- comment -%}
+  image_full: the hero image is a real screenshot and must be shown COMPLETE — no object-cover
+  crop, no height clamp, no overlay on top of it. The heading moves below the image instead.
+{%- endcomment -%}
+{%- assign hero_card = false -%}
+{%- if page.bg_alternative or page.image_full -%}{%- assign hero_card = true -%}{%- endif -%}
+
+{%- capture hero_heading -%}
+    {% if page.tags and page.tags.size > 0 %}
+    <span class="inline-flex items-center px-4 py-1.5 mb-4 text-xs font-bold uppercase tracking-widest bg-accent-cyan text-black w-fit rounded-full">
+        {{ page.tags[0] }}
+    </span>
+    {% endif %}
+
+    <p class="text-[10px] font-bold uppercase tracking-widest {% unless hero_card %}text-white/80{% else %}text-gray-600 dark:text-gray-400{% endunless %} mb-3">
+        <span>{{ t.post.published_in }}</span>
+        {% if page.tags and page.tags.size > 0 %}
+            <span class="{% unless hero_card %}text-white{% else %}text-gray-900 dark:text-white{% endunless %}">{% for tag in page.tags %}{{ tag }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
+        {% else %}
+            <span class="{% unless hero_card %}text-white{% else %}text-gray-900 dark:text-white{% endunless %}">{{ t.post.uncategorized }}</span>
+        {% endif %}
+    </p>
+
+    <h1 class="font-heading text-xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold {% unless hero_card %}text-white{% else %}text-gray-900 dark:text-white{% endunless %} leading-tight tracking-tight">
+        {{ page.title }}
+    </h1>
+
+    {% if page.description %}
+    <p class="mt-5 text-base md:text-lg {% unless hero_card %}text-white/80{% else %}text-gray-600 dark:text-gray-400{% endunless %} max-w-3xl">
+        {{ page.description }}
+    </p>
+    {% endif %}
+{%- endcapture -%}
+
 <!-- Hero -->
 <section class="mb-10">
-    {% if hero_image %}
+    {% if hero_image and page.image_full %}
+    <!-- Full-screenshot hero: the whole image stays visible, nothing is cropped or covered -->
+    <div class="w-full bg-gray-100 dark:bg-black">
+        <img src="{{ hero_image | relative_url }}" alt="{{ page.title | escape }}" fetchpriority="high" width="1920" height="1080" class="block w-full h-auto">
+    </div>
+
+    <div class="mx-auto w-full max-w-7xl px-6 lg:px-8 pt-8">
+        <div class="bg-white dark:bg-blackground p-6 md:p-8 rounded-xl" style="border: 1px solid #E2E8F0;">
+            {{ hero_heading }}
+        </div>
+    </div>
+    {% elsif hero_image %}
     <style>
       .post-hero { aspect-ratio: 16/9; max-height: 70vh; }
       @media (max-width: 767px) {
@@ -30,30 +75,7 @@ layout: base
                 <div class="bg-white/90 dark:bg-blackground/80 p-6 md:p-8 rounded-xl" style="border: 1px solid #E2E8F0;">
                 {% endif %}
 
-                    {% if page.tags and page.tags.size > 0 %}
-                    <span class="inline-flex items-center px-4 py-1.5 mb-4 text-xs font-bold uppercase tracking-widest bg-accent-cyan text-black w-fit rounded-full">
-                        {{ page.tags[0] }}
-                    </span>
-                    {% endif %}
-
-                    <p class="text-[10px] font-bold uppercase tracking-widest {% unless page.bg_alternative %}text-white/80{% else %}text-gray-600 dark:text-gray-400{% endunless %} mb-3">
-                        <span>{{ t.post.published_in }}</span>
-                        {% if page.tags and page.tags.size > 0 %}
-                            <span class="{% unless page.bg_alternative %}text-white{% else %}text-gray-900 dark:text-white{% endunless %}">{% for tag in page.tags %}{{ tag }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
-                        {% else %}
-                            <span class="{% unless page.bg_alternative %}text-white{% else %}text-gray-900 dark:text-white{% endunless %}">{{ t.post.uncategorized }}</span>
-                        {% endif %}
-                    </p>
-
-                    <h1 class="font-heading text-xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold {% unless page.bg_alternative %}text-white{% else %}text-gray-900 dark:text-white{% endunless %} leading-tight tracking-tight">
-                        {{ page.title }}
-                    </h1>
-
-                    {% if page.description %}
-                    <p class="mt-5 text-base md:text-lg {% unless page.bg_alternative %}text-white/80{% else %}text-gray-600 dark:text-gray-400{% endunless %} max-w-3xl">
-                        {{ page.description }}
-                    </p>
-                    {% endif %}
+                    {{ hero_heading }}
 
                 {% if page.bg_alternative %}
                 </div>
@@ -90,7 +112,7 @@ layout: base
 </section>
 
 <!-- Main content -->
-<div class="relative {% if hero_image %}-mt-16{% endif %}">
+<div class="relative {% if hero_image %}{% unless page.image_full %}-mt-16{% endunless %}{% endif %}">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="bg-white dark:bg-blackground rounded-xl overflow-hidden" style="border: 1px solid #E2E8F0;">
             <!-- Article metadata -->

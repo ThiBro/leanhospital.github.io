@@ -9,6 +9,7 @@ lang: de
 image: /assets/img/posts/huddle-board-klinikum.png
 image_header: /assets/img/posts/huddle-board-klinikum.png
 bg_alternative: true
+image_full: true
 permalink: /de/berichtspflichten-krankenhaus/
 translation_url: /en/hospital-reporting-obligations/
 downloads:
@@ -102,9 +103,9 @@ Peakboard ist eine Low-Code-Plattform für Echtzeit-Dashboards aus der Industrie
 
 **Ausprobieren lässt sich das ohne IT-Projekt: Der Peakboard Designer ist kostenlos, und für Kliniken gibt es eine fertige Vorlage, das [digitale Huddle Board für das Daily Management im Klinikum](https://templates.peakboard.com/Daily-Huddle-Board-Hospital/index).** Die Vorlage visualisiert die fünf wichtigsten Kennzahlen einer Station, das Team bestätigt täglich per Touchscreen, ob sie erreicht wurden, und das Board hält diese Historie für eine automatische Trendauswertung fest.
 
-![Ausschnitt des digitalen Huddle Boards für den stationären Bereich: fünf Kennzahlen mit je einem Monatskalender aus grünen und violetten Tageskreisen](/assets/img/posts/huddle-board-klinikum-kennzahlen.webp)
+![Das vollständige digitale Huddle Board für den stationären Bereich: fünf Kennzahlen mit je einem Monatskalender aus grünen und violetten Tageskreisen, darunter der Monatsvergleich](/assets/img/posts/huddle-board-klinikum.png)
 
-*Ausschnitt aus der Vorlage: je Kennzahl ein Kreis pro Tag — grün erfüllt, violett nicht erfüllt. Das vollständige Board mit Monatsvergleich und Trendverlauf zeigt das Titelbild oben.*
+*Die Vorlage vollständig: je Kennzahl ein Kreis pro Tag — grün erfüllt, violett nicht erfüllt — und darunter der Monatsvergleich mit Trendverlauf.*
 
 Ansehen lässt sich das Board ohne Installation in der [Live-Demo im Browser](https://templates.peakboard.rocks/Team-Huddle-Board-Klinikum/index). Die Projektdatei liegt hier im Blog bereit: [team-huddle-board-klinikum.pbmx](/assets/pbmx/team-huddle-board-klinikum.pbmx) herunterladen, im kostenlosen Peakboard Designer öffnen und auf die Kennzahlen der eigenen Station anpassen.
 
