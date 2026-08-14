@@ -115,11 +115,16 @@ Innerhalb P1 zuerst #14 Entlassmanagement (1.300 SV, größte Einzelchance) und 
     selbst anzubieten.
   - **Nachtrag 14.08.2026 (Auftrag des Auftraggebers):** Die Vorlage liegt jetzt zusätzlich im Blog selbst —
     `assets/pbmx/team-huddle-board-klinikum.pbmx` über `downloads:` und als Inline-Link, dazu das Board-Bild
-    `assets/img/posts/huddle-board-klinikum.webp` und ein sichtbarer Link auf die Live-Demo
+    und ein sichtbarer Link auf die Live-Demo
     `templates.peakboard.rocks/Team-Huddle-Board-Klinikum/index`. Beides stammt von der Vorlagenseite. Damit ist
     der oben genannte „sauberere" Weg umgesetzt; der eine Link auf `templates.peakboard.com` bleibt daneben stehen.
+  - **Nachtrag 14.08.2026 (Reklamation des Auftraggebers):** Das Hero-Bild war eine generierte Illustration
+    (`reporting-obligations.png`). Verlangt war der echte Screenshot der Anwendung. Hero ist jetzt das
+    Board-Bild der Vorlagenseite (`assets/img/posts/huddle-board-klinikum.png`, 2880×1620), die generierte
+    Illustration ist gelöscht; im Fließtext steht statt des identischen Vollbilds der Kennzahlen-Ausschnitt
+    `huddle-board-klinikum-kennzahlen.webp`. Regel dazu in SCHREIBANWEISUNG und IMAGE_PROMPT_GUIDE nachgezogen.
   - **Offen:** Ein zweites Inline-Bild fehlt (`berichtspflichten-krankenhaus-fristen.webp` — Zeitstrahl
-    31.03. / Quartalsmeldung / monatlicher Atlas). Hero-Bild (`reporting-obligations.png`) und das
+    31.03. / Quartalsmeldung / monatlicher Atlas). Hero-Bild und das
     Stationsboard-Motiv sind gesetzt. Autorenbox/CTA-Bausteine wie bei #1.
 - Warum Überfüllung der Notaufnahme ein Sicherheitsproblem ist — `/de/warum-ueberfuellung-der-notaufnahme-ein-sicherheitsproblem-ist/`
 - Die OP-Sicherheitscheckliste: Was die Evidenz wirklich zeigt — `/de/die-op-sicherheitscheckliste-was-die-evidenz-wirklich-zeigt/`
