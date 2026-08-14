@@ -45,7 +45,9 @@ Selbstcheck der Schreibanweisung bestehen**. Vorgehen:
    - `last_modified_at` — bei jeder Überarbeitung setzen, speist `dateModified`.
    - `downloads:` — Board-Vorlagen (`.pbmx`); so bleibt der Peakboard-Designer-CTA im Blog, ohne auf
      peakboard.com zu verlinken.
-   - `image` / `image_header`, `tags`, `read_more_links` wie im Writing Guide beschrieben.
+   - `image` / `image_header` — **Pflicht in jedem Artikel.** Thumbnail nach `IMAGE_PROMPT_GUIDE.md`
+     erzeugen, als `assets/img/posts/<slug>.png` ablegen und in DE- und EN-Datei identisch eintragen.
+   - `tags`, `read_more_links` wie im Writing Guide beschrieben.
 
 5. **Bauen und messen** — nicht behaupten, sondern prüfen. Im Repo-Root ausführen:
 

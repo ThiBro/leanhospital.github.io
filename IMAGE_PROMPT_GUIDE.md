@@ -1,6 +1,7 @@
 # Image Prompt Guide - Lean Hospital
 
-This guide keeps the article hero/thumbnail images **visually consistent**. Every
+**A hero/thumbnail image is mandatory for every article** - see BLOG_WRITING_GUIDE.md and
+SCHREIBANWEISUNG.md. This guide keeps those images **visually consistent**. Every
 post image is an AI-generated editorial illustration built from a fixed *style
 frame* plus a short, topic-specific *scene* sentence. Follow this whenever you
 add or regenerate a post image.

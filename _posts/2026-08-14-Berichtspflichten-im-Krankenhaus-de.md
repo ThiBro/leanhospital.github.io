@@ -6,6 +6,8 @@ date: 2026-08-14 00:00:00 +0000
 tags: lean-management
 description: "Berichtspflichten im Krankenhaus: welche Meldungen § 21 KHEntgG, Qualitätsbericht und Personalbemessung verlangen und wie der Aufwand sinkt."
 lang: de
+image: /assets/img/posts/reporting-obligations.png
+image_header: /assets/img/posts/reporting-obligations.png
 permalink: /de/berichtspflichten-krankenhaus/
 translation_url: /en/hospital-reporting-obligations/
 faq:

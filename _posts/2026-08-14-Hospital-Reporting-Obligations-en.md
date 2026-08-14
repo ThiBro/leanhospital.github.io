@@ -6,6 +6,8 @@ date: 2026-08-14 00:00:00 +0000
 tags: lean-management
 description: "Hospital reporting obligations in the DACH region: what § 21 KHEntgG, the quality report and nurse staffing rules demand - and how to cut the effort."
 lang: en
+image: /assets/img/posts/reporting-obligations.png
+image_header: /assets/img/posts/reporting-obligations.png
 permalink: /en/hospital-reporting-obligations/
 translation_url: /de/berichtspflichten-krankenhaus/
 faq:

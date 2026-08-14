@@ -101,7 +101,14 @@ Required fields for every new post:
 | `lang` | `en` or `de` |
 | `permalink` | `/en/<slug>/` or `/de/<slug>/` |
 | `translation_url` | Permalink of the counterpart-language article |
+| `image` | **Mandatory.** Hero/thumbnail path `/assets/img/posts/<slug>.png`. Same image in the DE and the EN file |
+| `image_header` | **Mandatory.** Same path as `image`; renders the wide hero at the top of the article |
 | `redirect_from` | Optional legacy `.html` path |
+
+**Every article needs a thumbnail - no exceptions.** No post ships without `image` and
+`image_header`. The image itself must be produced according to
+[IMAGE_PROMPT_GUIDE.md](IMAGE_PROMPT_GUIDE.md) (fixed style suffix, brand palette, no text
+in the image), stored as `assets/img/posts/<slug>.png`, and shared by both language files.
 
 The slug is the lower-cased, hyphenated form of the title. For example,
 `_posts/2026-07-02-My-Article-en.md` becomes
@@ -126,6 +133,8 @@ date: 2026-06-24 00:00:00 +0000
 tags: lean-management
 description: Two American health systems adopted the Toyota Production System and measured the results - freed space, shorter lead times, and safer care.
 lang: en
+image: /assets/img/posts/virginia-mason-thedacare.png
+image_header: /assets/img/posts/virginia-mason-thedacare.png
 permalink: /en/what-virginia-mason-and-thedacare-proved-about-lean-in-hospitals/
 translation_url: /de/was-virginia-mason-und-thedacare-ueber-lean-im-krankenhaus-bewiesen-haben/
 redirect_from:
@@ -169,8 +178,6 @@ Only list sources you actually relied on, and only URLs that resolve. Prefer the
   Set it whenever an existing article is reworked.
 - `downloads` - list of `{url, name}`; renders the download box (used for the `.pbmx` board templates,
   which is how the Peakboard-Designer CTA stays inside the blog without linking to peakboard.com).
-- `image` - hero/card image path under `/assets/...`. If omitted, the post uses a clean text hero and the card renders without an image. For AI-generated hero images, follow [IMAGE_PROMPT_GUIDE.md](IMAGE_PROMPT_GUIDE.md) so the set stays visually consistent.
-- `image_header` - a wider hero image used only at the top of the article.
 - `read_more_links` - list of `{title, url}` related links shown in the right sidebar under "Resources".
 
 ## Reference articles
