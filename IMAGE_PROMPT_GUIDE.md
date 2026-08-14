@@ -90,6 +90,14 @@ the key from that config, loops over a `{slug: scene}` map, and writes PNGs to
   image_header: /assets/img/posts/<slug>.png
   ```
   `image` drives the card/social preview; `image_header` is the wide hero at the top.
+- **Real screenshots are never cropped.** A screenshot of a board or template goes into the
+  article at its full extent — no detail crop inline, and no cover-crop in the hero. Add
+  ```yaml
+  image_full: true
+  ```
+  to both language files: `_layouts/post.html` then renders the hero image complete
+  (`w-full h-auto`, no height clamp, no overlay) and puts the title card underneath it.
+  Generated 16:9 motifs do not need the flag - they fit the classic hero as-is.
 
 ## Regenerating
 

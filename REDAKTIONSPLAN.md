@@ -123,6 +123,12 @@ Innerhalb P1 zuerst #14 Entlassmanagement (1.300 SV, größte Einzelchance) und 
     Board-Bild der Vorlagenseite (`assets/img/posts/huddle-board-klinikum.png`, 2880×1620), die generierte
     Illustration ist gelöscht; im Fließtext steht statt des identischen Vollbilds der Kennzahlen-Ausschnitt
     `huddle-board-klinikum-kennzahlen.webp`. Regel dazu in SCHREIBANWEISUNG und IMAGE_PROMPT_GUIDE nachgezogen.
+  - **Nachtrag 14.08.2026 (zweite Reklamation des Auftraggebers):** Der Screenshot war angeschnitten — der
+    Hero schnitt per `object-cover` + `max-height: 70vh` rund 29 % der Bildhöhe weg, und im Fließtext stand
+    ohnehin nur ein Ausschnitt. Jetzt gilt: Screenshots werden immer vollständig gezeigt. Neuer Schalter
+    `image_full: true` in beiden Sprachdateien; `_layouts/post.html` rendert das Hero-Bild damit ungeschnitten
+    und setzt Titelkarte und Teaser darunter statt darüber. Der Ausschnitt
+    `huddle-board-klinikum-kennzahlen.webp` ist gelöscht, inline steht das vollständige Board.
   - **Offen:** Ein zweites Inline-Bild fehlt (`berichtspflichten-krankenhaus-fristen.webp` — Zeitstrahl
     31.03. / Quartalsmeldung / monatlicher Atlas). Hero-Bild und das
     Stationsboard-Motiv sind gesetzt. Autorenbox/CTA-Bausteine wie bei #1.
