@@ -97,6 +97,23 @@ Innerhalb P1 zuerst #14 Entlassmanagement (1.300 SV, größte Einzelchance) und 
 
 ### Bereits veröffentlicht, nicht im Plan
 
+- ✅ **Berichtspflichten im Krankenhaus** — `/de/berichtspflichten-krankenhaus/` · EN: `/en/hospital-reporting-obligations/`
+  (14.08.2026, Auftragsartikel außerhalb des Plans, nach SCHREIBANWEISUNG geschrieben)
+  - **Fokuskeyword:** berichtspflichten krankenhaus · **Sekundär:** dokumentationsaufwand krankenhaus,
+    qualitätsbericht krankenhaus, § 21 KHEntgG, bundes-klinik-atlas, pflegepersonalbemessung
+  - **Rolle:** Spoke (1.705 W DE / 1.796 W EN). **Interne Links:** → Pillar #1, → Visuelles Management
+  - **Abgrenzung zu #4 (kennzahlen krankenhaus):** dieser Artikel behandelt die *Meldepflichten*, die den
+    Kennzahlenaufwand erzeugen (Gesetze, Fristen, Adressaten). Der KPI-**Katalog** mit Formeln und Zielwerten
+    bleibt #4. Beim Schreiben von #4 hierher verlinken und Doppelungen zum Gesetzesteil vermeiden.
+  - **Abweichung von der Brand-Regel (bewusst, vom Auftraggeber vorgegeben):** Der Artikel enthält **einen**
+    sichtbaren Link auf `templates.peakboard.com` (fertige Klinik-Vorlage „Digitales Huddle Board für das Daily
+    Management im Klinikum"). Der Auftrag verlangte ausdrücklich, dass Leser die Vorlage aus dem Artikel
+    erreichen. Sonst kein sichtbarer Peakboard-Link; das Herkunfts-Framing der Schreibanweisung steht wörtlich
+    im Text. Sauberer wäre langfristig, die `.pbmx` wie bei `ward-status-board.pbmx` über `downloads:` im Blog
+    selbst anzubieten.
+  - **Offen:** Hero-/Inline-Bilder fehlen (Vorschläge: `berichtspflichten-krankenhaus-fristen.webp` — Zeitstrahl
+    31.03. / Quartalsmeldung / monatlicher Atlas; `berichtspflichten-krankenhaus-stationsboard.webp` — Huddle vor
+    Stationsboard). Autorenbox/CTA-Bausteine wie bei #1.
 - Warum Überfüllung der Notaufnahme ein Sicherheitsproblem ist — `/de/warum-ueberfuellung-der-notaufnahme-ein-sicherheitsproblem-ist/`
 - Die OP-Sicherheitscheckliste: Was die Evidenz wirklich zeigt — `/de/die-op-sicherheitscheckliste-was-die-evidenz-wirklich-zeigt/`
 - Die Fünf-Punkt-Checkliste, die Infektionen auf null brachte — `/de/die-fuenf-punkt-checkliste-die-infektionen-auf-null-brachte/`
