@@ -53,6 +53,14 @@ no letters, no numbers, no logos, centered balanced composition, wide 16:9 hero 
 > dashboard **screenshot** as its hero (`assets/img/posts/ward-status-board.png`), not an
 > AI illustration. When an article is *about* a concrete Peakboard board, prefer a real
 > rendered screenshot over an illustration.
+>
+> The same holds when an article **presents a ready-made template** from
+> `templates.peakboard.com`: the template page already ships its own board image
+> (`<folder>/<project>.png`, also the page's `og:image`). Take that file as the hero instead of
+> generating a new illustration — a screenshot of the running application is what a reader
+> wants to see. Example: `assets/img/posts/huddle-board-klinikum.png` in the
+> *Berichtspflichten im Krankenhaus* article. Generate an illustration only when no such
+> screenshot exists.
 
 ## Generation parameters
 

@@ -70,6 +70,7 @@ Du arbeitest mit zwei Dokumenten:
 
 ### Bilder
 - **Thumbnail ist Pflicht.** Jeder Artikel bekommt ein Hero-/Thumbnail-Bild — ohne geht kein Artikel live. Es liegt als `assets/img/posts/<slug>.png`, wird nach [IMAGE_PROMPT_GUIDE.md](IMAGE_PROMPT_GUIDE.md) erzeugt (fixer Style-Suffix, Markenpalette, kein Text im Bild) und in **beiden** Sprachdateien identisch als `image:` **und** `image_header:` eingetragen.
+- **Zeigt der Artikel ein konkretes Peakboard-Board oder eine fertige Vorlage, geht der echte Screenshot vor.** Dann kein generiertes Bild erzeugen, sondern das Board-Bild der Vorlagenseite (`templates.peakboard.com/<Ordner>/<Projekt>.png`) bzw. einen echten Screenshot als Thumbnail setzen — siehe [IMAGE_PROMPT_GUIDE.md](IMAGE_PROMPT_GUIDE.md).
 - Zusätzlich 2–4 Bildvorschläge für den Fließtext: sprechender Dateiname (`fokuskeyword-kontext.webp`), konkreter Alt-Text (Keyword nur, wenn es das Bild wirklich beschreibt), optional Caption. Das `.webp`-Schema gilt nur für diese Inline-Bilder, nicht für das Thumbnail.
 
 ### E-E-A-T
