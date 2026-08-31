@@ -6,7 +6,7 @@ Diese Datei ist die maschinenlesbare Begleitliste zu https://lean-hospital.de/ll
 
 Kanonische, stets aktuelle Quelle ist die Sitemap: https://lean-hospital.de/sitemap.xml
 
-## Full post archive (as of 2026-08-24)
+## Full post archive (as of 2026-08-31)
 
 <!-- AUTOGEN:START — content between the AUTOGEN markers is regenerated from sitemap.xml; do not edit by hand -->
 
