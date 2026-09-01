@@ -9,6 +9,10 @@ description: "Lean Hospital: Was Lean Management im Krankenhaus belegbar verkür
 lang: de
 image: /assets/img/posts/lean-hospital.png
 image_header: /assets/img/posts/lean-hospital.png
+ai_disclosure:
+  text: ai-generated
+  image: ai-generated
+  image_model: gpt-image-1
 permalink: /de/lean-hospital/
 translation_url: /en/lean-hospital/
 faq:

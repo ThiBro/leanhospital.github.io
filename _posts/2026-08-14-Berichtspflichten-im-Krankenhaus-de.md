@@ -10,6 +10,9 @@ image: /assets/img/posts/huddle-board-klinikum.png
 image_header: /assets/img/posts/huddle-board-klinikum.png
 bg_alternative: true
 image_full: true
+ai_disclosure:
+  text: ai-generated
+  image: screenshot
 permalink: /de/berichtspflichten-krankenhaus/
 translation_url: /en/hospital-reporting-obligations/
 downloads:

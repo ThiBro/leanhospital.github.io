@@ -7,6 +7,9 @@ description: The lean roots of visual management, the evidence that visible stat
 lang: en
 image: /assets/img/posts/ward-status-board.png
 image_header: /assets/img/posts/ward-status-board.png
+ai_disclosure:
+  text: ai-generated
+  image: screenshot
 permalink: /en/make-the-work-visible-visual-management-and-the-real-time-hospital-board/
 translation_url: /de/die-arbeit-sichtbar-machen-visuelles-management-im-krankenhaus/
 downloads:

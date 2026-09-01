@@ -7,6 +7,10 @@ description: Die Evidenz, die Überfüllung und Boarding in der Notaufnahme mit 
 lang: de
 image: /assets/img/posts/ed-crowding.png
 image_header: /assets/img/posts/ed-crowding.png
+ai_disclosure:
+  text: ai-generated
+  image: ai-generated
+  image_model: gpt-image-1
 permalink: /de/warum-ueberfuellung-der-notaufnahme-ein-sicherheitsproblem-ist/
 translation_url: /en/why-emergency-department-crowding-is-a-safety-problem/
 read_more_links:

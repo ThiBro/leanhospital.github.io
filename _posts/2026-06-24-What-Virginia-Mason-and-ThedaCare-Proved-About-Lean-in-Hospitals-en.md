@@ -7,6 +7,10 @@ description: Two American health systems adopted the Toyota Production System an
 lang: en
 image: /assets/img/posts/virginia-mason-thedacare.png
 image_header: /assets/img/posts/virginia-mason-thedacare.png
+ai_disclosure:
+  text: ai-generated
+  image: ai-generated
+  image_model: gpt-image-1
 permalink: /en/what-virginia-mason-and-thedacare-proved-about-lean-in-hospitals/
 translation_url: /de/was-virginia-mason-und-thedacare-ueber-lean-im-krankenhaus-bewiesen-haben/
 read_more_links:

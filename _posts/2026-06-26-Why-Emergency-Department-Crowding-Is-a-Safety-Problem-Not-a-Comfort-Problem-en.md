@@ -7,6 +7,10 @@ description: The evidence linking ED crowding and boarding to higher mortality -
 lang: en
 image: /assets/img/posts/ed-crowding.png
 image_header: /assets/img/posts/ed-crowding.png
+ai_disclosure:
+  text: ai-generated
+  image: ai-generated
+  image_model: gpt-image-1
 permalink: /en/why-emergency-department-crowding-is-a-safety-problem/
 translation_url: /de/warum-ueberfuellung-der-notaufnahme-ein-sicherheitsproblem-ist/
 read_more_links:

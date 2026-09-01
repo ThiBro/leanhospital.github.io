@@ -7,6 +7,10 @@ description: Communication failures are a leading root cause of serious harm in 
 lang: en
 image: /assets/img/posts/handoff-ipass-sbar.png
 image_header: /assets/img/posts/handoff-ipass-sbar.png
+ai_disclosure:
+  text: ai-generated
+  image: ai-generated
+  image_model: gpt-image-1
 permalink: /en/the-handoff-is-where-care-breaks-how-i-pass-and-sbar-fix-it/
 translation_url: /de/die-uebergabe-ist-die-bruchstelle-wie-i-pass-und-sbar-sie-reparieren/
 read_more_links:

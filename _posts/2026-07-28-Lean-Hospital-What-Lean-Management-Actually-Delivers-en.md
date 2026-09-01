@@ -9,6 +9,10 @@ description: "The lean hospital, honestly assessed: what lean management demonst
 lang: en
 image: /assets/img/posts/lean-hospital.png
 image_header: /assets/img/posts/lean-hospital.png
+ai_disclosure:
+  text: ai-generated
+  image: ai-generated
+  image_model: gpt-image-1
 permalink: /en/lean-hospital/
 translation_url: /de/lean-hospital/
 faq:

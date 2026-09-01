@@ -7,6 +7,10 @@ description: Die WHO-OP-Sicherheitscheckliste halbierte in ihrer Pilotstudie 200
 lang: de
 image: /assets/img/posts/surgical-safety-checklist.png
 image_header: /assets/img/posts/surgical-safety-checklist.png
+ai_disclosure:
+  text: ai-generated
+  image: ai-generated
+  image_model: gpt-image-1
 permalink: /de/die-op-sicherheitscheckliste-was-die-evidenz-wirklich-zeigt/
 translation_url: /en/the-surgical-safety-checklist-what-the-evidence-really-shows/
 read_more_links:

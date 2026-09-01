@@ -7,6 +7,10 @@ description: In Michigan's intensive care units, a five-step checklist for inser
 lang: en
 image: /assets/img/posts/central-line-checklist.png
 image_header: /assets/img/posts/central-line-checklist.png
+ai_disclosure:
+  text: ai-generated
+  image: ai-generated
+  image_model: gpt-image-1
 permalink: /en/the-five-line-checklist-that-drove-infections-to-zero/
 translation_url: /de/die-fuenf-punkt-checkliste-die-infektionen-auf-null-brachte/
 read_more_links:

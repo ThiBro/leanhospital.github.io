@@ -7,6 +7,9 @@ description: "Die Lean-Wurzeln des visuellen Managements, die Evidenz, dass sich
 lang: de
 image: /assets/img/posts/ward-status-board.png
 image_header: /assets/img/posts/ward-status-board.png
+ai_disclosure:
+  text: ai-generated
+  image: screenshot
 permalink: /de/die-arbeit-sichtbar-machen-visuelles-management-im-krankenhaus/
 translation_url: /en/make-the-work-visible-visual-management-and-the-real-time-hospital-board/
 downloads:

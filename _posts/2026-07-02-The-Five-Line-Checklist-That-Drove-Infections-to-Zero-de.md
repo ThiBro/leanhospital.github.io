@@ -7,6 +7,10 @@ description: Auf den Intensivstationen Michigans senkte eine Fünf-Schritt-Check
 lang: de
 image: /assets/img/posts/central-line-checklist.png
 image_header: /assets/img/posts/central-line-checklist.png
+ai_disclosure:
+  text: ai-generated
+  image: ai-generated
+  image_model: gpt-image-1
 permalink: /de/die-fuenf-punkt-checkliste-die-infektionen-auf-null-brachte/
 translation_url: /en/the-five-line-checklist-that-drove-infections-to-zero/
 read_more_links:

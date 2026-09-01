@@ -7,6 +7,10 @@ description: Kommunikationsfehler sind eine der häufigsten Grundursachen für s
 lang: de
 image: /assets/img/posts/handoff-ipass-sbar.png
 image_header: /assets/img/posts/handoff-ipass-sbar.png
+ai_disclosure:
+  text: ai-generated
+  image: ai-generated
+  image_model: gpt-image-1
 permalink: /de/die-uebergabe-ist-die-bruchstelle-wie-i-pass-und-sbar-sie-reparieren/
 translation_url: /en/the-handoff-is-where-care-breaks-how-i-pass-and-sbar-fix-it/
 read_more_links:

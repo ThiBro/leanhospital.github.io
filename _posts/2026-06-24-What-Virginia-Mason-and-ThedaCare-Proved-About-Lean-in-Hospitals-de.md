@@ -7,6 +7,10 @@ description: Zwei US-Gesundheitssysteme übernahmen das Toyota-Produktionssystem
 lang: de
 image: /assets/img/posts/virginia-mason-thedacare.png
 image_header: /assets/img/posts/virginia-mason-thedacare.png
+ai_disclosure:
+  text: ai-generated
+  image: ai-generated
+  image_model: gpt-image-1
 permalink: /de/was-virginia-mason-und-thedacare-ueber-lean-im-krankenhaus-bewiesen-haben/
 translation_url: /en/what-virginia-mason-and-thedacare-proved-about-lean-in-hospitals/
 read_more_links:

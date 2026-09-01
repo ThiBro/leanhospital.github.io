@@ -7,6 +7,10 @@ description: The WHO Surgical Safety Checklist cut deaths in half in its 2009 pi
 lang: en
 image: /assets/img/posts/surgical-safety-checklist.png
 image_header: /assets/img/posts/surgical-safety-checklist.png
+ai_disclosure:
+  text: ai-generated
+  image: ai-generated
+  image_model: gpt-image-1
 permalink: /en/the-surgical-safety-checklist-what-the-evidence-really-shows/
 translation_url: /de/die-op-sicherheitscheckliste-was-die-evidenz-wirklich-zeigt/
 read_more_links:
