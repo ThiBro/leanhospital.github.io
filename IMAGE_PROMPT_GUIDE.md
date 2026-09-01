@@ -6,6 +6,22 @@ post image is an AI-generated editorial illustration built from a fixed *style
 frame* plus a short, topic-specific *scene* sentence. Follow this whenever you
 add or regenerate a post image.
 
+## Mandatory: label the image's origin
+
+Every post declares in the front matter of **both** language files where its header image came
+from — that is what drives the visible "AI-generated image" marker on the hero and the
+machine-readable IPTC digital source type in the page source:
+
+```yaml
+ai_disclosure:
+  image: ai-generated       # a generated illustration from this guide
+  image_model: gpt-image-1
+```
+
+A real board screenshot takes `image: screenshot` and no `image_model`. Getting this wrong is a
+labelling error under Article 50 of the EU AI Act, not a cosmetic one. The reader-facing
+explanation lives at `/ai-transparency/` (German: `/de/ki-transparenz/`); see SCHREIBANWEISUNG.md.
+
 ## The rule in one line
 
 `<one concrete scene sentence>` **+** `<the fixed style suffix below>` - nothing else.

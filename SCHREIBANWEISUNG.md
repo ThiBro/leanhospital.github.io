@@ -119,6 +119,31 @@ Bei Anleitungs-Artikeln mit nummerierten Schritten zusätzlich `HowTo`.
 
 ---
 
+## KI-Kennzeichnung (Pflicht, Artikel 50 EU-KI-Verordnung)
+Jeder Artikel trägt im Front Matter **beider** Sprachdateien:
+
+```yaml
+ai_disclosure:
+  text: ai-generated        # ai-generated | ai-assisted | human
+  image: ai-generated       # ai-generated | ai-edited | screenshot | photo | none
+  image_model: gpt-image-1  # nur bei ai-generated / ai-edited
+```
+
+Daraus baut der Blog die sichtbare Kennzeichnung (Pille in der Artikelzeile, Markierung auf dem
+Titelbild, Kasten am Textende) und die maschinenlesbare (`<meta name="ai-disclosure">`, JSON-LD mit
+IPTC Digital Source Type, `data-`Attribute am Bild) — dazu ist nichts weiter zu tun.
+
+**Der Wert muss stimmen, nicht bequem sein.** Ein von einer KI entworfener Text ist `ai-generated`,
+auch wenn ein Mensch ihn geprüft hat; `ai-assisted` gilt nur für einen selbst geschriebenen Text,
+bei dem KI beim Redigieren geholfen hat. Ein Board-Screenshot ist `screenshot`, niemals
+`ai-generated`. Fehlt der Block, greifen die Vorgaben aus `_config.yml` und kennzeichnen den Artikel
+vorsichtshalber komplett als KI-erzeugt — richtig gekennzeichnet ist er damit trotzdem nicht.
+
+Erklärseite für Leser: `/de/ki-transparenz/` bzw. `/ai-transparency/`. Ändert sich die Praxis
+(anderes Bildmodell, neue Inhaltsart), gehört das dort in denselben Commit.
+
+---
+
 ## CTA-System
 
 Drei Bausteine, Zuordnung pro Artikel steht verbindlich in der CTA-Spalte der Planzeile:
@@ -153,7 +178,7 @@ Dosierung: **maximal 2 CTAs pro Artikel** (1 inline + 1 am Ende). Artikel, deren
 6. **Interne Links gesetzt** — Liste: Anker → Ziel
 7. **Externe Autoritätsquelle** — Quelle + Verlinkungsstelle
 8. **CTA-Platzierung** — welcher Baustein, wo (gemäß Planzeile)
-9. **Bildvorschläge** — Dateiname, Alt-Text, Platzierung
+9. **Bildvorschläge** — Dateiname, Alt-Text, Platzierung, Herkunft (KI-generiert oder echter Screenshot)
 10. **JSON-LD** — BlogPosting + FAQPage + BreadcrumbList + Person (+ HowTo falls zutreffend)
 11. **Selbstcheck** — jede Zeile mit ✓ oder ✗, bei ✗ mit Begründung
 
@@ -178,4 +203,5 @@ Dosierung: **maximal 2 CTAs pro Artikel** (1 inline + 1 am Ende). Artikel, deren
 - [ ] Keine erfundene Statistik; unsichere Zahlen als [verify]
 - [ ] Keine „x, nicht y"-Formulierung
 - [ ] JSON-LD vollständig (BlogPosting, FAQPage wortgleich, BreadcrumbList, Person mit worksFor Peakboard GmbH)
+- [ ] `ai_disclosure` im Front Matter **beider** Sprachdateien, Werte entsprechen der tatsächlichen Entstehung
 - [ ] Mindestens ein konkretes Klinik-Beispiel
