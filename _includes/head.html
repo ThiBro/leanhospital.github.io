@@ -97,3 +97,10 @@
 
 {%- comment -%} Structured data (JSON-LD): WebSite + Blog + BlogPosting + Person + BreadcrumbList (+ FAQPage) {%- endcomment -%}
 {% include schema.html %}
+
+{%- comment -%}
+  Maschinenlesbare KI-Kennzeichnung (Artikel 50 Absatz 2 EU-KI-Verordnung).
+  Nur auf Artikeln: nur die tragen eine `ai_disclosure`-Angabe, und nur fuer sie
+  gelten die Vorgaben aus `site.ai_disclosure`.
+{%- endcomment -%}
+{%- if page.layout == 'post' -%}{% include ai-disclosure-meta.html %}{%- endif -%}

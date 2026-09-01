@@ -9,6 +9,17 @@ port: 4001
 # Per-post permalinks set via front matter (/en/<slug>/ and /de/<slug>/)
 # always take precedence over the global permalink above.
 
+# KI-Kennzeichnung (Artikel 50 der Verordnung (EU) 2024/1689, "KI-Verordnung")
+# Vorgaben fuer Artikel OHNE eigenes `ai_disclosure` im Front Matter. Sie sind mit
+# Absicht auf "KI" gestellt: ein neuer Artikel, bei dem die Angabe vergessen wurde,
+# ist damit zu viel gekennzeichnet statt zu wenig.
+# Erlaubte Werte: text  = ai-generated | ai-assisted | human
+#                 image = ai-generated | ai-edited | screenshot | photo | none
+ai_disclosure:
+  default_text: ai-generated
+  default_image: ai-generated
+  image_model: gpt-image-1
+
 # Build settings
 markdown: kramdown
 highlighter: rouge

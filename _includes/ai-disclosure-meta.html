@@ -1,0 +1,62 @@
+{%- comment -%}
+  _includes/ai-disclosure-meta.html
+  =================================
+  Maschinenlesbare KI-Kennzeichnung für den <head>. Umsetzung von Artikel 50
+  Absatz 2 der Verordnung (EU) 2024/1689 (KI-Verordnung): KI-erzeugte Inhalte
+  werden in einem maschinenlesbaren Format als künstlich erzeugt markiert.
+
+  Zwei Kanäle, weil sie unterschiedliche Leser bedienen:
+    1. <meta>-Tags — für Crawler, Scraper und einfache Prüfwerkzeuge greifbar,
+       ohne dass JSON geparst werden muss.
+    2. JSON-LD mit dem IPTC-Digital-Source-Type — die eingeführte Werteliste für
+       die Herkunft eines Mediums (trainedAlgorithmicMedia = von einem trainierten
+       Modell erzeugt).
+
+  Der Block liegt bewusst NEBEN `schema.html` und nicht darin: das SEO-kritische
+  BlogPosting-/FAQPage-Markup bleibt unverändert, die KI-Angabe steht als eigener
+  Knoten mit eigenem @context daneben.
+{%- endcomment -%}
+
+{%- include ai-disclosure-vars.html -%}
+{%- assign _ai_lang = page.lang | default: site.default_lang | default: 'en' -%}
+{%- assign _ai_t = site.data.strings[_ai_lang].ai -%}
+{%- assign _ai_policy = _ai_t.policy_url | absolute_url -%}
+
+<meta name="ai-disclosure" content="text={{ _ai_text }}; image={{ _ai_image }}">
+<meta name="ai-disclosure-policy" content="{{ _ai_policy }}">
+{%- if _ai_any %}
+<meta name="ai-generated" content="true">
+{%- endif %}
+
+{%- if _ai_any -%}
+{%- assign _ai_canonical = page.url | replace:'index.html','' | replace:'.html','' | absolute_url -%}
+{%- assign _ai_img_abs = _ai_has_image | absolute_url -%}
+{%- capture _ai_credit -%}
+{%- if _ai_text == 'ai-generated' -%}{{ _ai_t.text_ai_generated }}{%- elsif _ai_text == 'ai-assisted' -%}{{ _ai_t.text_ai_assisted }}{%- else -%}{{ _ai_t.text_human }}{%- endif %} {% case _ai_image %}{%- when 'ai-generated' -%}{{ _ai_t.image_ai_generated | replace: '%MODEL%', _ai_model }}{%- when 'ai-edited' -%}{{ _ai_t.image_ai_edited | replace: '%MODEL%', _ai_model }}{%- when 'screenshot' -%}{{ _ai_t.image_screenshot }}{%- when 'photo' -%}{{ _ai_t.image_photo }}{%- else -%}{{ _ai_t.image_none }}{%- endcase -%}
+{%- endcapture -%}
+<script type="application/ld+json">
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "digitalSourceType": { "@id": "http://iptc.org/std/nar/2006-10-01/#digitalSourceType", "@type": "@id" }
+  },
+  "@id": "{{ _ai_canonical }}#ai-disclosure",
+  "@type": "schema:CreativeWork",
+  "schema:name": {{ _ai_t.heading | jsonify }},
+  "schema:inLanguage": "{{ _ai_lang }}",
+  "schema:mainEntityOfPage": { "@id": "{{ _ai_canonical }}" },
+  "schema:usageInfo": { "@id": "{{ _ai_policy }}" },
+  "schema:creditText": {{ _ai_credit | strip_html | normalize_whitespace | jsonify }},
+  {%- if _ai_text_is_ai %}
+  "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+  {%- endif %}
+  "schema:isPartOf": { "@id": "{{ _ai_canonical }}#article" }{% if _ai_src_type != '' %},
+  "schema:associatedMedia": {
+    "@type": "schema:ImageObject",
+    "schema:contentUrl": "{{ _ai_img_abs }}",
+    "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/{{ _ai_src_type }}"{% if _ai_image_is_ai %},
+    "schema:creditText": {{ _ai_t.hero_badge | append: ' — ' | append: _ai_model | jsonify }}{% endif %}
+  }{% endif %}
+}
+</script>
+{%- endif -%}

@@ -13,6 +13,7 @@ footer:
   deploy: "Loslegen"
   search: "Suche"
   legal: "Impressum"
+  ai_transparency: "KI-Transparenz"
   copyright:
     suffix: "Alle Rechte vorbehalten."
 
@@ -43,6 +44,31 @@ post:
   related_links: "Verwandte Links"
   ai_prompt_header: "KI-generierter Artikel"
   ai_prompt_intro: "Dieser Artikel wurde mit KI erstellt. Der verwendete Prompt:"
+
+# ---------------------------------------------------------------------------
+# KI-Kennzeichnung (Artikel 50 der Verordnung (EU) 2024/1689, "KI-Verordnung").
+# Bausteine mit %MODEL% bekommen im Include das tatsächlich verwendete Modell
+# eingesetzt (Front Matter `ai_disclosure.image_model`, sonst `site.ai_disclosure.image_model`).
+# ---------------------------------------------------------------------------
+ai:
+  badge: "KI-Kennzeichnung"
+  badge_title: "Wie dieser Artikel entstanden ist — Kennzeichnung nach Artikel 50 der EU-KI-Verordnung"
+  hero_badge: "KI-generiertes Bild"
+  heading: "KI-Kennzeichnung: Wie dieser Artikel entstanden ist"
+  intro: "Wir legen offen, welche Teile dieses Artikels von künstlicher Intelligenz erstellt wurden."
+  text_label: "Text"
+  image_label: "Bild"
+  text_ai_generated: "Der Text dieses Artikels wurde mit einem KI-Sprachmodell erstellt. Martin Neumann hat ihn vor der Veröffentlichung geprüft, die Quellen kontrolliert und trägt die redaktionelle Verantwortung."
+  text_ai_assisted: "Den Text dieses Artikels hat Martin Neumann geschrieben; ein KI-Sprachmodell hat beim Entwurf und beim Redigieren unterstützt. Die redaktionelle Verantwortung liegt bei Martin Neumann."
+  text_human: "Den Text dieses Artikels hat Martin Neumann ohne KI-Unterstützung geschrieben."
+  image_ai_generated: "Das Titelbild ist eine KI-generierte Illustration (Modell %MODEL%). Es zeigt eine symbolische Szene ohne reale Personen, reale Orte und reale Geräte."
+  image_ai_edited: "Das Titelbild ist eine echte Aufnahme, die mit KI-Werkzeugen nachbearbeitet wurde (Modell %MODEL%)."
+  image_screenshot: "Das Titelbild und die Screenshots in diesem Artikel sind echte Bildschirmaufnahmen einer laufenden Anwendung und stammen nicht aus einer KI."
+  image_photo: "Das Titelbild ist eine echte Fotografie und stammt nicht aus einer KI."
+  image_none: "Dieser Artikel enthält kein Titelbild."
+  legal: "Kennzeichnung nach Artikel 50 der Verordnung (EU) 2024/1689 (KI-Verordnung), anwendbar seit dem 2. August 2026."
+  policy_label: "Wie dieser Blog KI einsetzt"
+  policy_url: "/de/ki-transparenz/"
 
 author:
   heading: "Über den Autor"

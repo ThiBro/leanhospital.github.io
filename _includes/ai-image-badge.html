@@ -1,0 +1,21 @@
+{%- comment -%}
+  _includes/ai-image-badge.html
+  =============================
+  Kennzeichnet ein KI-erzeugtes Titelbild direkt AUF dem Bild, damit die Angabe
+  auch dann ankommt, wenn das Bild allein weiterverwendet oder überflogen wird.
+  Erwartet, dass `ai-disclosure-vars.html` vorher eingebunden wurde (setzt
+  `_ai_image_is_ai`); rendert nichts, wenn das Bild nicht von einer KI stammt.
+  Der umgebende Container braucht `position: relative`.
+{%- endcomment -%}
+{%- if _ai_image_is_ai -%}
+{%- assign _ai_lang = page.lang | default: site.default_lang | default: 'en' -%}
+<a href="#ai-disclosure"
+   class="absolute top-4 right-4 z-20 inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[10px] font-heading font-bold uppercase tracking-widest text-white hover:text-accent-amber transition-colors"
+   style="background-color: rgba(15,23,42,0.78); backdrop-filter: blur(4px);"
+   title="{{ site.data.strings[_ai_lang].ai.badge_title }}">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-3 h-3 flex-shrink-0" aria-hidden="true">
+        <path d="M12 2 L13.5 8.5 L20 10 L13.5 11.5 L12 18 L10.5 11.5 L4 10 L10.5 8.5 Z" fill="currentColor"/>
+    </svg>
+    <span>{{ site.data.strings[_ai_lang].ai.hero_badge }}</span>
+</a>
+{%- endif -%}

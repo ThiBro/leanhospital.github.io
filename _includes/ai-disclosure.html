@@ -1,0 +1,61 @@
+{%- comment -%}
+  _includes/ai-disclosure.html
+  ============================
+  Sichtbare KI-Kennzeichnung am Ende eines Artikels. Umsetzung von Artikel 50
+  Absatz 4 der Verordnung (EU) 2024/1689 (KI-Verordnung): wer KI-erzeugten oder
+  KI-veränderten Text veröffentlicht, legt das offen.
+
+  Der Blog verzichtet bewusst auf die Ausnahme für redaktionell geprüfte Inhalte
+  und kennzeichnet auch dann, wenn ein Mensch den Text freigegeben hat. Deshalb
+  steht der Kasten auf JEDEM Artikel, auch bei `text: human` — dort sagt er, dass
+  der Text ohne KI entstanden ist.
+
+  Werte und Vorgaben: siehe `ai-disclosure-vars.html`.
+{%- endcomment -%}
+
+{%- include ai-disclosure-vars.html -%}
+{%- assign _ai_lang = page.lang | default: site.default_lang | default: 'en' -%}
+{%- assign _ai_t = site.data.strings[_ai_lang].ai -%}
+
+<aside id="ai-disclosure" class="not-prose mt-12 rounded-xl overflow-hidden" style="border: 1px solid #E2E8F0; background: linear-gradient(135deg, #eff6ff 0%, #e0f2fe 100%);">
+    <div class="flex items-center gap-2 px-5 py-3" style="background-color: #0E6BA8;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-accent-amber flex-shrink-0" aria-hidden="true">
+            <path d="M12 2 L13.5 8.5 L20 10 L13.5 11.5 L12 18 L10.5 11.5 L4 10 L10.5 8.5 Z" fill="currentColor"/>
+            <path d="M19 3 L19.7 5.3 L22 6 L19.7 6.7 L19 9 L18.3 6.7 L16 6 L18.3 5.3 Z" fill="currentColor"/>
+            <path d="M19 15 L19.5 16.5 L21 17 L19.5 17.5 L19 19 L18.5 17.5 L17 17 L18.5 16.5 Z" fill="currentColor"/>
+        </svg>
+        <span class="font-heading text-xs font-bold uppercase tracking-widest text-white">{{ _ai_t.heading }}</span>
+    </div>
+
+    <div class="px-5 py-4">
+        <p class="text-sm text-gray-700 mb-4">{{ _ai_t.intro }}</p>
+
+        <dl class="space-y-3">
+            <div class="flex items-start gap-3">
+                <dt class="font-heading text-[10px] font-bold uppercase tracking-widest text-gray-500 pt-1" style="min-width: 4.5rem;">{{ _ai_t.text_label }}</dt>
+                <dd class="text-sm text-gray-900 leading-relaxed m-0">
+                    {%- if _ai_text == 'ai-generated' -%}{{ _ai_t.text_ai_generated }}
+                    {%- elsif _ai_text == 'ai-assisted' -%}{{ _ai_t.text_ai_assisted }}
+                    {%- else -%}{{ _ai_t.text_human }}{%- endif -%}
+                </dd>
+            </div>
+            <div class="flex items-start gap-3">
+                <dt class="font-heading text-[10px] font-bold uppercase tracking-widest text-gray-500 pt-1" style="min-width: 4.5rem;">{{ _ai_t.image_label }}</dt>
+                <dd class="text-sm text-gray-900 leading-relaxed m-0">
+                    {%- case _ai_image -%}
+                    {%- when 'ai-generated' -%}{{ _ai_t.image_ai_generated | replace: '%MODEL%', _ai_model }}
+                    {%- when 'ai-edited' -%}{{ _ai_t.image_ai_edited | replace: '%MODEL%', _ai_model }}
+                    {%- when 'screenshot' -%}{{ _ai_t.image_screenshot }}
+                    {%- when 'photo' -%}{{ _ai_t.image_photo }}
+                    {%- else -%}{{ _ai_t.image_none }}
+                    {%- endcase -%}
+                </dd>
+            </div>
+        </dl>
+
+        <p class="text-xs text-gray-600 mt-4 mb-0" style="border-top: 1px solid rgba(14,107,168,0.15); padding-top: 0.75rem;">
+            {{ _ai_t.legal }}
+            <a href="{{ _ai_t.policy_url | relative_url }}" class="font-bold text-accent-cyan hover:text-accent-amber transition-colors">{{ _ai_t.policy_label }} →</a>
+        </p>
+    </div>
+</aside>

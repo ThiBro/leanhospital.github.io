@@ -4,6 +4,12 @@ layout: base
 {%- assign _lang = page.lang | default: site.default_lang | default: 'en' -%}
 {%- assign t = site.data.strings[_lang] -%}
 
+{%- comment -%}
+  KI-Kennzeichnung (Artikel 50 EU-KI-Verordnung): loest `_ai_text`, `_ai_image`,
+  `_ai_src_type` und die Flags einmal fuer das ganze Layout auf.
+{%- endcomment -%}
+{%- include ai-disclosure-vars.html -%}
+
 {%- assign hero_image = page.image_header | default: page.image -%}
 
 {%- comment -%}
@@ -44,8 +50,10 @@ layout: base
 <section class="mb-10">
     {% if hero_image and page.image_full %}
     <!-- Full-screenshot hero: the whole image stays visible, nothing is cropped or covered -->
-    <div class="w-full bg-gray-100 dark:bg-black">
-        <img src="{{ hero_image | relative_url }}" alt="{{ page.title | escape }}" fetchpriority="high" width="1920" height="1080" class="block w-full h-auto">
+    <div class="relative w-full bg-gray-100 dark:bg-black">
+        <img src="{{ hero_image | relative_url }}" alt="{{ page.title | escape }}" fetchpriority="high" width="1920" height="1080" class="block w-full h-auto"
+             data-ai-generated="{{ _ai_image_is_ai }}"{% if _ai_src_type != '' %} data-digital-source-type="{{ _ai_src_type }}"{% endif %}>
+        {% include ai-image-badge.html %}
     </div>
 
     <div class="mx-auto w-full max-w-7xl px-6 lg:px-8 pt-8">
@@ -61,7 +69,10 @@ layout: base
       }
     </style>
     <div class="post-hero relative w-full overflow-hidden group">
-        <img src="{{ hero_image | relative_url }}" alt="{{ page.title | escape }}" fetchpriority="high" width="1920" height="1080" class="absolute inset-0 w-full h-full object-cover">
+        <img src="{{ hero_image | relative_url }}" alt="{{ page.title | escape }}" fetchpriority="high" width="1920" height="1080" class="absolute inset-0 w-full h-full object-cover"
+             data-ai-generated="{{ _ai_image_is_ai }}"{% if _ai_src_type != '' %} data-digital-source-type="{{ _ai_src_type }}"{% endif %}>
+
+        {% include ai-image-badge.html %}
 
         {% unless page.bg_alternative %}
         <!-- Home-like gradient overlay -->
@@ -132,6 +143,17 @@ layout: base
                         <span>{{ _post_date_label }}</span>
                         <span class="w-1 h-1 bg-accent-cyan rounded-full"></span>
                         <span>{% include reading_time.html content=page.content lang=_lang %} {{ t.post.read }}</span>
+                        {% if _ai_any %}
+                        <span class="w-1 h-1 bg-accent-cyan rounded-full"></span>
+                        <a href="#ai-disclosure" title="{{ t.ai.badge_title }}"
+                           class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-white hover:text-accent-amber transition-colors"
+                           style="background-color: #0E6BA8;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-2.5 h-2.5 flex-shrink-0" aria-hidden="true">
+                                <path d="M12 2 L13.5 8.5 L20 10 L13.5 11.5 L12 18 L10.5 11.5 L4 10 L10.5 8.5 Z" fill="currentColor"/>
+                            </svg>
+                            <span>{{ t.ai.badge }}</span>
+                        </a>
+                        {% endif %}
                     </div>
                     <div class="flex items-center gap-3">
                         <button onclick="copyPageUrl()"
@@ -166,6 +188,8 @@ layout: base
                             </div>
                         </aside>
                         {% endif %}
+
+                        {% include ai-disclosure.html %}
 
                         {% include author-box.html %}
                     </div>

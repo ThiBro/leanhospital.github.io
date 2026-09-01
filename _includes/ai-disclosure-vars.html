@@ -1,0 +1,58 @@
+{%- comment -%}
+  _includes/ai-disclosure-vars.html
+  =================================
+  Löst die KI-Kennzeichnung einer Seite auf und stellt sie als Variablen bereit.
+  Wird von `ai-disclosure-meta.html` (Kopfbereich, maschinenlesbar) und von
+  `ai-disclosure.html` (sichtbarer Kasten) eingebunden, damit beide dieselbe
+  Quelle lesen und niemals auseinanderlaufen können.
+
+  Front Matter eines Artikels:
+    ai_disclosure:
+      text: ai-generated | ai-assisted | human
+      image: ai-generated | ai-edited | screenshot | photo | none
+      image_model: gpt-image-1        # optional, sonst site.ai_disclosure.image_model
+      text_model: ...                 # optional, nur für die Doku-Zeile im Kasten
+
+  Ohne Front Matter greifen die Vorgaben aus `_config.yml` (site.ai_disclosure).
+
+  Gesetzte Variablen:
+    _ai_text        aufgelöster Textstatus
+    _ai_image       aufgelöster Bildstatus ('none', wenn die Seite kein Titelbild hat)
+    _ai_model       Modellname für die Bild-Formulierung
+    _ai_any         true, sobald irgendein Teil der Seite von KI stammt
+    _ai_text_is_ai  true, wenn der Text ganz oder teilweise von KI stammt
+    _ai_image_is_ai true, wenn das Titelbild ganz oder teilweise von KI stammt
+    _ai_src_type    IPTC-Digital-Source-Type des Titelbilds (leer bei 'none')
+{%- endcomment -%}
+
+{%- assign _ai_fm = page.ai_disclosure -%}
+{%- assign _ai_text = _ai_fm.text | default: site.ai_disclosure.default_text | default: 'human' -%}
+{%- assign _ai_model = _ai_fm.image_model | default: site.ai_disclosure.image_model -%}
+
+{%- assign _ai_has_image = page.image_header | default: page.image -%}
+{%- if _ai_has_image -%}
+  {%- assign _ai_image = _ai_fm.image | default: site.ai_disclosure.default_image | default: 'none' -%}
+{%- else -%}
+  {%- assign _ai_image = 'none' -%}
+{%- endif -%}
+
+{%- assign _ai_text_is_ai = false -%}
+{%- if _ai_text == 'ai-generated' or _ai_text == 'ai-assisted' -%}{%- assign _ai_text_is_ai = true -%}{%- endif -%}
+
+{%- assign _ai_image_is_ai = false -%}
+{%- if _ai_image == 'ai-generated' or _ai_image == 'ai-edited' -%}{%- assign _ai_image_is_ai = true -%}{%- endif -%}
+
+{%- assign _ai_any = false -%}
+{%- if _ai_text_is_ai or _ai_image_is_ai -%}{%- assign _ai_any = true -%}{%- endif -%}
+
+{%- comment -%}
+  IPTC Digital Source Type — die eingeführte Werteliste für "wie ist dieses Medium
+  entstanden": http://cv.iptc.org/newscodes/digitalsourcetype/
+{%- endcomment -%}
+{%- case _ai_image -%}
+  {%- when 'ai-generated' -%}{%- assign _ai_src_type = 'trainedAlgorithmicMedia' -%}
+  {%- when 'ai-edited' -%}{%- assign _ai_src_type = 'compositeWithTrainedAlgorithmicMedia' -%}
+  {%- when 'screenshot' -%}{%- assign _ai_src_type = 'softwareImage' -%}
+  {%- when 'photo' -%}{%- assign _ai_src_type = 'digitalCapture' -%}
+  {%- else -%}{%- assign _ai_src_type = '' -%}
+{%- endcase -%}

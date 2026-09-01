@@ -13,6 +13,7 @@ footer:
   deploy: "Get Started"
   search: "Search"
   legal: "Legal Notice"
+  ai_transparency: "AI transparency"
   copyright:
     suffix: "All rights reserved."
 
@@ -43,6 +44,31 @@ post:
   related_links: "Related Links"
   ai_prompt_header: "AI-generated article"
   ai_prompt_intro: "This article was created with AI. The exact prompt used:"
+
+# ---------------------------------------------------------------------------
+# AI disclosure (Article 50 of Regulation (EU) 2024/1689, the "AI Act").
+# Strings containing %MODEL% get the actually used model substituted in the
+# include (front matter `ai_disclosure.image_model`, else `site.ai_disclosure.image_model`).
+# ---------------------------------------------------------------------------
+ai:
+  badge: "AI disclosure"
+  badge_title: "How this article was made — labelled under Article 50 of the EU AI Act"
+  hero_badge: "AI-generated image"
+  heading: "AI disclosure: how this article was made"
+  intro: "We state openly which parts of this article were created by artificial intelligence."
+  text_label: "Text"
+  image_label: "Image"
+  text_ai_generated: "The text of this article was created with an AI language model. Martin Neumann reviewed it before publication, checked the sources and holds editorial responsibility for it."
+  text_ai_assisted: "Martin Neumann wrote the text of this article; an AI language model assisted with drafting and editing. Editorial responsibility rests with Martin Neumann."
+  text_human: "Martin Neumann wrote the text of this article without AI assistance."
+  image_ai_generated: "The header image is an AI-generated illustration (model %MODEL%). It shows a symbolic scene with no real people, real places or real devices."
+  image_ai_edited: "The header image is a real capture that was post-processed with AI tools (model %MODEL%)."
+  image_screenshot: "The header image and the screenshots in this article are real screen captures of running software and did not come from an AI."
+  image_photo: "The header image is a real photograph and did not come from an AI."
+  image_none: "This article has no header image."
+  legal: "Labelled under Article 50 of Regulation (EU) 2024/1689 (the AI Act), applicable since 2 August 2026."
+  policy_label: "How this blog uses AI"
+  policy_url: "/ai-transparency/"
 
 author:
   heading: "About the author"
