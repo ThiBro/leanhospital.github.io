@@ -224,6 +224,46 @@ Innerhalb P1 zuerst #14 Entlassmanagement (1.300 SV, größte Einzelchance) und 
     `silodenken-krankenhaus-designer.webp`. Kein generiertes Motiv.
   - **Sämtliche Board-Werte sind erfundene Beispieldaten** und im Text beider Sprachen als solche benannt.
   - **Offen:** Beim Schreiben von #17 und #27 hierher verlinken.
+- ✅ **Standardarbeit in der Pflege** — `/de/standardarbeit-pflege/` · EN: `/en/standard-work-nursing/`
+  (04.09.2026, Auftragsartikel außerhalb des Plans, nach SCHREIBANWEISUNG geschrieben)
+  - **Fokuskeyword:** standardarbeit pflege · **Sekundär:** Stationsorganisation, Suchzeiten Pflege,
+    Tagesstandard Station, Fixpunkte Schicht, Schwester Philin, pflegefremde Tätigkeiten
+  - **Rolle:** Spoke (1.734 W DE / 1.795 W EN, gemessen am Markdown-Body). **Interne Links:** → Pillar #1,
+    → Silodenken im Krankenhaus, → Visuelles Management
+  - **Anlass:** Der Beitrag „Je komplexer die Medizin, desto einfacher muss die Organisation sein" der
+    LKB Redaktion (LeanBase, Channel LeanHospital, 17.08.2026). Er fasst die Folge „Die schöne Welt der
+    Schwester Philin" aus Jörg Gottschalks Podcast „Krankenhausführung neu denken" zusammen: der Dienst
+    einer Pflegekraft auf einer Station, deren Abläufe tragen. Weder Beitrag noch Podcastfolge
+    veröffentlichen Zahlen; die beiden Zahlenquellen des Artikels sind Destatis (553 400 Beschäftigte im
+    Pflegedienst 2024, 44,6 % des nichtärztlichen Personals, Pressemitteilung Nr. 398 vom 06.11.2025)
+    und das Deutsche Krankenhausinstitut (rund 2:10 Stunden pflegefremde/patientenferne Tätigkeiten je
+    Pflegekraft und Arbeitstag, gut 28 % der Arbeitszeit — **Erhebungsjahr 2002, im Text ausdrücklich
+    genannt**).
+  - **Abgrenzung zu den drei Nachbarartikeln vom selben Tag:** „Clinical Operations im Krankenhaus"
+    gehört der Ergebnisreport, „Clinical Operations Framework" gehören die drei Dimensionen,
+    „Silodenken im Krankenhaus" gehört die Schnittstelle zwischen Bereichen. Hier steht die **Station
+    selbst** im Mittelpunkt: der Tagesstandard einer Schicht, Material und sein Ort, Zuständigkeit und
+    die bewusst entschiedene Abweichung. Reifegradzahlen, Framework-Dimensionen und die
+    Bettenauslastung werden hier bewusst nicht wiederholt.
+  - **Abgrenzung zu #22 (5s methode krankenhaus) und #27 (stations-dashboard):** #22 bleibt die
+    **Methode** mit ihren fünf S und der Einführungsanleitung; hier steht die Ordnung nur als eine von
+    drei Bildschirmseiten und ohne Methodenschritte. #27 bleibt das **Dashboard als Kategorie**
+    (Datenquellen, KIS/SAP, Anforderungen an die Technik) mit Peakboard-Haupt-CTA; hier ist das Board
+    ein Beispiel für Standardarbeit und der Designer-Download der einzige Inline-CTA.
+  - **Abgrenzung zu #20 (lean management pflege) und #23 (schichtübergabe pflege):** #20 bleibt der
+    Hub über Lean in der Pflege insgesamt; die Übergabe wird hier nur als einer von acht Fixpunkten
+    genannt, SBAR und I-PASS bleiben beim Bestandspost zur Übergabe.
+  - **Board-Vorlage:** `assets/pbmx/stationsstandard-board.pbmx` (eigens für den Artikel gebaut, drei
+    Bildschirmseiten — Tagesstandard, Material und Ort, Zuständigkeit und Abweichung; gegen den
+    Designer kompiliert, in der Peakboard Runtime abgespielt und im Designer gegengeprüft) über
+    `downloads:` und als Inline-Link. Kein sichtbarer Link auf `peakboard.com`.
+  - **Bilder:** Vier echte Screenshots der gebauten Anwendung, deshalb `image_full: true` +
+    `bg_alternative: true` und `ai_disclosure.image: screenshot`. Hero:
+    `assets/img/posts/standardarbeit-pflege.png` (Bildschirmseite „Tagesstandard"). Inline:
+    `standardarbeit-pflege-material.webp`, `standardarbeit-pflege-designer.webp`,
+    `standardarbeit-pflege-zustaendigkeit.webp`. Kein generiertes Motiv.
+  - **Sämtliche Board-Werte sind erfundene Beispieldaten** und im Text beider Sprachen als solche benannt.
+  - **Offen:** Beim Schreiben von #20, #22 und #27 hierher verlinken.
 - Warum Überfüllung der Notaufnahme ein Sicherheitsproblem ist — `/de/warum-ueberfuellung-der-notaufnahme-ein-sicherheitsproblem-ist/`
 - Die OP-Sicherheitscheckliste: Was die Evidenz wirklich zeigt — `/de/die-op-sicherheitscheckliste-was-die-evidenz-wirklich-zeigt/`
 - Die Fünf-Punkt-Checkliste, die Infektionen auf null brachte — `/de/die-fuenf-punkt-checkliste-die-infektionen-auf-null-brachte/`
