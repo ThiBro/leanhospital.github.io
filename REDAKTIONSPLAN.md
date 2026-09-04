@@ -132,6 +132,36 @@ Innerhalb P1 zuerst #14 Entlassmanagement (1.300 SV, größte Einzelchance) und 
   - **Offen:** Ein zweites Inline-Bild fehlt (`berichtspflichten-krankenhaus-fristen.webp` — Zeitstrahl
     31.03. / Quartalsmeldung / monatlicher Atlas). Hero-Bild und das
     Stationsboard-Motiv sind gesetzt. Autorenbox/CTA-Bausteine wie bei #1.
+- ✅ **Clinical Operations im Krankenhaus** — `/de/clinical-operations-krankenhaus/` · EN: `/en/clinical-operations-hospital/`
+  (04.09.2026, Auftragsartikel außerhalb des Plans, nach SCHREIBANWEISUNG geschrieben)
+  - **Fokuskeyword:** clinical operations krankenhaus · **Sekundär:** operative Steuerung Krankenhaus,
+    Reifegrad Krankenhaus, Transformations-Perspektive, Patientenfluss, Clinical Operations Framework
+  - **Rolle:** Spoke (1.619 W DE / 1.783 W EN, gemessen am Markdown-Body). **Plan-Slug:**
+    `daily-management/clinical-operations-krankenhaus`. **Interne Links:** → Pillar #1,
+    → Visuelles Management, → Berichtspflichten
+  - **Anlass:** Der erste Clinical Operations Ergebnisreport von Ralf Volkmer (LeanBase, 29.08.2026,
+    1.260 Einzelantworten aus D/A/CH). Alle sieben Themenfelder liegen im IST unter 3,0 Punkten; bei
+    „Daten & KI nutzen" (2,33 → 2,12) und „Clinical Operations steuern" (2,95 → 2,90) liegt die
+    Transformations-Perspektive sogar unter dem IST-Wert. Alle Zahlen des Artikels stammen aus dieser
+    Quelle und wurden gegen den Originalartikel geprüft.
+  - **Abgrenzung zu #4 (kennzahlen krankenhaus):** Hier steht die *operative Steuerungsfähigkeit* als
+    Reifegradthema im Mittelpunkt (Report, IST vs. Transformations-Perspektive, Tagessteuerung). Der
+    KPI-**Katalog** mit Formeln und Zielwerten bleibt #4; die Kennzahlenliste hier ist bewusst auf fünf
+    Positionen ohne Formeln begrenzt.
+  - **Abgrenzung zu #24 (digitalisierung krankenhaus) und #27 (stations-dashboard):** #24 bleibt die
+    Digitalstrategie-Ebene (KHZG, Systeme, Förderung), #27 das *Stations*-Dashboard. Dieser Artikel
+    liegt auf der Haus-Ebene: bereichsübergreifende Tagessteuerung über Notaufnahme, Station, OP und
+    Diagnostik hinweg.
+  - **Board-Vorlage:** `assets/pbmx/clinical-operations-cockpit.pbmx` (eigens für den Artikel gebaut,
+    zwei Bildschirmseiten, gegen den Designer kompiliert und in der Peakboard Runtime abgespielt) über
+    `downloads:` und als Inline-Link. Kein sichtbarer Link auf `peakboard.com` oder
+    `templates.peakboard.com` — die Brand-Regel gilt hier unverändert.
+  - **Bilder:** Alle drei sind echte Screenshots der gebauten Anwendung, deshalb `image_full: true` +
+    `bg_alternative: true` und `ai_disclosure.image: screenshot`. Hero:
+    `assets/img/posts/clinical-operations-krankenhaus.png` (Bildschirmseite „Reifegrad"). Inline:
+    `clinical-operations-tagessteuerung.webp` (Bildschirmseite „Tagessteuerung"),
+    `clinical-operations-designer.webp` (Projekt im Peakboard Designer). Kein generiertes Motiv.
+  - **Offen:** Beim Schreiben von #4, #24 und #27 hierher verlinken.
 - Warum Überfüllung der Notaufnahme ein Sicherheitsproblem ist — `/de/warum-ueberfuellung-der-notaufnahme-ein-sicherheitsproblem-ist/`
 - Die OP-Sicherheitscheckliste: Was die Evidenz wirklich zeigt — `/de/die-op-sicherheitscheckliste-was-die-evidenz-wirklich-zeigt/`
 - Die Fünf-Punkt-Checkliste, die Infektionen auf null brachte — `/de/die-fuenf-punkt-checkliste-die-infektionen-auf-null-brachte/`
