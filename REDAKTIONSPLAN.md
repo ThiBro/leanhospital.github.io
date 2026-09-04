@@ -162,6 +162,37 @@ Innerhalb P1 zuerst #14 Entlassmanagement (1.300 SV, größte Einzelchance) und 
     `clinical-operations-tagessteuerung.webp` (Bildschirmseite „Tagessteuerung"),
     `clinical-operations-designer.webp` (Projekt im Peakboard Designer). Kein generiertes Motiv.
   - **Offen:** Beim Schreiben von #4, #24 und #27 hierher verlinken.
+- ✅ **Clinical Operations Framework** — `/de/clinical-operations-framework/` · EN: `/en/clinical-operations-framework/`
+  (04.09.2026, Auftragsartikel außerhalb des Plans, nach SCHREIBANWEISUNG geschrieben)
+  - **Fokuskeyword:** clinical operations framework · **Sekundär:** Managementsystem Krankenhaus,
+    Zielkonflikte Krankenhaus, Bereichsoptimum, Toyota Kata Krankenhaus, integratives Managementsystem
+  - **Rolle:** Spoke (1.679 W DE / 1.799 W EN, gemessen am Markdown-Body). **Interne Links:** → Pillar #1,
+    → Clinical Operations im Krankenhaus, → Visuelles Management
+  - **Anlass:** Die Rezension "Braucht das Krankenhaus ein neues Framework?" von Götz Müller (LeanBase,
+    Channel LeanHospital, 31.08.2026) zum Clinical Operations Framework von Ralf Volkmer, dazu die
+    Podcast-Folge Kaizen 2 go 394. Der Artikel antwortet begleitend darauf und zeigt, wo Digitalisierung
+    zu den drei offenen Punkten der Rezension beiträgt. Der Artikel enthält **keine** erfundenen
+    Statistiken; die einzige Zahlenquelle ist Destatis (17,5 Mio. Behandlungsfälle 2024, Verweildauer
+    7,1 Tage, Pressemitteilung Nr. 398 vom 06.11.2025).
+  - **Abgrenzung zum Nachbarartikel „Clinical Operations im Krankenhaus" (clinical operations krankenhaus):**
+    Dort steht der **Ergebnisreport** mit seinen Reifegradzahlen und die Tagessteuerung im Mittelpunkt.
+    Hier steht das **Framework selbst** im Mittelpunkt — die drei Dimensionen, die Frage nach dem einen
+    Managementsystem, Bereichsoptimum gegen Gesamtsystem, Zielkonflikte und das Lernexperiment. Zahlen des
+    Ergebnisreports werden hier bewusst nicht wiederholt.
+  - **Abgrenzung zu #4 (kennzahlen krankenhaus) und #17 (op planung):** Die Kennzahlenliste hier ist auf
+    fünf Systemgrößen ohne Formeln begrenzt; der KPI-Katalog bleibt #4. Das OP-Beispiel dient der
+    Systemsicht, die Planungsmethodik bleibt #17.
+  - **Board-Vorlage:** `assets/pbmx/clinical-operations-framework-cockpit.pbmx` (eigens für den Artikel
+    gebaut, drei Bildschirmseiten — Bereichsoptimum, Zielkonflikte, Lernexperiment; gegen den Designer
+    kompiliert und in der Peakboard Runtime abgespielt) über `downloads:` und als Inline-Link. Kein
+    sichtbarer Link auf `peakboard.com`.
+  - **Bilder:** Vier echte Screenshots der gebauten Anwendung, deshalb `image_full: true` +
+    `bg_alternative: true` und `ai_disclosure.image: screenshot`. Hero:
+    `assets/img/posts/clinical-operations-framework.png` (Bildschirmseite „Bereichsoptimum"). Inline:
+    `clinical-operations-framework-zielkonflikte.webp`, `clinical-operations-framework-lernexperiment.webp`,
+    `clinical-operations-framework-designer.webp`. Kein generiertes Motiv.
+  - **Sämtliche Board-Werte sind erfundene Beispieldaten** und im Text beider Sprachen als solche benannt.
+  - **Offen:** Beim Schreiben von #4, #17 und #27 hierher verlinken.
 - Warum Überfüllung der Notaufnahme ein Sicherheitsproblem ist — `/de/warum-ueberfuellung-der-notaufnahme-ein-sicherheitsproblem-ist/`
 - Die OP-Sicherheitscheckliste: Was die Evidenz wirklich zeigt — `/de/die-op-sicherheitscheckliste-was-die-evidenz-wirklich-zeigt/`
 - Die Fünf-Punkt-Checkliste, die Infektionen auf null brachte — `/de/die-fuenf-punkt-checkliste-die-infektionen-auf-null-brachte/`
