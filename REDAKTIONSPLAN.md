@@ -193,6 +193,37 @@ Innerhalb P1 zuerst #14 Entlassmanagement (1.300 SV, größte Einzelchance) und 
     `clinical-operations-framework-designer.webp`. Kein generiertes Motiv.
   - **Sämtliche Board-Werte sind erfundene Beispieldaten** und im Text beider Sprachen als solche benannt.
   - **Offen:** Beim Schreiben von #4, #17 und #27 hierher verlinken.
+- ✅ **Silodenken im Krankenhaus** — `/de/silodenken-krankenhaus/` · EN: `/en/silo-thinking-hospital/`
+  (04.09.2026, Auftragsartikel außerhalb des Plans, nach SCHREIBANWEISUNG geschrieben)
+  - **Fokuskeyword:** silodenken krankenhaus · **Sekundär:** Methodenparadox, Schnittstellen Krankenhaus,
+    Abteilungssilos, Entlassmanagement, Bettenauslastung, bereichsübergreifende Zusammenarbeit
+  - **Rolle:** Spoke (1.636 W DE / 1.797 W EN, gemessen am Markdown-Body). **Interne Links:** → Pillar #1,
+    → Clinical Operations Framework, → Visuelles Management
+  - **Anlass:** Der Beitrag "Das Methodenparadox der Krankenhäuser" von Ralf Volkmer (LeanBase,
+    Channel LeanHospital, 24.08.2026). Der Artikel antwortet darauf und nimmt die vier Beispiele der
+    Montagmorgen-Szene (Notaufnahme, Entlassung, OP-Plan, Personalausfall) als Aufbau. Der Beitrag
+    veröffentlicht **keine** Zahlen; die einzige Zahlenquelle ist Destatis (Bettenauslastung 72,0 %
+    2024, 472 900 Betten in 1 841 Krankenhäusern, Pressemitteilung Nr. 398 vom 06.11.2025).
+  - **Abgrenzung zu den beiden Nachbarartikeln vom selben Tag:** "Clinical Operations im Krankenhaus"
+    (clinical operations krankenhaus) gehört der **Ergebnisreport** mit seinen Reifegradzahlen,
+    "Clinical Operations Framework" (clinical operations framework) gehören die **drei Dimensionen**,
+    Zielkonflikte und das Lernexperiment. Hier steht die **Schnittstelle im Tagesbetrieb** im
+    Mittelpunkt: Warum eine Aufnahme wartet, woran eine Entlassung hängt, wo eine OP-Verspätung
+    entsteht. Reifegradzahlen und Framework-Dimensionen werden hier bewusst nicht wiederholt.
+  - **Abgrenzung zu #17 (op planung) und #27 (stations-dashboard):** Das OP-Beispiel dient der
+    Schnittstellensicht, die Planungsmethodik bleibt #17; das Board liegt auf der Haus-Ebene und
+    nicht auf der Stations-Ebene von #27.
+  - **Board-Vorlage:** `assets/pbmx/schnittstellen-board.pbmx` (eigens für den Artikel gebaut, drei
+    Bildschirmseiten — Morgenlage, Entlassung, OP und Dienste; gegen den Designer kompiliert und in
+    der Peakboard Runtime abgespielt) über `downloads:` und als Inline-Link. Kein sichtbarer Link auf
+    `peakboard.com`.
+  - **Bilder:** Vier echte Screenshots der gebauten Anwendung, deshalb `image_full: true` +
+    `bg_alternative: true` und `ai_disclosure.image: screenshot`. Hero:
+    `assets/img/posts/silodenken-krankenhaus.png` (Bildschirmseite „Morgenlage"). Inline:
+    `silodenken-krankenhaus-entlassung.webp`, `silodenken-krankenhaus-op-dienste.webp`,
+    `silodenken-krankenhaus-designer.webp`. Kein generiertes Motiv.
+  - **Sämtliche Board-Werte sind erfundene Beispieldaten** und im Text beider Sprachen als solche benannt.
+  - **Offen:** Beim Schreiben von #17 und #27 hierher verlinken.
 - Warum Überfüllung der Notaufnahme ein Sicherheitsproblem ist — `/de/warum-ueberfuellung-der-notaufnahme-ein-sicherheitsproblem-ist/`
 - Die OP-Sicherheitscheckliste: Was die Evidenz wirklich zeigt — `/de/die-op-sicherheitscheckliste-was-die-evidenz-wirklich-zeigt/`
 - Die Fünf-Punkt-Checkliste, die Infektionen auf null brachte — `/de/die-fuenf-punkt-checkliste-die-infektionen-auf-null-brachte/`
