@@ -10,10 +10,11 @@ Kanonische, stets aktuelle Quelle ist die Sitemap: https://lean-hospital.de/site
 
 <!-- AUTOGEN:START — content between the AUTOGEN markers is regenerated from sitemap.xml; do not edit by hand -->
 
-### All blog posts (16)
+### All blog posts (18)
 
 #### Deutsch
 
+- 2026-09-04 — clinical operations krankenhaus: https://lean-hospital.de/de/clinical-operations-krankenhaus/
 - 2026-08-14 — berichtspflichten krankenhaus: https://lean-hospital.de/de/berichtspflichten-krankenhaus/
 - 2026-08-11 — lean hospital: https://lean-hospital.de/de/lean-hospital/
 - 2026-07-07 — die arbeit sichtbar machen visuelles management im krankenhaus: https://lean-hospital.de/de/die-arbeit-sichtbar-machen-visuelles-management-im-krankenhaus/
@@ -25,6 +26,7 @@ Kanonische, stets aktuelle Quelle ist die Sitemap: https://lean-hospital.de/site
 
 #### English
 
+- 2026-09-04 — clinical operations hospital: https://lean-hospital.de/en/clinical-operations-hospital/
 - 2026-08-14 — hospital reporting obligations: https://lean-hospital.de/en/hospital-reporting-obligations/
 - 2026-08-11 — lean hospital: https://lean-hospital.de/en/lean-hospital/
 - 2026-07-07 — make the work visible visual management and the real time hospital board: https://lean-hospital.de/en/make-the-work-visible-visual-management-and-the-real-time-hospital-board/
